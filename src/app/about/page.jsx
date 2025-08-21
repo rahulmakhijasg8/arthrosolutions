@@ -96,7 +96,7 @@ const clinicsData = [
     phone: "+91 - 9820273995",
     timing: "Tuesday/ Thursday: 5 PM-7 PM",
     services: "Consult & Surgeries",
-    imageUrl: "/Surya.png",
+    imageUrl: "/surya.png",
     badgeText: "Main Clinic"
   },
   {
@@ -107,7 +107,7 @@ const clinicsData = [
     phone: "+91 - 9820273995",
     timing: "Wednesday/ Saturday: 5 PM-8 PM",
     services: "Consult & Surgeries",
-    imageUrl: "/Raheja.png",
+    imageUrl: "/raheja.png",
     badgeText: "Main Clinic"
   },
   {
@@ -118,7 +118,7 @@ const clinicsData = [
     phone: "+91 - 9820273995",
     timing: "Monday/ Friday: 6 PM-8 PM",
     services: "Consult & Surgeries",
-    imageUrl: "/Raheja.png",
+    imageUrl: "/raheja.png",
     badgeText: "Main Clinic"
   }
 ];
