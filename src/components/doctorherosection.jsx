@@ -152,7 +152,7 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
 
         {/* Doctor Image */}
         <div className="w-full flex flex-col items-center mb-6">
-          <div className="w-[135%] h-[500px] relative overflow-hidden">
+          <div className="w-[100%] h-[500px] relative overflow-hidden">
             <Image
               src={rightImage || "/placeholder.svg"}
               alt="Dr. Mohit Upadhyaya"

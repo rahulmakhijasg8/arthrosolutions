@@ -26,7 +26,7 @@ const HeroSection = ({
     return title.map((part, index) => (
       <span 
         key={index}
-        className='leading-[44px] md:leading-[78px]'
+        className='leading-[36px] md:leading-[78px]'
         style={{
           color: part.highlight ? '#0D4F7A' : '#2D2D2D',
           fontFeatureSettings: "'liga' off, 'clig' off",
@@ -57,7 +57,7 @@ const HeroSection = ({
           {/* Left Column */}
           <div className="w-full md:w-[60%] md:pr-6 flex flex-col mt-15">
             <h1 
-              className="font-normal mb-4"
+              className="font-normal mb-4 leading-[36px] md:leading-[78px]"
               style={{
                 color: '#2D2D2D',
                 fontFeatureSettings: "'liga' off, 'clig' off",
@@ -69,7 +69,7 @@ const HeroSection = ({
               {renderTitle()}
             </h1>
             
-            <p className="font-['Lato'] text-[#000000D6] font-normal text-[20px] md:text-[20px] mb-8 tracking-normal leading-relaxed md:leading-[1.6]">
+            <p className="font-['Lato'] text-[#000000D6] font-normal text-[16px] md:text-[20px] mb-8 tracking-normal leading-relaxed md:leading-[1.6]">
               {description}
             </p>
             
