@@ -20,31 +20,31 @@ const Card = ({
 
   return (
     <div
-      className={`${getBackgroundColor()} w-full rounded-[8px] p-5 md:p-6 overflow-auto mx-auto h-full`}
+      className={`${getBackgroundColor()} w-full flex flex-col p-[18px] md:p-[24px] justify-center items-center rounded-[8px] overflow-auto h-full`}
     >
       {/* Icon */}
       {icon && (
-        <div className="flex justify-center items-center mb-8">
-          <div className="flex rounded-[10px] justify-center items-center w-20 h-20 bg-white">
+        <div className="flex justify-center items-center">
+          <div className="flex rounded-[10px] justify-center items-center w-[54px] md:w-[84px] h-[54px] md:h-[84px]">
             <Image
               src={icon}
               alt="Insurance Icon"
               width={500}
               height={500}
-              className="w-16 h-16"
+              className="w-full h-full"
             />
           </div>
         </div>
       )}
 
       {/* Title */}
-      <h3 className="text-lg font-[600] text-[#000000] mb-2 text-center">
+      <h3 className="text-[18px] px-8 md:px-5 md:text-[20px] font-[500] text-[#2D2D2D] mt-[24px] leading-[28px] md:leading-[34px] text-center">
         {title}
       </h3>
 
       {/* Description - Optional */}
       {description && (
-        <div className="text-center px-2">
+        <div className="text-center text-[#64648A] md:mt-[8px] font-[400] font-['Inter'] md:text-[16px]">
           {description}
         </div>
       )}

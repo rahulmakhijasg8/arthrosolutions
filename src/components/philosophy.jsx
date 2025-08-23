@@ -3,8 +3,8 @@ import React from 'react';
 export default function Philosophy({ 
 }) {
   return (
-    <div className="w-full text-center py-12 bg-[#F4F8FF] pt-8 md:pt-12 px-4 md:px-8 lg:px-16">
-  <div className="max-w-7xl mx-auto">
+    <div className="w-full text-center py-12 bg-[#F4F8FF] pt-8 md:pt-12 px-[20px] md:px-[60px] lg:px-[100px]">
+  <div className="max-w-7xl md:px-[120px] mx-auto">
         <h2 className="font-['Outfit'] text-[#2D2D2D] font-[600] text-[28px] md:text-[44px] leading-tight mb-2 md:mb-4">
           Philosophy
         </h2>

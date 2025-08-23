@@ -75,19 +75,19 @@ const TestimonialCarousel = ({ testimonials = [] }) => {
   const visibleTestimonials = getVisibleTestimonials();
   
   return (
-    <div className="w-full px-4 md:px-8 lg:px-16 py-8">
+    <div className="w-full px-[20px] md:px-[60px] lg:px-[100px] mt-[14px] md:mt-[24px]">
   <div className="max-w-7xl mx-auto">
       {/* Patient Satisfaction Badge */}
-      <div className="flex justify-center mb-8">
-        <div className="bg-green-500 text-white px-6 py-2 rounded-full flex items-center gap-2">
+      <div className="flex justify-center">
+        <div className="bg-[#4CAF50] text-white px-[16px] md:px-[24px] py-[8px] md:py-[10px] rounded-[100px] flex items-center gap-[6px] md:gap-[10px]">
           <span className="text-white">⭐</span>
           <span className="font-semibold">97% Patient Satisfaction Rate</span>
         </div>
       </div>
       {/* Carousel Container */}
-      <div className="relative">
+      <div className="relative mt-[32px] md:mt-[60px]">
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
           {visibleTestimonials.map((testimonial, index) => (
             <div
               key={`${testimonial.id}-${currentIndex}`}
@@ -106,7 +106,7 @@ const TestimonialCarousel = ({ testimonials = [] }) => {
           ))}
         </div>
         {/* Navigation Buttons */}
-        <div className="flex justify-center items-center gap-4">
+        <div className="flex justify-center mt-[16px] md:mt-[46px] items-center gap-[34px]">
           <button
             onClick={prevSlide}
             disabled={!canGoPrev}

@@ -18,20 +18,20 @@ export default function StatsComponent() {
   ];
 
   return (
-    <div className="w-full mt-20 md:h-[240px] bg-[#F4F8FF] py-8 md:px-40">
-  <div className="flex flex-col md:flex-row md:justify-between md:items-center mx-auto gap-6 md:gap-0">
+    <div className="w-full mt-[60px] md:mt-[120px] md:h-[240px] bg-[#F4F8FF] py-[34px] md:py-[56px] px-[20px] md:px-[60px] lg:px-[100px] ">
+  <div className="flex flex-col md:px-[40px] md:flex-row md:justify-center md:items-center gap-6 md:gap-0">
     {stats.map((stat, index) => (
       <>
         <div className="text-center">
-          <div className={`text-[24px] md:text-[34px] font-[700] text-[${stat.color}] mb-2`}>
+          <div className={`text-[24px] md:text-[34px] font-[700] text-[${stat.color}]`}>
             {stat.number}
           </div>
-          <div className="text-[#64648A] text-[16px] md:text-[20px] font-[600]">
+          <div className="text-[#64648A] text-[16px] mt-2 md:text-[20px] font-[400]">
             {stat.label}
           </div>
         </div>
         {index < stats.length - 1 && (
-          <div className="mx-auto w-[40%] h-px md:w-px md:h-[100px] bg-[#64648A] opacity-[0.14]"></div>
+          <div className="mx-auto w-[203px] h-px md:w-px md:h-[127px] bg-[#64648A] opacity-[0.14]"></div>
         )}
       </>
     ))}

@@ -155,7 +155,7 @@ export default function Navbar() {
             items-center 
             justify-between 
             h-20
-            px-4 sm:px-6 md:px-8 lg:px-12
+            px-4 sm:px-6 md:px-8 lg:px-[100px]
             bg-transparent
             transition-all
             duration-300

@@ -8,17 +8,17 @@ const MedicalToggleComponent = ({ tabs, defaultTab = 0 }) => {
   const currentTab = tabs[activeTabIndex];
 
   return (
-    <div className="flex flex-col p-6 bg-white">
+    <div className="flex flex-col px-[20px] md:px-[60px] lg:px-[100px] bg-white">
       {/* Toggle Buttons */}
-      <div className="flex justify-center border-[1px] rounded-[6px] border-[#2D2D2D24] mb-15 w-fit mx-auto">
+      <div className="flex justify-center mt-[18px] md:mt-[36px] border-[1px] rounded-[6px] border-[#2D2D2D24] w-fit mx-auto">
         {tabs.map((tab, index) => (
           <button
             key={index}
             onClick={() => setActiveTabIndex(index)}
-            className={`px-6 py-2 rounded-[6px] border-[1px] border-solid border-white text-sm font-medium ${
+            className={`px-[8px] md:px-[14px] py-[6px] md:py[12px] rounded-[6px] border-[1px] border-solid border-white text-[12px] md:text-[16px] font-medium ${
               activeTabIndex === index
-                ? 'bg-[#0D4F7A] text-white'
-                : 'text-gray-700 hover:bg-gray-300'
+                ? 'bg-[#0D4F7A] font-[400] text-white'
+                : 'text-[#2D2D2D] font-[400] hover:bg-gray-300'
             } transition-colors duration-200`}
           >
             {tab.buttonLabel}
@@ -27,11 +27,12 @@ const MedicalToggleComponent = ({ tabs, defaultTab = 0 }) => {
       </div>
 
       {/* Main Card */}
-      <div className="bg-white w-[90%] md:max-w-none md:w-[80%] md:h-[549px] rounded-[18px] mx-auto shadow-lg overflow-hidden">
+      <div className="bg-white w-full mt-[32px] md:mt-[60px] md:h-[570px] rounded-[12px] md:rounded-[20px] overflow-hidden" 
+     style={{boxShadow: '0 14px 34px 1px rgba(0, 0, 0, 0.09)'}}>
         <div className="flex flex-col md:flex-row h-full">
           {/* Left Side - Image */}
           <div 
-            className="w-full md:w-1/2 object-top relative h-[350px] md:h-full"
+            className="w-full md:w-1/2 object-top relative h-[400px] md:h-full"
             style={{
               backgroundImage: currentTab.image ? `url(${currentTab.image})` : 'none',
               backgroundSize: 'cover',
@@ -72,14 +73,14 @@ const MedicalToggleComponent = ({ tabs, defaultTab = 0 }) => {
           </div>
 
           {/* Right Side - Content */}
-          <div className="w-full md:w-1/2 p-6 h-auto md:h-full">
+          <div className="w-full md:w-1/2 p-[12px] md:px-[34px] md:py-[24px] h-auto md:h-full">
             {/* Conditions Treated */}
             {currentTab.conditions && (
               <div className="mb-6">
                 <h4 className="text-[20px] font-[600] text-[#0D4F7A] mb-3">
                   {currentTab.conditionsTitle || 'Conditions Treated'}
                 </h4>
-                <ul className="space-y-2">
+                <ul className="mt-[12px] md:mt-[18px] space-y-[8px] md:space-y-[12px]">
                   {currentTab.conditions.map((condition, index) => (
                     <li key={index} className="flex items-center text-[16px] font-[400] text-[#64648A]">
                       <span className={`w-2 h-2 rounded-full mr-3 ${condition.bulletColor || 'bg-[#4CAF50]'}`}></span>
@@ -92,13 +93,13 @@ const MedicalToggleComponent = ({ tabs, defaultTab = 0 }) => {
 
             {/* Key Procedures */}
             {currentTab.procedures && (
-              <div className='mt-12'>
+              <div className='mt-[16px] md:mt-[34px]'>
                 <h4 className="text-[20px] font-[600] text-[#0D4F7A] mb-3">
                   {currentTab.proceduresTitle || 'Key Procedures'}
                 </h4>
-                <div className="space-y-4">
+                <div className="mt-[12px] md:mt-[18px] space-y-[12px] md:space-y-[6px]">
                   {currentTab.procedures.map((procedure, index) => (
-                    <div key={index} className='rounded-[8px] border-[1px] border-[#2D2D2D24] p-3'>
+                    <div key={index} className='rounded-[8px] border-[1px] border-[#2D2D2D24] p-[14px]'>
                       <h5 className="font-[500] text-[#2D2D2D] text-[16px]">{procedure.name}</h5>
                       
                       <div key={index} className="flex flex-col md:flex-row md:justify-between md:items-center">

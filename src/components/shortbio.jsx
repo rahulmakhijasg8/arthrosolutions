@@ -1,10 +1,11 @@
 import Image from "next/image"
+import { GraduationCap } from "lucide-react"
 
 export default function ShortBio() {
   return (
-    <div className="w-full px-4 md:px-8 lg:px-16 py-6">
+    <div className="w-full px-[20px] md:px-[60px] md:mt-[122px] lg:px-[100px] py-6">
   <div className="max-w-7xl mx-auto">
-      <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+      <div className="flex flex-col md:flex-row gap-6 md:gap-[97px]">
         {/* Profile Image */}
         <div className="w-full md:w-1/2 flex-shrink-0">
           <div className="w-full h-96 md:h-[456px] rounded-2xl overflow-hidden bg-gray-900">
@@ -13,7 +14,7 @@ export default function ShortBio() {
               alt="Dr. Mohit Upadhyaya"
               width={400}
               height={600}
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-contain object-top"
             />
           </div>
         </div>
@@ -42,17 +43,20 @@ export default function ShortBio() {
           </div>
           
           {/* Qualification Badges */}
-          <div className="flex flex-wrap gap-2 md:gap-3">
-            <div className="px-3 py-1.5 md:px-4 md:py-2 bg-blue-100 text-blue-800 rounded-full border border-blue-200">
-              <span className="text-xs md:text-sm font-medium">MS Degree</span>
-            </div>
-            <div className="px-3 py-1.5 md:px-4 md:py-2 bg-orange-100 text-orange-800 rounded-full border border-orange-200">
-              <span className="text-xs md:text-sm font-medium">FRCS Degree</span>
-            </div>
-            <div className="px-3 py-1.5 md:px-4 md:py-2 bg-green-100 text-green-800 rounded-full border border-green-200">
-              <span className="text-xs md:text-sm font-medium">DNB Degree</span>
-            </div>
-          </div>
+          <div className="flex flex-wrap gap-[24px] md:gap-[10px]">
+  <div className="px-3 py-1.5 flex gap-[8px] md:px-4 md:py-2 text-[#0D4F7A] rounded-[6px] border border-[#0D4F7A]">
+    <GraduationCap height={18} width={18} />
+    <span className="text-xs md:text-[16px] font-[400]">MS Degree</span>
+  </div>
+  <div className="px-3 py-1.5 md:px-4 flex gap-[8px] md:py-2 text-[#FE7C49] rounded-[6px] border border-[#FE7C49]">
+    <GraduationCap height={18} width={18} />
+    <span className="text-xs md:text-[16px] font-[400]">FRCS Degree</span>
+  </div>
+  <div className="px-3 py-1.5 md:px-4 flex gap-[8px] md:py-2 text-[#4CAF50] rounded-[6px] border border-[#4CAF50]">
+    <GraduationCap height={18} width={18} />
+    <span className="text-xs md:text-[16px] font-[400]">DNB Degree</span>
+  </div>
+</div>
         </div>
       </div>
       </div>

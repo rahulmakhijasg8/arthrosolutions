@@ -26,12 +26,11 @@ const HeroSection = ({
     return title.map((part, index) => (
       <span 
         key={index}
-        className='leading-[36px] md:leading-[78px]'
+        className='leading-[36px] text-[38px] md:text-[53px] md:leading-[38px]'
         style={{
           color: part.highlight ? '#0D4F7A' : '#2D2D2D',
           fontFeatureSettings: "'liga' off, 'clig' off",
           fontFamily: 'Outfit, sans-serif',
-          fontSize: 'clamp(34px, 4vw, 56px)',
           fontWeight: 700,
         }}
       >
@@ -51,30 +50,28 @@ const HeroSection = ({
         opacity: 100
       }}
     >
-      <section className="w-full py-12 pt-0 md:py-20 px-4 md:px-8 lg:px-16">
+      <section className="w-full mt-[40px] md:mt-[25px] px-[20px] md:px-[60px] lg:px-[100px]">
   <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row gap-0 md:gap-0">
           {/* Left Column */}
-          <div className="w-full md:w-[60%] md:pr-6 flex flex-col mt-15">
+          <div className="w-full md:w-[63%] flex flex-col md:mt-[100px]">
             <h1 
-              className="font-normal mb-4 leading-[36px] md:leading-[78px]"
+              className="font-[700] text-[40px] md:text-[56px] leading-[44px] md:leading-[68px]"
               style={{
                 color: '#2D2D2D',
                 fontFeatureSettings: "'liga' off, 'clig' off",
                 fontFamily: 'Outfit, sans-serif',
-                fontSize: 'clamp(34px, 4vw, 56px)',
-                fontWeight: 700,
               }}
             >
               {renderTitle()}
             </h1>
             
-            <p className="font-['Lato'] text-[#000000D6] font-normal text-[16px] md:text-[20px] mb-8 tracking-normal leading-relaxed md:leading-[1.6]">
+            <p className="font-['Lato'] mt-[12px] md:mt-[36px] text-[#000000D6] font-normal text-[16px] md:text-[18px] tracking-normal leading-[26px] md:leading-[28px]">
               {description}
             </p>
             
             {showButton && (
-              <div>
+              <div className='mt-[26px] md:mt-[46px]'>
                 <Link 
                   href={buttonHref}
                   className="inline-flex items-center justify-center gap-2 px-10 py-5 md:px-7 md:py-4 text-white font-['Lexend'] font-medium transition-all duration-300 hover:bg-opacity-90 text-[18px] md:text-lg w-auto tracking-normal"
@@ -92,7 +89,7 @@ const HeroSection = ({
           
           {/* Right Column with Image */}
           {rightImage && (
-            <div className="w-full md:w-[50%] flex-col items-center justify-center">
+            <div className="w-full md:w-[50%] mt-[42px] md:mt-0 flex-col items-center justify-center">
               <div className="w-full h-[100%] [@media(min-width:776px)and(max-width:817px)]:h-[35%] [@media(min-width:818px)and(max-width:903px)]:h-[45%] [@media(min-width:904px)and(max-width:995px)]:h-[50%] [@media(min-width:941px)and(max-width:995px)]:h-[55%] [@media(min-width:971px)and(max-width:995px)]:h-[60%] lg:h-[100%] relative rounded-[50px]">
                 <Image
                   src={rightImage}
@@ -104,7 +101,7 @@ const HeroSection = ({
                 />
               </div>
               {stats.length > 0 && (
-          <div className="relative flex z-10 justify-center bg-white -mt-30 md:-mt-45">
+          <div className="relative flex z-10 justify-center bg-white -mt-30 md:-mt-35">
             <div className="flex flex-wrap w-full md:w-[95%] justify-center gap-8 py-3 md:py-5 md:gap-26 rounded-[20px] shadow-[0_20.553px_49.915px_1.468px_rgba(0,0,0,0.1)]">
               {stats.map((stat, index) => (
                 <div key={index} className="flex-col text-center items-center justify-center">

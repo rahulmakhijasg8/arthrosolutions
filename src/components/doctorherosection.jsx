@@ -3,18 +3,17 @@ import { GraduationCap } from "lucide-react"
 
 const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
   return (
-    <section className="w-full py-8 md:py-12 lg:py-20 px-4 md:px-8 lg:px-16">
+    <section className="w-full mt-[60px] md:mt-[120px] px-[20px] md:px-[60px] lg:px-[100px]">
   <div className="max-w-7xl mx-auto">
       {/* Mobile Layout - Single Column */}
       <div className="block md:hidden">
         {/* Doctor Name */}
         <h1
-          className="font-bold mb-4"
+          className="font-[600]"
           style={{
             color: "#2D2D2D",
             fontFamily: "Outfit, sans-serif",
             fontSize: "28px",
-            fontWeight: 700,
             lineHeight: "1.2",
           }}
         >
@@ -22,26 +21,23 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
         </h1>
 
         {/* Quote Section */}
-        <div className="mb-6">
+        <div className="mt-[32px]">
           <div
-            className="p-4 py-4 rounded-[18px] mb-4 border-l-6"
+            className="p-[14px] pl-[24px] rounded-[18px] border-l-[3px] border-[#64648A]"
             style={{
-              fontSize: "16px",
-              lineHeight: "1.7",
-              color: "#64648A",
               boxShadow: "0 14px 34px 1px rgba(0, 0, 0, 0.04)",
             }}
           >
             <div className="flex flex-col items-start gap-3">
               {/* Quote SVG Icon */}
-              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+              <div className="bg-white rounded-lg flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
+                  width="38"
+                  height="38"
                   viewBox="0 0 48 48"
                   fill="none"
-                  className="w-6 h-6"
+                  className="w-[38px] h-[38px]"
                 >
                   <g clipPath="url(#clip0_163_7726)">
                     <path
@@ -64,24 +60,21 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
               </div>
 
               {/* Quote Content */}
-              <div className="flex-1">
+              <div className="mt-[24px]">
                 <p
-                  className="mb-2 italic"
+                  className="italic text-[18px] text-[#2D2D2D] "
                   style={{
-                    fontFamily: "Lato, sans-serif",
+                    fontFamily: "Inter",
                     fontWeight: 400,
-                    marginBottom: "8px",
                   }}
                 >
                   Joints shouldn't limit life's playbooks – whether you're running or shopping
                 </p>
                 <p
-                  className="text-left italic pt-3 font-medium"
+                  className="text-left text-[16px] mt-[14px] font-[500]"
                   style={{
                     color: "#0D4F7A",
-                    fontFamily: "Lato, sans-serif",
-                    fontSize: "14px",
-                    fontWeight: 500,
+                    fontFamily: "Inter",
                   }}
                 >
                   — Dr. Mohit Upadhyaya
@@ -92,19 +85,19 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
         </div>
 
         {/* Areas of Expertise */}
-        <div className="mb-6">
+        <div className="mt-[14px]">
           <h3
-            className="mb-3"
+            className=""
             style={{
-              color: "#2D2D2D",
-              fontFamily: "Outfit, sans-serif",
+              color: "#0D4F7A",
+              fontFamily: "Inter",
               fontSize: "18px",
-              fontWeight: 600,
+              fontWeight: 500,
             }}
           >
             Areas of Expertise
           </h3>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="mt-[14px] grid grid-cols-2 gap-2">
             {[
               "Sports Medicine",
               "Trauma Surgery",
@@ -120,9 +113,9 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
                 ></div>
                 <span
                   style={{
-                    color: "#666666",
-                    fontFamily: "Lato, sans-serif",
-                    fontSize: "14px",
+                    color: "#64648A",
+                    fontFamily: "Inter",
+                    fontSize: "16px",
                     fontWeight: 400,
                   }}
                 >
@@ -133,16 +126,25 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
           </div>
         </div>
 
+        <div
+            className="my-[14px]"
+            style={{
+              height: "0.5px",
+              backgroundColor: "rgba(45, 45, 45, 0.14)",
+            }}
+          ></div>
+
         {/* Credentials */}
-        <div className="mb-6">
-          <div className="flex bg-[#FAFAFA] rounded-[6px] py-2 px-3 items-center gap-2 mb-2">
-            <GraduationCap className="w-4 h-4 text-[#FE7C49] flex-shrink-0" />
+        <div className="">
+          <div className="flex px-[10px] py-[8px] bg-[#FAFAFA] rounded-[6px] items-center gap-[8px]">
+            <GraduationCap className="w-[24px] h-[24px] text-[#FE7C49]" />
             <span
               style={{
-                color: "#666666",
-                fontFamily: "Lato, sans-serif",
-                fontSize: "13px",
+                color: "#64648A",
+                fontFamily: "Inter",
+                fontSize: "14px",
                 fontWeight: 400,
+                lineHeight: "20px"
               }}
             >
               Master of Surgery, India & Fellow of royal college of surgeons, UK
@@ -151,7 +153,7 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
         </div>
 
         {/* Doctor Image */}
-        <div className="w-full flex flex-col items-center mb-6">
+        <div className="w-full flex flex-col items-center mt-6">
           <div className="w-[100%] h-[500px] relative overflow-hidden">
             <Image
               src={rightImage || "/placeholder.svg"}
@@ -166,7 +168,7 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
 
         {/* Stats Section */}
         <div className="flex justify-center">
-          <div className="flex w-[90%] py-4 z-10 h-fit -mt-20 md:-mt-35 bg-white rounded-[20px] shadow-[0_20.553px_49.915px_1.468px_rgba(0,0,0,0.1)]">
+          <div className="flex w-[100%] py-4 px-5 z-10 h-fit -mt-35 bg-white rounded-[20px] shadow-[0_20.553px_49.915px_1.468px_rgba(0,0,0,0.1)]">
             <div className="flex flex-col w-1/2 text-center items-center justify-center">
               <div
                 className="font-bold mb-1"
@@ -229,12 +231,11 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
         <div className="w-[63%] flex flex-col">
           {/* Doctor Name */}
           <h1
-            className="font-bold mb-6"
+            className="font-[600]"
             style={{
               color: "#2D2D2D",
               fontFamily: "Outfit, sans-serif",
-              fontSize: "clamp(28px, 6vw, 48px)",
-              fontWeight: 700,
+              fontSize: "53px",
               lineHeight: "1.2",
             }}
           >
@@ -242,9 +243,9 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
           </h1>
 
           {/* Quote Section */}
-          <div className="mb-0">
+          <div className="mt-[32px]">
             <div
-              className="p-8 lg:p-10 py-5 rounded-[18px] mb-6 border-l-6"
+              className="py-[24px] px-[34px] rounded-[18px] border-l-6"
               style={{
                 fontSize: "clamp(16px, 2.5vw, 18px)",
                 lineHeight: "1.7",
@@ -254,19 +255,19 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
             >
               <div className="flex flex-col items-start gap-4">
                 {/* Quote SVG Icon */}
-                <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+                <div className="bg-white rounded-lg flex items-center justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
+                    width="48"
+                    height="48"
                     viewBox="0 0 48 48"
                     fill="none"
-                    className="w-8 h-8"
+                    className="w-12 h-12"
                   >
                     <g clipPath="url(#clip0_163_7726)">
                       <path
                         d="M33.2305 43.8076H31.3848C31.0227 43.8076 30.7158 43.6811 30.4404 43.4062C30.1654 43.131 30.0391 42.8234 30.0391 42.4609V38.7686C30.0391 38.4514 30.1353 38.1767 30.3438 37.9287L30.4404 37.8242C30.7158 37.5492 31.0225 37.4229 31.3848 37.4229H33.2305C35.4015 37.4229 37.2696 36.6488 38.8057 35.1133C40.3418 33.5771 41.1162 31.7094 41.1162 29.5381V28.6152C41.1162 27.7147 40.795 26.933 40.1621 26.2998C39.5288 25.6665 38.7469 25.3458 37.8467 25.3457H31.3848C29.9776 25.3457 28.7972 24.8587 27.8154 23.877C26.8329 22.8943 26.3457 21.7153 26.3457 20.3076V9.23145C26.3457 7.82345 26.8326 6.64367 27.8145 5.66113C28.7967 4.67924 29.9767 4.19244 31.3838 4.19238H42.4619C43.781 4.19248 44.9008 4.62012 45.8447 5.48242L46.0312 5.66113C47.0133 6.64363 47.5 7.82331 47.5 9.23145V29.5381C47.5 31.4712 47.124 33.313 46.3721 35.0674C45.6169 36.8296 44.5989 38.3479 43.3193 39.627C42.1195 40.8267 40.7103 41.7963 39.0869 42.5352L38.7598 42.6797C37.0051 43.4312 35.1636 43.8076 33.2305 43.8076Z"
-                        stroke="#2D2D2D"
+                        stroke="#8f7d7dff"
                         strokeOpacity="0.24"
                       />
                       <path
@@ -286,21 +287,20 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
                 {/* Quote Content */}
                 <div className="flex-1">
                   <p
-                    className="mb-3 italic"
+                    className="mt-[34px] text-[18px] italic"
                     style={{
                       fontFamily: "Lato, sans-serif",
                       fontWeight: 400,
-                      marginBottom: "8px",
                     }}
                   >
                     Joints shouldn't limit life's playbooks – whether you're running or shopping
                   </p>
                   <p
-                    className="text-left italic pt-6 font-medium"
+                    className="text-left italic pt-[32px]"
                     style={{
                       color: "#0D4F7A",
-                      fontFamily: "Lato, sans-serif",
-                      fontSize: "clamp(14px, 2vw, 15px)",
+                      fontFamily: "Inter",
+                      fontSize: "16px",
                       fontWeight: 500,
                     }}
                   >
@@ -312,19 +312,19 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
           </div>
 
           {/* Areas of Expertise */}
-          <div className="mb-8">
+          <div className="mt-[28px]">
             <h3
-              className="mb-4"
+              className=""
               style={{
-                color: "#2D2D2D",
-                fontFamily: "Outfit, sans-serif",
-                fontSize: "clamp(18px, 3vw, 24px)",
-                fontWeight: 600,
+                color: "#0D4F7A",
+                fontFamily: "Inter",
+                fontSize: "20px",
+                fontWeight: 500,
               }}
             >
               Areas of Expertise
             </h3>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="mt-[18px] grid grid-cols-2 gap-3">
               {[
                 "Sports Medicine",
                 "Joint Replacement",
@@ -340,9 +340,9 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
                   ></div>
                   <span
                     style={{
-                      color: "#666666",
-                      fontFamily: "Lato, sans-serif",
-                      fontSize: "clamp(14px, 2vw, 16px)",
+                      color: "#64648A",
+                      fontFamily: "Inter",
+                      fontSize: "16px",
                       fontWeight: 400,
                     }}
                   >
@@ -355,7 +355,7 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
 
           {/* Divider Line */}
           <div
-            className="mb-4"
+            className="my-[24px]"
             style={{
               height: "0.5px",
               backgroundColor: "rgba(45, 45, 45, 0.14)",
@@ -369,9 +369,9 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
                 <GraduationCap className="w-5 h-5 text-[#FE7C49] flex-shrink-0" />
                 <span
                   style={{
-                    color: "#666666",
-                    fontFamily: "Lato, sans-serif",
-                    fontSize: "clamp(13px, 2vw, 16px)",
+                    color: "#64648A",
+                    fontFamily: "Inter",
+                    fontSize: "16px",
                     fontWeight: 400,
                   }}
                 >
@@ -382,9 +382,9 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
                 <GraduationCap className="w-5 h-5 text-[#FE7C49] flex-shrink-0" />
                 <span
                   style={{
-                    color: "#666666",
-                    fontFamily: "Lato, sans-serif",
-                    fontSize: "clamp(13px, 2vw, 16px)",
+                    color: "#64648A",
+                    fontFamily: "Inter",
+                    fontSize: "16px",
                     fontWeight: 400,
                   }}
                 >
@@ -396,8 +396,8 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
         </div>
 
         {/* Right Column with Image */}
-        <div className="w-[37%] flex flex-col items-center">
-          <div className="w-full h-[400px] lg:h-[550px] mt-20 relative">
+        <div className="w-[37%] flex flex-col mt-[38px] items-center">
+          <div className="w-full h-[400px] lg:h-[603px] relative">
             <Image
               src={rightImage || "/placeholder.svg"}
               alt="Dr. Mohit Upadhyaya"
@@ -409,54 +409,54 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
           </div>
 
           {/* Stats Section */}
-          <div className="relative flex z-10 justify-end -mt-32 lg:-mt-38 w-full">
-            <div className="flex w-[85%] justify-center gap-8 py-2 bg-white rounded-[20px] shadow-[0_20.553px_49.915px_1.468px_rgba(0,0,0,0.1)]">
-              <div className="flex flex-col text-center items-center justify-center">
+          <div className="relative flex z-10 justify-end -mt-43 w-full">
+            <div className="flex w-[85%] justify-center bg-white rounded-[20px] shadow-[0_20.553px_49.915px_1.468px_rgba(0,0,0,0.1)]">
+              <div className="flex flex-col px-[24px] py-[19px] text-center items-center justify-center">
                 <div
-                  className="font-bold mb-1"
+                  className=""
                   style={{
                     color: "#0D4F7A",
-                    fontFamily: "Outfit, sans-serif",
-                    fontSize: "clamp(20px, 5vw, 36px)",
-                    fontWeight: 700,
+                    fontFamily: "Inter",
+                    fontSize: "24px",
+                    fontWeight: 600,
                     lineHeight: "1.2",
                   }}
                 >
                   7+
                 </div>
                 <div
-                  className="font-medium"
+                  className="mt-[8px]"
                   style={{
-                    color: "#8B8B8B",
-                    fontFamily: "Outfit, sans-serif",
-                    fontSize: "clamp(11px, 2.5vw, 16px)",
-                    fontWeight: 500,
+                    color: "#64648A",
+                    fontFamily: "Inter",
+                    fontSize: "16px",
+                    fontWeight: 400,
                     lineHeight: "1.4",
                   }}
                 >
                   Years Experience
                 </div>
               </div>
-              <div className="flex flex-col text-center items-center justify-center">
+              <div className="flex flex-col px-[24px] py-[19px] text-center items-center justify-center">
                 <div
-                  className="font-bold mb-1"
+                  className=""
                   style={{
-                    color: "#4EBA64",
-                    fontFamily: "Outfit, sans-serif",
-                    fontSize: "clamp(20px, 5vw, 36px)",
-                    fontWeight: 700,
+                    color: "#4CAF50",
+                    fontFamily: "Inter",
+                    fontSize: "24px",
+                    fontWeight: 600,
                     lineHeight: "1.2",
                   }}
                 >
                   3000+
                 </div>
                 <div
-                  className="font-medium"
+                  className="mt-[8px]"
                   style={{
-                    color: "#8B8B8B",
-                    fontFamily: "Outfit, sans-serif",
-                    fontSize: "clamp(11px, 2.5vw, 16px)",
-                    fontWeight: 500,
+                    color: "#64648A",
+                    fontFamily: "Inter",
+                    fontSize: "16px",
+                    fontWeight: 400,
                     lineHeight: "1.4",
                   }}
                 >

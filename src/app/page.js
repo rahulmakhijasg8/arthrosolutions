@@ -10,6 +10,9 @@ import TestimonialCarousel from "@/components/testimonial-carousal";
 import AppointmentBooking from "@/components/appointment-booking";
 import ServicesHeroSection from "@/components/services-hero-section";
 import ServiceIntro from "@/components/service-intro";
+import ConditionsTreated from "@/components/conditions-treated";
+import MedicalProcedureContainer from "@/components/medical-procedure-container";
+import SplitHeading from "@/components/split-heading";
 
 export default function Home() {
 
@@ -228,6 +231,41 @@ const testimonials = [
   },
 ];
 
+const procedures = [
+  {
+    id: 1,
+    title: "Arthroscopic Instability Surgery",
+    subtitle: "Anchor-based stabilization",
+    returnTime: "Return to sport 4-6 months",
+    description: "Minimally invasive procedure to stabilize recurring shoulder dislocations using bioabsorbable anchors.",
+    patientType: "Athletes with recurrent dislocations"
+  },
+  {
+    id: 2,
+    title: "Rotator Cuff Repair",
+    subtitle: "Suture-bridge technique",
+    returnTime: "90% strength recovery in 3-5 months",
+    description: "Advanced double-row repair technique for optimal healing and strength restoration.",
+    patientType: "Active adults with rotator cuff tears"
+  },
+  {
+    id: 3,
+    title: "Frozen Shoulder Release",
+    subtitle: "Arthroscopic capsular release",
+    returnTime: "70% mobility improvement in 6 hours",
+    description: "Precise arthroscopic release of tight capsular structures for immediate mobility gains.",
+    patientType: "Patients with adhesive capsulitis"
+  },
+  {
+    id: 4,
+    title: "Shoulder Replacement",
+    subtitle: "Anatomic / Reverse prosthesis",
+    returnTime: "Long-term pain relief",
+    description: "Total or reverse shoulder replacement for end-stage arthritis and massive rotator cuff tears.",
+    patientType: "Severe arthritis or massive cuff tears"
+  }
+];
+
   return (
     <>
     <Navbar/>
@@ -274,6 +312,9 @@ const testimonials = [
   bgColor="#F4F8FF"
   textColor="#6B7280"
 />
+<ConditionsTreated />
+<SplitHeading firstText="Advanced" secondText="Procedures" accentColor="#0D4F7A" />
+<MedicalProcedureContainer procedures={procedures} />
     </>
   );
 }

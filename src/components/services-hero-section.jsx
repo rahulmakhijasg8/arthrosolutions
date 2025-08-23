@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react"
 
 const ServicesHeroSection = () => {
   return (
-    <section className="w-full bg-transparent py-12 md:py-25 px-4 md:px-8 lg:px-16">
+    <section className="w-full bg-transparent py-12 md:py-25 px-[20px] mt-[41px] md:mt-[72px] md:px-[60px] lg:px-[100px] ">
       <div className="max-w-7xl mx-auto text-center">
         {/* Title and Subtitle */}
         <div className="mb-8">

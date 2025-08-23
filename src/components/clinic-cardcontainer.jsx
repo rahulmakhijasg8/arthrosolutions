@@ -4,7 +4,7 @@ export function ClinicCardContainer({ children, clinics }) {
   // If clinics data is provided, render cards automatically
   if (clinics) {
     return (
-      <div className="w-full px-4 md:px-8 lg:px-16 mt-8 md:mt-16">
+      <div className="w-full px-[20px] md:px-[60px] lg:px-[100px] mt-[32px] md:mt-[60px]">
   <div className="max-w-7xl mx-auto">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-[56px] w-full">
         {clinics.map((clinic) => (

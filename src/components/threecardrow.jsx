@@ -5,13 +5,13 @@ export default function ThreeCardRow({ cards }) {
   const displayCards = Array.isArray(cards) ? cards.slice(0, 3) : [];
 
   return (
-    <section className="w-full py-8 md:py-12 px-4 md:px-8 lg:px-16">
+    <section className="w-full mt-[32px] md:mt-[60px] md:mb-[30px] px-[20px] md:px-[60px] lg:px-[100px]">
   <div className="max-w-7xl mx-auto">
 
         {/* Mobile: Column layout with spacing */}
-        <div className="flex flex-col md:hidden space-y-6">
+        <div className="flex flex-col md:hidden space-y-[24px]">
           {displayCards.map((card, index) => (
-            <div key={index} className="w-[90%] mx-auto">
+            <div key={index} className="w-[100%] px-[43px] h-[210px] mx-auto">
               <Card
                 icon={card.icon}
                 title={card.title}
@@ -26,9 +26,9 @@ export default function ThreeCardRow({ cards }) {
         </div>
 
         {/* Desktop: Single row with 3 cards */}
-        <div className="hidden md:flex justify-center space-x-6">
+        <div className="hidden md:flex justify-center space-x-[27px]">
           {displayCards.map((card, index) => (
-            <div key={index} className="w-[28%]">
+            <div key={index} className="w-[33%] h-[295px]">
               <Card
                 icon={card.icon}
                 title={card.title}

@@ -12,10 +12,10 @@ const TestimonialCard = ({
   bgColor = "from-pink-200 to-pink-300" 
 }) => {
   return (
-    <div className="max-w-sm mx-auto bg-[#FAFAFA] rounded-2xl p-6 pt-12 relative mt-10">
+    <div className="mx-auto bg-[#FAFAFA] rounded-[20px] p-[18px] md:p-6 pt-[58px] md:pt-[60px] relative mt-10">
       {/* Profile Image - positioned at top-left, half outside the card */}
-      <div className="absolute -top-10 left-6">
-        <div className="w-20 h-20 rounded-full overflow-hidden bg-pink-200 flex items-center justify-center shadow-md">
+      <div className="absolute -top-10 left-6 md:left-5">
+        <div className="w-[84px] md:w-[100px] h-[84px] md:h-[100px] rounded-full overflow-hidden bg-pink-200 flex items-center justify-center shadow-md">
           {profileImage ? (
             <img 
               src={profileImage} 
@@ -31,28 +31,28 @@ const TestimonialCard = ({
       </div>
       
       {/* Star Rating */}
-      <div className="flex justify-start mb-4">
+      <div className="flex justify-start mt-[0px] md:mt-[10px]">
         {[...Array(rating)].map((_, index) => (
           <Star
             key={index}
-            className="w-5 h-5 text-yellow-400 fill-current mr-1"
+            className="w-[18px] h-[18px] text-[#F5C74D] fill-current mr-[8px]"
           />
         ))}
       </div>
       
       {/* Testimonial Text */}
-      <div className="mb-6">
-        <p className="text-gray-700 text-sm leading-relaxed">
+      <div className="mt-[20px] md:mt-[14px]">
+        <p className="text-[#2D2D2D] text-[16px] font-[400] leading-[23px]">
           {testimonial}
         </p>
       </div>
       
       {/* Patient Info */}
       <div>
-        <h3 className="text-blue-600 font-semibold text-lg mb-1">
+        <h3 className="text-[#0D4F7A] font-[600] text-[18px] md:text-[20px] mt-[14px] md:mt-[20px]">
           {name}
         </h3>
-        <p className="text-gray-500 text-sm">
+        <p className="text-[#2D2D2D] font-['Inter'] font-[300] text-[12px]">
           {procedure}
         </p>
       </div>
