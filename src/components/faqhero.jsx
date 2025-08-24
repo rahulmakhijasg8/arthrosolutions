@@ -33,7 +33,7 @@ export default function Hero({
         
         {/* Header Section */}
         <div className="text-center">
-          <h1 className="font-['Outfit'] text-[32px] md:text-[48px] lg:text-[56px] font-[600] leading-normal text-white">
+          <h1 className="font-['Outfit'] text-[32px] md:text-[48px] lg:text-[56px] lg:px-[140px] font-[600] leading-normal text-white">
             {isFAQ ? "Frequently Asked Questions" : "Get in touch — we'll book your joint care"}
           </h1>
           {subtitle && (
