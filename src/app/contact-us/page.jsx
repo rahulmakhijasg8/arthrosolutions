@@ -266,111 +266,111 @@ const procedures = [
   }
 ];
 
-const smFaqs = [
-        {
-          question: "What is the minimum amount required to start investing in the stock market?",
-          answer: "You can start investing in the stock market with as little as ₹10. This low entry barrier makes stock market investing accessible to everyone, regardless of their financial situation. Many platforms now offer fractional share ownership and small-ticket investments through various instruments like SIPs (Systematic Investment Plans), making it possible to begin your investment journey with minimal capital. This democratization of investing allows even beginners to gain practical experience and gradually build their portfolio as they become more comfortable with market dynamics."
-        },
-        {
-          question: "How do I open a Demat and trading account with MAK GROUP?",
-          answer: "To open a Demat and trading account with IIFL Securities, simply provide us with the required details and documents listed in the \"Open Your Free Demat Account\" section above. Our team will guide you through the account opening process."
-        },
-        {
-          question: "What are the charges for trading in the stock market?",
-          answer: "Account opening is completely free. However, there are several standard charges that apply to your trading activities. These include brokerage fees for executing your trades, Securities Transaction Tax (STT) which is a government levy on stock transactions, stamp duty charges that vary by state, Goods and Services Tax (GST), and service tax on various aspects of trading services. All these charges are transparently disclosed and are industry-standard across brokerage platforms. Understanding these fees is important for calculating your net returns and planning your investment strategy effectively."
-        },
-        {
-          question: "How can I monitor my stock market investments?",
-          answer: "You will receive a mobile application free of cost for monitoring your investments. This user-friendly app provides real-time tracking of your portfolio performance, with features including live market updates, detailed transaction history, profit/loss analysis, and customizable alerts for price movements. The platform also offers comprehensive dashboards with visual representations of your investment distribution and performance metrics. These digital tools ensure you always have instant access to your investment status, empowering you to make informed decisions based on current market conditions."
-        },
-        {
-          question: "Can I invest in the stock market if I am not an Indian resident?",
-          answer: "Yes, you can invest in the Indian stock market even if you are not a resident of India. Non-Resident Indians (NRIs) can invest through either an NRE (Non-Resident External) account or an NRO (Non-Resident Ordinary) account, subject to certain trading conditions and regulatory requirements. These specialized accounts are designed to accommodate foreign investors while ensuring compliance with India's foreign exchange regulations. Different tax implications may apply to NRI investors, and some investment categories might have restrictions or require additional approvals as per RBI and SEBI guidelines."
-        }
-      ];
+const Faqs = [
+  {
+    question: "What is a total hip replacement?",
+    answer: "A total hip replacement, or total hip arthroplasty, is a surgical procedure in which a damaged hip joint is removed and replaced with an artificial joint (prosthesis). It is most commonly performed to relieve pain and improve mobility in patients with hip arthritis or injury."
+  },
+  {
+    question: "Why would I need a hip replacement?",
+    answer: "Hip replacement is typically recommended when conservative treatments have failed to provide adequate relief from hip pain and mobility issues. Common reasons include severe arthritis (osteoarthritis, rheumatoid arthritis), hip fractures, avascular necrosis, or other conditions that cause significant pain and limit daily activities."
+  },
+  {
+    question: "What conditions can lead to hip replacement surgery?",
+    answer: "Several conditions may necessitate hip replacement surgery, including osteoarthritis (wear and tear of joint cartilage), rheumatoid arthritis (inflammatory joint disease), hip fractures, avascular necrosis (bone death due to poor blood supply), childhood hip diseases, and bone tumors around the hip joint."
+  },
+  {
+    question: "What happens during the surgery?",
+    answer: "During hip replacement surgery, the surgeon removes damaged bone and cartilage from the hip joint and replaces them with artificial components. The procedure typically involves making an incision, dislocating the hip, removing the damaged femoral head, preparing the hip socket, and implanting the prosthetic components. The surgery usually takes 1-3 hours."
+  },
+  {
+    question: "Is the procedure painful?",
+    answer: "While hip replacement is a major surgery, modern pain management techniques help minimize discomfort. You'll receive anesthesia during the procedure, and post-operative pain is managed through medications, nerve blocks, and other pain control methods. Most patients experience significant pain relief compared to their pre-surgery condition."
+  },
+  {
+    question: "What is the recovery time after hip replacement?",
+    answer: "Recovery varies by individual, but most patients can walk with assistance within 24-48 hours after surgery. Initial recovery takes 6-12 weeks, during which you'll gradually increase activity levels. Full recovery and return to normal activities typically occurs within 3-6 months, depending on your overall health and adherence to rehabilitation."
+  },
+  {
+    question: "Are there risks or complications?",
+    answer: "Like any major surgery, hip replacement carries some risks including infection, blood clots, dislocation of the new joint, nerve or blood vessel injury, and adverse reactions to anesthesia. However, serious complications are relatively rare, and the benefits typically far outweigh the risks for appropriate candidates."
+  },
+  {
+    question: "How long will the artificial hip last?",
+    answer: "Modern hip replacements are designed to last 15-20 years or longer with proper care. The longevity depends on factors such as your age, activity level, body weight, and the type of implant used. Younger, more active patients may need revision surgery eventually, while older patients often have their implants last a lifetime."
+  },
+  {
+    question: "What activities can I do after surgery?",
+    answer: "After full recovery, most patients can return to low-impact activities such as walking, swimming, cycling, and golf. High-impact activities like running, jumping sports, or heavy lifting may be restricted to protect the implant. Your surgeon will provide specific guidelines based on your individual case and recovery progress."
+  },
+  {
+    question: "Will I need physical therapy?",
+    answer: "Yes, physical therapy is a crucial part of hip replacement recovery. It typically begins within 24 hours after surgery and continues for several weeks to months. Physical therapy helps restore strength, flexibility, and proper movement patterns, ensuring optimal function of your new hip joint and preventing complications."
+  },
+  {
+    question: "How do I prepare for the surgery?",
+    answer: "Preparation includes medical evaluations, blood tests, imaging studies, and possibly dental clearance. You may need to stop certain medications, arrange for help at home, modify your living space for safety, and attend pre-operative education classes. Your surgical team will provide a comprehensive preparation checklist."
+  },
+  {
+    question: "What signs of complications should I watch for after surgery?",
+    answer: "Watch for signs of infection (fever, increased pain, redness, warmth, or drainage at the incision site), blood clots (leg swelling, calf pain, shortness of breath), or hip dislocation (severe pain, inability to move the leg, leg appearing shorter or turned inward). Contact your healthcare provider immediately if you experience any of these symptoms."
+  }
+];
 
       // Example data for NEW CARD component - Complete with all fields
 const newCardsData = [
   {
-    icon: "/phone.svg",
-    title: "Call Directly",
-    subtitle: "Speak with our medical team",
-    description: "Available 24/7 for emergency consultations",
-    buttonText: "+91 - 9620273965",
-    buttonType: "contained",
+    icon: "/call.svg",
+    title: "Phone",
+    subtitle: "+91-9820273995",
+    description: "Immediate assistance for urgent cases.",
+    buttonText: "Tap to call",
+    buttonType: "outlined",
     buttonIcon: "/phonebutton.svg",
     buttonLink: "tel:+919620273965",
     buttonTarget: "_self",
     accentColor: "#0D4F7A"
   },
+      {
+    icon: "/location.svg",
+    title: "Locations",
+    subtitle: "3 Convenient Locations",
+    description: "Kumar Clinic | Surya Hospital | Upadhyaya Nursing Home",
+    buttonText: "Get Direction",
+    buttonType: "outlined",
+    buttonIcon: "/cambutton.svg",
+    buttonLink: "/book-consultation",
+    buttonTarget: "_self",
+    accentColor: "#FE7C49"
+    },
   {
-    icon: "/whatsapp.svg",
-    title: "WhatsApp Chat",
-    subtitle: "Quick questions & appointments",
-    description: "Get instant responses to your health queries",
-    buttonText: "WhatsApp Us",
-    buttonType: "contained",
+    icon: "/mail.svg",
+    title: "Email",
+    subtitle: "Upadhyaya.mohit@gmail.com",
+    description: "Send us your queries anytime.",
+    buttonText: "Send Email",
+    buttonType: "outlined",
     buttonIcon: "/whatsappbutton.svg",
     buttonLink: "https://wa.me/919620273965",
     buttonTarget: "_blank",
     accentColor: "#1AB585"
-  },
-  {
-    icon: "/cam.svg",
-    title: "Free Teleconsultation",
-    subtitle: "15-minute video consultation",
-    description: "Connect with certified doctors from home",
-    buttonText: "Book Video Call",
-    buttonType: "contained",
-    buttonIcon: "/cambutton.svg",
-    buttonLink: "/book-consultation",
-    buttonTarget: "_self",
-    accentColor: "#0D4F7A"
   }
 ];
 
   return (
     <>
-    <Navbar/>
-    <OrthopedicHero title={[
-          { text: "Precise Orthopaedic care for ", highlight: false },
-          { text: "athletic performance", highlight: true },
-          { text: " and ageless joints", highlight: false }
-        ]} description='From Sports Injuries to Joint Replacement Comprehensive Solutions Under one roof by globally trained Orthopaedic surgeon, Dr. Mohit Upadhyaya.'
-        buttonText="Schedule A Consultation" buttonHref="#" rightImageAlt="test" rightImage='/homehero.png'
-        stats={[
-  { number: "7+", label: "Years Experience", numberColor: "#0D4F7A" },
-  { number: "3000+", label: "Surgeries", numberColor: "#4EBA64" },
-]} />
-<Heading title='Why Choose Arthro Solutions?' optionalsubtitle='Surgery to Rehabilitation in One Ecosystem' subtitle="Unlike traditional orthopaedic clinics, we merge non operative management, surgical precision with tailored rehab programs – ensuring athletes return stronger and seniors reclaim active lives." />
-   <ThreeCardRow cards={Cards}  />
-  <Heading title='Surgical Precision for Every Joint, Every Age' />
-  <MedicalToggleComponent tabs={medicalTabsData} defaultTab={0} />
-  <StatsComponent />
-  <DoctorHeroSection />
-  <Heading title='Strategic Locations Across Mumbai' subtitle="From consultation to surgery to rehabilitation we're strategically located for your convenience" />
-  <ClinicCardContainer clinics={clinicsData} />
-  <Heading title='Where Science Meets Movement' subtitle='Real stories from real patients who returned to the life they love' />
-  <TestimonialCarousel testimonials={testimonials} />
-  <Heading title='Book an Appointment with Ease' subtitle="Quick, simple, and personalized orthopaedic consultation. Just fill out the form and we'll take care of the rest." />
-  <AppointmentBooking />
-  <FaqSection faqs={smFaqs} />
-  <MedicalQuestionForm />
-  <SplitHeading firstText="Need Immediate " secondText="Medical Consultation?" accentColor="#0D4F7A" subtitle="For urgent medical questions or to schedule your consultation" />
-  <ThreeCardRow cards={newCardsData} />
-  <Hero 
-  type="faq"
-  firstText="Frequently Asked"
-  secondText="Questions"
-  subtitle="Common questions about appointments, surgery, recovery and insurance — if you don't see your question, drop us a message."
-  searchPlaceholder="Search FAQs..."
-/>
-
-<Hero 
+    <div style={{ backgroundColor: '#0D4F7A' }}>
+      <Navbar isDarkMode={true}/>
+      <Hero 
   type="contact"
   subtitle="Quick questions, appointment requests, or teleconsultation — we're here to help."
 />
-<ProceduresList />
+    </div>
+  <ThreeCardRow cards={newCardsData} />
+  <Heading title='Strategic Locations Across Mumbai' subtitle="From consultation to surgery to rehabilitation we're strategically located for your convenience" />
+  <ClinicCardContainer clinics={clinicsData} />
+  <Heading title='Book an Appointment with Ease' subtitle="Quick, simple, and personalized orthopaedic consultation. Just fill out the form and we'll take care of the rest." />
+  <AppointmentBooking />
     </>
   );
 }

@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#FAFAFA] mt-13">
+    <footer className="bg-[#FAFAFA] mt-[95px] md:mt-[120px]">
       {/* Main footer content */}
       <div className="max-w-6xl mx-auto px-6 py-8">
         {/* Desktop layout */}

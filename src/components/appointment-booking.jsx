@@ -40,7 +40,7 @@ export default function AppointmentBooking() {
         >
           <div className="space-y-[14px] md:space-y-[28px]">
             {/* Full Name and Age */}
-            <div className="grid md:grid-cols-2 gap-[32px]">
+            <div className="grid md:grid-cols-2 gap-[14px] md:gap-[32px]">
   <div className="space-y-2">
     <label className="text-[16px] font-[400] text-[#2D2D2D] block">Full Name</label>
     <input
@@ -78,7 +78,7 @@ export default function AppointmentBooking() {
 </div>
 
 {/* Phone Number and Email */}
-<div className="grid md:grid-cols-2 gap-[32px]">
+<div className="grid md:grid-cols-2 gap-[14px] md:gap-[32px]">
   <div className="space-y-2">
     <label className="text-[16px] font-[400] text-[#2D2D2D] block">Phone Number</label>
     <input
@@ -104,7 +104,7 @@ export default function AppointmentBooking() {
 </div>
 
 {/* Service and Location */}
-<div className="grid md:grid-cols-2 gap-[32px]">
+<div className="grid md:grid-cols-2 gap-[14px] md:gap-[32px]">
   <div className="space-y-2">
     <label className="text-[16px] font-[400] text-[#2D2D2D] block">Select Service</label>
     <select
@@ -150,7 +150,7 @@ export default function AppointmentBooking() {
 </div>
 
 {/* Date and Time */}
-<div className="grid md:grid-cols-2 gap-[32px]">
+<div className="grid md:grid-cols-2 gap-[14px] md:gap-[32px]">
   <div className="space-y-2">
     <label className="text-[16px] font-[400] text-[#2D2D2D] block">Preferred Date</label>
     <div className="relative">

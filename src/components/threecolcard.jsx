@@ -20,7 +20,7 @@ const Card = ({
 
   return (
     <div
-      className={`${getBackgroundColor()} w-full flex flex-col p-[18px] md:p-[24px] justify-center items-center rounded-[8px] overflow-auto h-full`}
+      className={`${getBackgroundColor()} w-full flex flex-col p-[14px] md:p-[24px] justify-center items-center rounded-[8px] overflow-auto h-full`}
     >
       {/* Icon */}
       {icon && (
@@ -38,7 +38,7 @@ const Card = ({
       )}
 
       {/* Title */}
-      <h3 className="text-[18px] px-8 md:px-5 md:text-[20px] font-[500] text-[#2D2D2D] mt-[24px] leading-[28px] md:leading-[34px] text-center">
+      <h3 className="text-[18px] px-6 md:px-5 md:text-[20px] font-[500] text-[#2D2D2D] mt-[24px] leading-[28px] md:leading-[34px] text-center">
         {title}
       </h3>
 

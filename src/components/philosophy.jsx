@@ -3,21 +3,21 @@ import React from 'react';
 export default function Philosophy({ 
 }) {
   return (
-    <div className="w-full text-center py-12 bg-[#F4F8FF] pt-8 md:pt-12 px-[20px] md:px-[60px] lg:px-[100px]">
+    <div className="w-full text-center mt-[60px] md:mt-[120px] py-[60px] md:py-[100px] bg-[#F4F8FF] px-[20px] md:px-[60px] lg:px-[100px]">
   <div className="max-w-7xl md:px-[120px] mx-auto">
-        <h2 className="font-['Outfit'] text-[#2D2D2D] font-[600] text-[28px] md:text-[44px] leading-tight mb-2 md:mb-4">
+        <h2 className="font-['Outfit'] text-[#2D2D2D] font-[600] text-[28px] md:text-[44px] leading-tight">
           Philosophy
         </h2>
         
-        <h3 className="font-['Lato'] text-[#2D2D2D] font-normal text-[16px] md:mt-2 md:text-[18px] max-w-full sm:max-w-full">
+        <h3 className="text-[#2D2D2D] font-[400] font-['Inter'] text-[16px] mt-[24px] md:mt-[32px]">
           Joints shouldn't limit life's playbooks whether you're running or shopping. Our mission at Arthro Solutions is to restore movement using evidence based surgery and sport focused rehabilitation, tailored to your lifestyle.
         </h3>
-        <h3 className="font-['Lato'] text-[#2D2D2D] font-normal text-[16px] md:mt-2 md:text-[18px] max-w-full sm:max-w-full">
+        <h3 className="text-[#2D2D2D] font-[400] font-['Inter'] text-[16px] mt-[12px] md:mt-[18px]">
           We believe that every patient deserves personalized care that considers not just their medical condition, but their life goals, activity levels, and personal circumstances. From the weekend warrior to the professional athlete, from the active senior to the desk professional everyone deserves to move without pain.
         </h3>
 
         {/* Quote Section */}
-        <div className="bg-[#0D4F7A] rounded-2xl p-8 md:p-8 max-w-2xl mt-[46px] mx-auto mb-6">
+        <div className="bg-[#0D4F7A] max-w-2xl mx-auto rounded-[18px] p-8 md:p-8 mt-[24px] md:mt-[46px]">
             <div className="flex flex-col items-start gap-3">
               {/* Quote SVG Icon */}
               <div className="w-12 h-12 flex items-center justify-center">
