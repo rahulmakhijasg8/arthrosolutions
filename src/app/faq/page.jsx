@@ -62,7 +62,7 @@ const Faqs = [
       // Example data for NEW CARD component - Complete with all fields
 const newCardsData = [
   {
-    icon: "/phone.svg",
+    icon: "/Phone.svg",
     title: "Call Directly",
     subtitle: "Speak with our medical team",
     buttonText: "+91 - 9620273965",

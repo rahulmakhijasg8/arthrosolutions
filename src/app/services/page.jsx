@@ -39,11 +39,8 @@ const serviceConfigs = {
       "Rotator Cuff Tears",
       "Shoulder Impingement",
       "Frozen Shoulder",
-      "Shoulder Instability",
       "Sports-Related Injuries",
-      "Shoulder Arthritis",
-      "Labral Tears",
-      "Biceps Tendon Injuries"
+      "Arthritis",
     ],
     splitHeading: {
       firstText: "Advanced",
