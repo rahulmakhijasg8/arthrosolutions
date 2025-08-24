@@ -8,11 +8,6 @@ import DoctorHeroSection from "@/components/doctorherosection";
 import { ClinicCardContainer } from "@/components/clinic-cardcontainer";
 import TestimonialCarousel from "@/components/testimonial-carousal";
 import AppointmentBooking from "@/components/appointment-booking";
-import FaqSection from "@/components/faqsection";
-import MedicalQuestionForm from "@/components/faqform";
-import SplitHeading from "@/components/split-heading";
-import Hero from "@/components/faqhero";
-import ProceduresList from "@/components/procedurelist";
 
 export default function Home() {
 
@@ -231,104 +226,6 @@ const testimonials = [
   },
 ];
 
-const procedures = [
-  {
-    id: 1,
-    title: "Arthroscopic Instability Surgery",
-    subtitle: "Anchor-based stabilization",
-    returnTime: "Return to sport 4-6 months",
-    description: "Minimally invasive procedure to stabilize recurring shoulder dislocations using bioabsorbable anchors.",
-    patientType: "Athletes with recurrent dislocations"
-  },
-  {
-    id: 2,
-    title: "Rotator Cuff Repair",
-    subtitle: "Suture-bridge technique",
-    returnTime: "90% strength recovery in 3-5 months",
-    description: "Advanced double-row repair technique for optimal healing and strength restoration.",
-    patientType: "Active adults with rotator cuff tears"
-  },
-  {
-    id: 3,
-    title: "Frozen Shoulder Release",
-    subtitle: "Arthroscopic capsular release",
-    returnTime: "70% mobility improvement in 6 hours",
-    description: "Precise arthroscopic release of tight capsular structures for immediate mobility gains.",
-    patientType: "Patients with adhesive capsulitis"
-  },
-  {
-    id: 4,
-    title: "Shoulder Replacement",
-    subtitle: "Anatomic / Reverse prosthesis",
-    returnTime: "Long-term pain relief",
-    description: "Total or reverse shoulder replacement for end-stage arthritis and massive rotator cuff tears.",
-    patientType: "Severe arthritis or massive cuff tears"
-  }
-];
-
-const smFaqs = [
-        {
-          question: "What is the minimum amount required to start investing in the stock market?",
-          answer: "You can start investing in the stock market with as little as ₹10. This low entry barrier makes stock market investing accessible to everyone, regardless of their financial situation. Many platforms now offer fractional share ownership and small-ticket investments through various instruments like SIPs (Systematic Investment Plans), making it possible to begin your investment journey with minimal capital. This democratization of investing allows even beginners to gain practical experience and gradually build their portfolio as they become more comfortable with market dynamics."
-        },
-        {
-          question: "How do I open a Demat and trading account with MAK GROUP?",
-          answer: "To open a Demat and trading account with IIFL Securities, simply provide us with the required details and documents listed in the \"Open Your Free Demat Account\" section above. Our team will guide you through the account opening process."
-        },
-        {
-          question: "What are the charges for trading in the stock market?",
-          answer: "Account opening is completely free. However, there are several standard charges that apply to your trading activities. These include brokerage fees for executing your trades, Securities Transaction Tax (STT) which is a government levy on stock transactions, stamp duty charges that vary by state, Goods and Services Tax (GST), and service tax on various aspects of trading services. All these charges are transparently disclosed and are industry-standard across brokerage platforms. Understanding these fees is important for calculating your net returns and planning your investment strategy effectively."
-        },
-        {
-          question: "How can I monitor my stock market investments?",
-          answer: "You will receive a mobile application free of cost for monitoring your investments. This user-friendly app provides real-time tracking of your portfolio performance, with features including live market updates, detailed transaction history, profit/loss analysis, and customizable alerts for price movements. The platform also offers comprehensive dashboards with visual representations of your investment distribution and performance metrics. These digital tools ensure you always have instant access to your investment status, empowering you to make informed decisions based on current market conditions."
-        },
-        {
-          question: "Can I invest in the stock market if I am not an Indian resident?",
-          answer: "Yes, you can invest in the Indian stock market even if you are not a resident of India. Non-Resident Indians (NRIs) can invest through either an NRE (Non-Resident External) account or an NRO (Non-Resident Ordinary) account, subject to certain trading conditions and regulatory requirements. These specialized accounts are designed to accommodate foreign investors while ensuring compliance with India's foreign exchange regulations. Different tax implications may apply to NRI investors, and some investment categories might have restrictions or require additional approvals as per RBI and SEBI guidelines."
-        }
-      ];
-
-      // Example data for NEW CARD component - Complete with all fields
-const newCardsData = [
-  {
-    icon: "/phone.svg",
-    title: "Call Directly",
-    subtitle: "Speak with our medical team",
-    description: "Available 24/7 for emergency consultations",
-    buttonText: "+91 - 9620273965",
-    buttonType: "contained",
-    buttonIcon: "/phonebutton.svg",
-    buttonLink: "tel:+919620273965",
-    buttonTarget: "_self",
-    accentColor: "#0D4F7A"
-  },
-  {
-    icon: "/whatsapp.svg",
-    title: "WhatsApp Chat",
-    subtitle: "Quick questions & appointments",
-    description: "Get instant responses to your health queries",
-    buttonText: "WhatsApp Us",
-    buttonType: "contained",
-    buttonIcon: "/whatsappbutton.svg",
-    buttonLink: "https://wa.me/919620273965",
-    buttonTarget: "_blank",
-    accentColor: "#1AB585"
-  },
-  {
-    icon: "/cam.svg",
-    title: "Free Teleconsultation",
-    subtitle: "15-minute video consultation",
-    description: "Connect with certified doctors from home",
-    buttonText: "Book Video Call",
-    buttonType: "contained",
-    buttonIcon: "/cambutton.svg",
-    buttonLink: "/book-consultation",
-    buttonTarget: "_self",
-    accentColor: "#0D4F7A"
-  }
-];
-
   return (
     <>
     <Navbar/>
@@ -354,23 +251,6 @@ const newCardsData = [
   <TestimonialCarousel testimonials={testimonials} />
   <Heading title='Book an Appointment with Ease' subtitle="Quick, simple, and personalized orthopaedic consultation. Just fill out the form and we'll take care of the rest." />
   <AppointmentBooking />
-  <FaqSection faqs={smFaqs} />
-  <MedicalQuestionForm />
-  <SplitHeading firstText="Need Immediate " secondText="Medical Consultation?" accentColor="#0D4F7A" subtitle="For urgent medical questions or to schedule your consultation" />
-  <ThreeCardRow cards={newCardsData} />
-  <Hero 
-  type="faq"
-  firstText="Frequently Asked"
-  secondText="Questions"
-  subtitle="Common questions about appointments, surgery, recovery and insurance — if you don't see your question, drop us a message."
-  searchPlaceholder="Search FAQs..."
-/>
-
-<Hero 
-  type="contact"
-  subtitle="Quick questions, appointment requests, or teleconsultation — we're here to help."
-/>
-<ProceduresList />
     </>
   );
 }
