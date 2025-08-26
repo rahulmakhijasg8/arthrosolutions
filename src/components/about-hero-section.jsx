@@ -26,14 +26,14 @@ const AboutHeroSection = () => {
                     </clipPath>
                   </defs>
                 </svg>
-                <span className="text-[#0D4F7A] font-[500] text-[10px]">FRCS Ed Certified Surgeon</span>
+                <span className="text-[#0D4F7A] font-[500] font-['Inter'] text-[10px]">FRCS Ed Certified Surgeon</span>
               </div>
             </div>
-            <h1 className="text-[32px] font-['Inter'] font-[700] text-[#2D2D2D] mt-[6px] font-['Inter'] leading-[44px]">
-              Meet <span className="font-[700] text-[#0D4F7A]"> Dr. Mohit </span>
+            <h1 className="text-[32px] font-['Outfit'] font-[700] text-[#2D2D2D] mt-[6px] leading-[44px]">
+              Meet <span className="font-[700] font-['Outfit'] text-[#0D4F7A]"> Dr. Mohit </span>
                Upadhyaya
             </h1>
-            <p className="text-[#2D2D2D] text-[400] text-[16px] font-['Inter'] leading-[26px] mt-[12px]">
+            <p className="font-['Inter'] text-[#2D2D2D] text-[400] text-[16px] leading-[26px] mt-[12px]">
               Young, UK-Fellowship-trained orthopaedic surgeon specializing in minimally invasive 
               joint preservation, sports injuries and joint replacements.
             </p>
@@ -45,7 +45,7 @@ const AboutHeroSection = () => {
               href="/schedule"
               className="w-fit bg-[#0D4F7A] text-white p-[14px] rounded-[6px] font-[500] text-center flex items-center justify-between hover:bg-[#1D4ED8] transition-colors"
             >
-              <div className="flex items-center gap-[10px]">
+              <div className="flex items-center font-['Inter'] gap-[10px]">
                 <span>Schedule Your Joint Assessment</span>
                 <ArrowRight className="w-5 h-5" />
               </div>
@@ -55,7 +55,7 @@ const AboutHeroSection = () => {
               className="w-fit border border-[#0D4F7A] text-[16px] text-[#0D4F7A] p-[14px] rounded-[6px] font-[500] text-center flex items-center justify-between hover:bg-[#0D4F7A] hover:text-white transition-colors"
             >
               <div className="flex items-center gap-[10px]">
-                <span>Free 15-Min Tele-Consultation</span>
+                <span className="font-['Inter']">Free 15-Min Tele-Consultation</span>
                 <ArrowRight className="w-5 h-5" />
               </div>
             </Link>
@@ -217,9 +217,9 @@ const AboutHeroSection = () => {
         </div>
 
         {/* Desktop Layout */}
-        <div className="hidden lg:grid lg:grid-cols-12 lg:gap-16 items-start">
+        <div className="hidden lg:grid lg:grid-cols-12 lg:gap-6 items-start">
           {/* Left Column - Content */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-6">
             {/* Header */}
             <div className="mb-8">
               <div className="flex items-center gap-2 mb-6">
@@ -309,7 +309,7 @@ const AboutHeroSection = () => {
           </div>
           
           {/* Right Column - Doctor Image */}
-          <div className="lg:col-span-7 relative">
+          <div className="lg:col-span-6 relative">
             <div className="w-full max-w-[550px] ml-auto">
               <div className="aspect-[3/2.9] relative rounded-2xl overflow-hidden">
                 <Image

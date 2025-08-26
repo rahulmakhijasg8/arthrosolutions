@@ -20,6 +20,7 @@ export function ClinicCardContainer({ children, clinics }) {
             badgeText={clinic.badgeText}
             onCallClick={clinic.onCallClick}
             onDirectionClick={clinic.onDirectionClick}
+            mapLink={clinic.mapLink}
           />
         ))}
       </div>

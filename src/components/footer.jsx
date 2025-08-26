@@ -1,78 +1,79 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#FAFAFA] mt-[95px] md:mt-[120px]">
+    <footer className="bg-[#FAFAFA] w-full mt-[95px] md:mt-[120px]">
       {/* Main footer content */}
-      <div className="max-w-6xl mx-auto px-6 py-8">
+      <div className="px-[20px] md:px-[60px] lg:px-[100px]">
+      <div className="max-w-7xl mx-auto">
         {/* Desktop layout */}
         <div className="hidden md:block">
           {/* Logo and tagline section - in same row */}
-          <div className="mb-8">
-            <div className="flex items-center justify-between mb-4">
+          <div className="pt-[50px]">
+            <div className="flex items-center justify-between">
               <div className="flex items-center">
                 {/* Logo */}
-                <div className="w-[83px] md:w-[209px] h-[34px] md:h-[85px] mr-3">
+                <div className="w-[83px] md:w-[209px] h-[34px] md:h-[85px]">
                   <img 
                     src="/logo.svg" 
                     alt="Arthro Solutions Orthopaedic" 
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
-              <h2 className="text-xl font-semibold text-gray-800">Act Now – Regain Your Freedom of Movement</h2>
+              <h2 className="text-[36px] font-[500] font-['Inter'] text-[#0D0D0D]">Act Now – Regain Your Freedom of Movement</h2>
             </div>
-            <div className="w-full h-px bg-gray-200"></div>
+            <div className="w-full mt-[10px] h-px bg-[#99B9EA]"></div>
           </div>
 
           {/* Links sections */}
-          <div className="grid grid-cols-3 gap-8 mb-8">
+          <div className="flex justify-between mt-[63px]">
             {/* Company section */}
             <div>
-              <h3 className="font-semibold text-gray-800 mb-4">Company</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-[#0D4F7A] transition-colors">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-[#0D4F7A] transition-colors">
-                    About us
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-[#0D4F7A] transition-colors">
-                    Services
-                  </a>
-                </li>
-              </ul>
+              <h3 className="font-[500] text-[20px] font-['Inter'] text-[#0D0D0D]">Company</h3>
+              <ul className="space-y-[16px] mt-[24px]">
+  <li>
+    <a href="/" className="text-[#808080] font-[500] font-['Inter'] text-[16px] hover:text-[#0D4F7A] transition-colors">
+      Home
+    </a>
+  </li>
+  <li>
+    <a href="/about" className="text-[#808080] font-[500] font-['Inter'] text-[16px] hover:text-[#0D4F7A] transition-colors">
+      About us
+    </a>
+  </li>
+  <li>
+    <a href="/services" className="text-[#808080] font-[500] font-['Inter'] text-[16px] hover:text-[#0D4F7A] transition-colors">
+      Services
+    </a>
+  </li>
+</ul>
             </div>
 
             {/* Support section */}
             <div>
-              <h3 className="font-semibold text-gray-800 mb-4">Support</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-[#0D4F7A] transition-colors">
-                    Why Choose Us
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-[#0D4F7A] transition-colors">
-                    Testimonials
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-600 hover:text-[#0D4F7A] transition-colors">
-                    Contact Us
-                  </a>
-                </li>
-              </ul>
-            </div>
+  <h3 className="font-[500] text-[20px] font-['Inter'] text-[#0D0D0D]">Support</h3>
+  <ul className="space-y-[16px] mt-[24px]">
+  <li>
+    <a href="/faq" className="text-[#808080] font-[500] font-['Inter'] text-[16px] hover:text-[#0D4F7A] transition-colors">
+      FAQs
+    </a>
+  </li>
+  <li>
+    <a href="#testimonies" className="text-[#808080] font-[500] font-['Inter'] text-[16px] hover:text-[#0D4F7A] transition-colors">
+      Testimonials
+    </a>
+  </li>
+  <li>
+    <a href="/contact-us" className="text-[#808080] font-[500] font-['Inter'] text-[16px] hover:text-[#0D4F7A] transition-colors">
+      Contact Us
+    </a>
+  </li>
+</ul>
+</div>
 
             {/* Social Links section */}
             <div>
-              <h3 className="font-semibold text-gray-800 mb-4">Social Links</h3>
-              <div className="flex space-x-3">
+              <h3 className="font-[500] font-['Inter'] text-[20px] text-[#0D0D0D]">Social Links</h3>
+              <div className="flex mt-[24px] space-x-[39px]">
                 {/* Instagram */}
                 <a
                   href="#"
@@ -118,10 +119,10 @@ export default function Footer() {
         {/* Mobile layout */}
         <div className="md:hidden">
           {/* Logo and tagline section */}
-          <div className="mb-6">
-            <div className="flex items-center mb-4">
+          <div className="">
+            <div className="flex items-center pt-[32px]">
               {/* Logo */}
-              <div className="w-[84px] h-[34px] mr-3">
+              <div className="w-[84px] h-[34px]">
                 <img 
                   src="/logo.svg" 
                   alt="Arthro Solutions Orthopaedics" 
@@ -129,63 +130,63 @@ export default function Footer() {
                 />
               </div>
             </div>
-            <h2 className="text-base font-semibold text-gray-800 mb-4 leading-tight">Act Now – Regain Your Freedom of Movement</h2>
-            <div className="w-full h-px bg-gray-200"></div>
+            <h2 className="text-[18px] font-['Inter'] mt-[24px] font-[500] text-[#0D0D0D] leading-[24px]">Act Now – Regain Your Freedom of Movement</h2>
+            <div className="w-full my-[24px] h-px bg-[#99B9EA]"></div>
           </div>
 
           {/* Links sections - Company and Support side by side, Social Links below */}
-          <div className="mb-6">
+          <div className="">
             {/* Company and Support in a row */}
-            <div className="grid grid-cols-2 gap-6 mb-6">
+            <div className="grid grid-cols-2 items-start justify-between">
               {/* Company section */}
               <div>
-                <h3 className="font-semibold text-gray-800 mb-3 text-sm">Company</h3>
-                <ul className="space-y-2">
-                  <li>
-                    <a href="#" className="text-gray-600 hover:text-[#0D4F7A] transition-colors text-sm">
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-gray-600 hover:text-[#0D4F7A] transition-colors text-sm">
-                      About us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-gray-600 hover:text-[#0D4F7A] transition-colors text-sm">
-                      Services
-                    </a>
-                  </li>
-                </ul>
+                <h3 className="font-[500] font-['Inter'] text-[#2D2D2D] leading-normal text-[18px]">Company</h3>
+                <ul className="space-y-2 mt-[8px]">
+  <li>
+    <a href="/" className="text-[#808080] font-[400] font-['Inter'] hover:text-[#0D4F7A] transition-colors text-[14px]">
+      Home
+    </a>
+  </li>
+  <li>
+    <a href="/about" className="text-[#808080] font-[400] font-['Inter'] hover:text-[#0D4F7A] transition-colors text-[14px]">
+      About us
+    </a>
+  </li>
+  <li>
+    <a href="/services" className="text-[#808080] font-[400] font-['Inter'] hover:text-[#0D4F7A] transition-colors text-[14px]">
+      Services
+    </a>
+  </li>
+</ul>
               </div>
 
               {/* Support section */}
-              <div>
-                <h3 className="font-semibold text-gray-800 mb-3 text-sm">Support</h3>
-                <ul className="space-y-2">
-                  <li>
-                    <a href="#" className="text-gray-600 hover:text-[#0D4F7A] transition-colors text-sm">
-                      Why Choose Us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-gray-600 hover:text-[#0D4F7A] transition-colors text-sm">
-                      Testimonials
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-gray-600 hover:text-[#0D4F7A] transition-colors text-sm">
-                      Contact Us
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              <div className="justify-self-end">
+  <h3 className="font-[500] font-['Inter'] text-[#2D2D2D] leading-normal text-[18px]">Support</h3>
+  <ul className="space-y-2 mt-[8px]">
+  <li>
+    <a href="/faq" className="text-[#808080] font-[400] font-['Inter'] hover:text-[#0D4F7A] transition-colors text-[14px]">
+      FAQs
+    </a>
+  </li>
+  <li>
+    <a href="#testimonies" className="text-[#808080] font-[400] font-['Inter'] hover:text-[#0D4F7A] transition-colors text-[14px]">
+      Testimonials
+    </a>
+  </li>
+  <li>
+    <a href="/contact-us" className="text-[#808080] font-[400] font-['Inter'] hover:text-[#0D4F7A] transition-colors text-[14px]">
+      Contact Us
+    </a>
+  </li>
+</ul>
+</div>
             </div>
 
             {/* Social Links section - full width below */}
             <div>
-              <h3 className="font-semibold text-gray-800 mb-3 text-sm">Social Links</h3>
-              <div className="flex space-x-3">
+              <h3 className="font-[500] font-['Inter'] text-[#2D2D2D] mt-[24px] text-[18px]">Social Links</h3>
+              <div className="flex mt-[8px] space-x-6">
                 {/* Instagram */}
                 <a
                   href="#"
@@ -228,12 +229,12 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      </div>
 
       {/* Copyright bar */}
-      <div className="bg-[#0D4F7A] text-white py-3">
-        <div className="max-w-6xl mx-auto px-6">
-          <p className="text-center text-sm">Copyright © 2025 TechDevs, All rights reserved.</p>
-        </div>
+      <div className="bg-[#0D4F7A] w-full px-[20px] mt-[32px] md:mt-[52px] md:px-[60px] lg:px-[100px] py-[16px] md:py-[24px]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-center font-['Inter'] font-[400] text-[12px] md:text-[16px]">Copyright © 2025 <a href="https://www.techdevs.in/" className="hover:underline">TechDevs</a>, All rights reserved.</p>     </div>
       </div>
     </footer>
   )

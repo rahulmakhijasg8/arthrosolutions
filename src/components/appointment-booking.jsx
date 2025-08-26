@@ -28,7 +28,7 @@ export default function AppointmentBooking() {
   }
 
   return (
-    <div className="w-full px-[20px] md:px-[60px] lg:px-[100px] mt-[32px] md:mt-[60px]">
+    <div className="w-full px-[20px] md:px-[60px] lg:px-[100px] mt-[32px] md:mt-[60px] font-['Inter']">
   <div className="max-w-7xl mx-auto">
       <div className="grid lg:grid-cols-2 gap-[24px] md:gap-[54px]">
         {/* Form Section */}
@@ -42,22 +42,22 @@ export default function AppointmentBooking() {
             {/* Full Name and Age */}
             <div className="grid md:grid-cols-2 gap-[14px] md:gap-[32px]">
   <div className="space-y-2">
-    <label className="text-[16px] font-[400] text-[#2D2D2D] block">Full Name</label>
+    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block">Full Name</label>
     <input
       type="text"
       placeholder="Enter your name"
       value={formData.fullName}
       onChange={(e) => handleInputChange("fullName", e.target.value)}
-      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900"
+      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900 font-['Inter']"
       style={{ caretColor: '#374151' }}
     />
   </div>
   <div className="space-y-2">
-    <label className="text-[16px] font-[400] text-[#2D2D2D] block">Age</label>
+    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block">Age</label>
     <select
       value={formData.age}
       onChange={(e) => handleInputChange("age", e.target.value)}
-      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm appearance-none text-gray-900"
+      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm appearance-none text-gray-900 font-['Inter']"
       style={{
         backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23999999' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e")`,
         backgroundPosition: 'right 0.75rem center',
@@ -66,13 +66,13 @@ export default function AppointmentBooking() {
         caretColor: '#374151'
       }}
     >
-      <option value="" className="text-[#999999]">Select your age</option>
-      <option value="18-25" className="text-gray-900">18-25</option>
-      <option value="26-35" className="text-gray-900">26-35</option>
-      <option value="36-45" className="text-gray-900">36-45</option>
-      <option value="46-55" className="text-gray-900">46-55</option>
-      <option value="56-65" className="text-gray-900">56-65</option>
-      <option value="65+" className="text-gray-900">65+</option>
+      <option value="" className="text-[#999999] font-['Inter']">Select your age</option>
+      <option value="18-25" className="text-gray-900 font-['Inter']">18-25</option>
+      <option value="26-35" className="text-gray-900 font-['Inter']">26-35</option>
+      <option value="36-45" className="text-gray-900 font-['Inter']">36-45</option>
+      <option value="46-55" className="text-gray-900 font-['Inter']">46-55</option>
+      <option value="56-65" className="text-gray-900 font-['Inter']">56-65</option>
+      <option value="65+" className="text-gray-900 font-['Inter']">65+</option>
     </select>
   </div>
 </div>
@@ -80,24 +80,24 @@ export default function AppointmentBooking() {
 {/* Phone Number and Email */}
 <div className="grid md:grid-cols-2 gap-[14px] md:gap-[32px]">
   <div className="space-y-2">
-    <label className="text-[16px] font-[400] text-[#2D2D2D] block">Phone Number</label>
+    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block">Phone Number</label>
     <input
       type="tel"
       placeholder="Enter your number"
       value={formData.phoneNumber}
       onChange={(e) => handleInputChange("phoneNumber", e.target.value)}
-      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900"
+      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900 font-['Inter']"
       style={{ caretColor: '#374151' }}
     />
   </div>
   <div className="space-y-2">
-    <label className="text-[16px] font-[400] text-[#2D2D2D] block">Email</label>
+    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block">Email</label>
     <input
       type="email"
       placeholder="Enter your email"
       value={formData.email}
       onChange={(e) => handleInputChange("email", e.target.value)}
-      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900"
+      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900 font-['Inter']"
       style={{ caretColor: '#374151' }}
     />
   </div>
@@ -106,11 +106,11 @@ export default function AppointmentBooking() {
 {/* Service and Location */}
 <div className="grid md:grid-cols-2 gap-[14px] md:gap-[32px]">
   <div className="space-y-2">
-    <label className="text-[16px] font-[400] text-[#2D2D2D] block">Select Service</label>
+    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block">Select Service</label>
     <select
       value={formData.service}
       onChange={(e) => handleInputChange("service", e.target.value)}
-      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm appearance-none text-gray-900"
+      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm appearance-none text-gray-900 font-['Inter']"
       style={{
         backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23999999' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e")`,
         backgroundPosition: 'right 0.75rem center',
@@ -119,19 +119,19 @@ export default function AppointmentBooking() {
         caretColor: '#374151'
       }}
     >
-      <option value="" className="text-[#999999]">Select service</option>
-      <option value="consultation" className="text-gray-900">General Consultation</option>
-      <option value="checkup" className="text-gray-900">Health Checkup</option>
-      <option value="treatment" className="text-gray-900">Treatment</option>
-      <option value="followup" className="text-gray-900">Follow-up</option>
+      <option value="" className="text-[#999999] font-['Inter']">Select service</option>
+      <option value="consultation" className="text-gray-900 font-['Inter']">General Consultation</option>
+      <option value="checkup" className="text-gray-900 font-['Inter']">Health Checkup</option>
+      <option value="treatment" className="text-gray-900 font-['Inter']">Treatment</option>
+      <option value="followup" className="text-gray-900 font-['Inter']">Follow-up</option>
     </select>
   </div>
   <div className="space-y-2">
-    <label className="text-[16px] font-[400] text-[#2D2D2D] block">Preferred Location</label>
+    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block">Preferred Location</label>
     <select
       value={formData.location}
       onChange={(e) => handleInputChange("location", e.target.value)}
-      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm appearance-none text-gray-900"
+      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm appearance-none text-gray-900 font-['Inter']"
       style={{
         backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23999999' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e")`,
         backgroundPosition: 'right 0.75rem center',
@@ -140,11 +140,11 @@ export default function AppointmentBooking() {
         caretColor: '#374151'
       }}
     >
-      <option value="" className="text-[#999999]">Select clinic</option>
-      <option value="downtown" className="text-gray-900">Downtown Clinic</option>
-      <option value="uptown" className="text-gray-900">Uptown Branch</option>
-      <option value="suburbs" className="text-gray-900">Suburban Center</option>
-      <option value="online" className="text-gray-900">Online Consultation</option>
+      <option value="" className="text-[#999999] font-['Inter']">Select clinic</option>
+      <option value="downtown" className="text-gray-900 font-['Inter']">Downtown Clinic</option>
+      <option value="uptown" className="text-gray-900 font-['Inter']">Uptown Branch</option>
+      <option value="suburbs" className="text-gray-900 font-['Inter']">Suburban Center</option>
+      <option value="online" className="text-gray-900 font-['Inter']">Online Consultation</option>
     </select>
   </div>
 </div>
@@ -152,14 +152,14 @@ export default function AppointmentBooking() {
 {/* Date and Time */}
 <div className="grid md:grid-cols-2 gap-[14px] md:gap-[32px]">
   <div className="space-y-2">
-    <label className="text-[16px] font-[400] text-[#2D2D2D] block">Preferred Date</label>
+    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block">Preferred Date</label>
     <div className="relative">
       <input
         type="date"
         placeholder="Select date"
         value={formData.date}
         onChange={(e) => handleInputChange("date", e.target.value)}
-        className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900"
+        className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900 font-['Inter']"
         style={{ caretColor: '#374151' }}
       />
       <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -168,11 +168,11 @@ export default function AppointmentBooking() {
     </div>
   </div>
   <div className="space-y-2">
-    <label className="text-[16px] font-[400] text-[#2D2D2D] block">Preferred Time</label>
+    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block">Preferred Time</label>
     <select
       value={formData.time}
       onChange={(e) => handleInputChange("time", e.target.value)}
-      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm appearance-none text-gray-900"
+      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm appearance-none text-gray-900 font-['Inter']"
       style={{
         backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23999999' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e")`,
         backgroundPosition: 'right 0.75rem center',
@@ -181,20 +181,20 @@ export default function AppointmentBooking() {
         caretColor: '#374151'
       }}
     >
-      <option value="" className="text-[#999999]">Select time</option>
-      <option value="9:00" className="text-gray-900">9:00 AM</option>
-      <option value="10:00" className="text-gray-900">10:00 AM</option>
-      <option value="11:00" className="text-gray-900">11:00 AM</option>
-      <option value="14:00" className="text-gray-900">2:00 PM</option>
-      <option value="15:00" className="text-gray-900">3:00 PM</option>
-      <option value="16:00" className="text-gray-900">4:00 PM</option>
+      <option value="" className="text-[#999999] font-['Inter']">Select time</option>
+      <option value="9:00" className="text-gray-900 font-['Inter']">9:00 AM</option>
+      <option value="10:00" className="text-gray-900 font-['Inter']">10:00 AM</option>
+      <option value="11:00" className="text-gray-900 font-['Inter']">11:00 AM</option>
+      <option value="14:00" className="text-gray-900 font-['Inter']">2:00 PM</option>
+      <option value="15:00" className="text-gray-900 font-['Inter']">3:00 PM</option>
+      <option value="16:00" className="text-gray-900 font-['Inter']">4:00 PM</option>
     </select>
   </div>
 </div>
 
             <button
               onClick={handleSubmit}
-              className="w-full bg-[#0D4F7A] hover:bg-[#0B4269] text-white py-3 mt-[24px] md:mt-[18px] px-6 rounded-[6px] text-base font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#0D4F7A] focus:ring-offset-2"
+              className="w-full bg-[#0D4F7A] hover:bg-[#0B4269] text-white py-3 mt-[24px] md:mt-[18px] px-6 rounded-[6px] text-base font-medium font-['Inter'] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#0D4F7A] focus:ring-offset-2"
             >
               Book my appointment
             </button>
@@ -208,7 +208,7 @@ export default function AppointmentBooking() {
             className="rounded-[18px] p-[14px] md:p-[34px] md:pr-[54px]"
             style={{ background: '#FAFAFA' }}
           >
-            <h3 className="text-[18px] md:text-[20px] font-[600] text-[#0D4F7A]">What to Expect</h3>
+            <h3 className="text-[18px] md:text-[20px] font-[600] font-['Inter'] text-[#0D4F7A]">What to Expect</h3>
             <div className="mt-[12px] md:mt-[24px] space-y-[20px]">
               <div className="flex items-center gap-[8px]">
   <div className="w-8 h-8 bg-[#0D4F7A] font-['Inter'] text-white rounded-full flex items-center justify-center text-[14px] font-[400] flex-shrink-0">
@@ -257,7 +257,7 @@ export default function AppointmentBooking() {
         />
       </svg>
     </div>
-    <span className="font-[14px] md:text-[16px] font-['Inter'] font-[400] text-[#64648A]">Upadhyaya.mohit@gmail.com</span>
+    <span className="text-[14px] md:text-[16px] font-['Inter'] font-[400] text-[#64648A]">Upadhyaya.mohit@gmail.com</span>
   </div>
   <div className="flex items-center gap-3">
     <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
@@ -270,7 +270,7 @@ export default function AppointmentBooking() {
         />
       </svg>
     </div>
-    <span className="font-[14px] md:text-[16px] font-['Inter'] font-[400] text-[#64648A]">+91 - 9820273995</span>
+    <span className="text-[14px] md:text-[16px] font-['Inter'] font-[400] text-[#64648A]">+91 - 9820273995</span>
   </div>
 </div>
 

@@ -17,7 +17,11 @@ export default function Philosophy({
         </h3>
 
         {/* Quote Section */}
-        <div className="bg-[#0D4F7A] max-w-2xl mx-auto rounded-[18px] p-8 md:p-8 mt-[24px] md:mt-[46px]">
+        <div className="bg-[#0D4F7A] max-w-2xl mx-auto rounded-[18px] p-8 md:p-8 mt-[24px] md:mt-[46px] relative overflow-hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="168" height="162" viewBox="0 0 168 162" fill="none" className="absolute -bottom-[30px] md:-bottom-[15px] -right-[5px] md:-right-[15px] opacity-6">
+    <circle cx="120.5" cy="120.5" r="120.5" fill="white"/>
+  </svg>
+  
             <div className="flex flex-col items-start gap-3">
               {/* Quote SVG Icon */}
               <div className="w-12 h-12 flex items-center justify-center">
@@ -35,24 +39,14 @@ export default function Philosophy({
               </div>
 
               {/* Quote Content */}
-              <div className="w-full text-center">
+              <div className="w-full z-10 text-center">
                 <p
-                  className="mb-2 text-white"
-                  style={{
-                    fontFamily: "Lato, sans-serif",
-                    fontWeight: 600,
-                    marginBottom: "8px",
-                  }}
+                  className="text-white text-[20px] md:text-[24px] font-[600] leading-[30px] md:leading-[32px] font-['Inter']"
                 >
                   "Joints shouldn't limit life's playbooks"
                 </p>
                 <p
-                  className="pt-3 font-medium text-white"
-                  style={{
-                    fontFamily: "Lato, sans-serif",
-                    fontSize: "14px",
-                    fontWeight: 500,
-                  }}
+                  className="mt-[24px] italic text-[15px] font-['Inter'] font-500 text-white"
                 >
                   — Dr. Mohit Upadhyaya
                 </p>

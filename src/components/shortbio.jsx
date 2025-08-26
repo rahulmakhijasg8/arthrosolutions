@@ -21,7 +21,7 @@ export default function ShortBio() {
         
         {/* Bio Content */}
         <div className="w-full md:w-1/2 flex-1">
-          <h2 className="text-[28px] md:text-[52px] font-[600] text-[#2D2D2D] mt-[24px] md:mt-0 ">Short Bio</h2>
+          <h2 className="text-[28px] font-['Outfit'] md:text-[52px] font-[600] text-[#2D2D2D] mt-[24px] md:mt-0 ">Short Bio</h2>
           
           <div className="text-[#2D2D2D] text-[16px] font-['Inter'] font-[400] leading-[26px] md:leading-[28px] space-y-[6px]">
             <p>

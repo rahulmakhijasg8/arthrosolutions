@@ -26,7 +26,7 @@ const HeroSection = ({
     return title.map((part, index) => (
       <span 
         key={index}
-        className='leading-[36px] text-[38px] md:text-[53px] md:leading-[38px]'
+        className='leading-[44px] text-[38px] md:text-[53px] md:leading-[38px]'
         style={{
           color: part.highlight ? '#0D4F7A' : '#2D2D2D',
           fontFeatureSettings: "'liga' off, 'clig' off",
@@ -66,7 +66,7 @@ const HeroSection = ({
               {renderTitle()}
             </h1>
             
-            <p className="font-['Lato'] mt-[12px] md:mt-[36px] text-[#000000D6] font-normal text-[16px] md:text-[18px] tracking-normal leading-[26px] md:leading-[28px]">
+            <p className="font-['Inter'] mt-[12px] md:mt-[36px] text-[#000000D6] font-normal text-[16px] md:text-[18px] tracking-normal leading-[26px] md:leading-[28px]">
               {description}
             </p>
             
@@ -74,7 +74,7 @@ const HeroSection = ({
               <div className='mt-[26px] md:mt-[46px]'>
                 <Link 
                   href={buttonHref}
-                  className="inline-flex items-center justify-center gap-2 px-10 py-5 md:px-7 md:py-4 text-white font-['Lexend'] font-medium transition-all duration-300 hover:bg-opacity-90 text-[18px] md:text-lg w-auto tracking-normal"
+                  className="inline-flex items-center justify-center gap-[10px] px-[24px] py-[14px] md:px-[34px] md:py-[16px] text-white font-['Inter'] font-[500] transition-all duration-300 hover:bg-opacity-90 text-[16px] md:text-[18px] w-auto tracking-normal"
                   style={{
                     backgroundColor: '#0D4F7A',
                     borderRadius: '6px'
@@ -101,32 +101,20 @@ const HeroSection = ({
                 />
               </div>
               {stats.length > 0 && (
-          <div className="relative flex z-10 justify-center bg-white -mt-30 md:-mt-35">
-            <div className="flex flex-wrap w-full md:w-[95%] justify-center gap-8 py-3 md:py-5 md:gap-26 rounded-[20px] shadow-[0_20.553px_49.915px_1.468px_rgba(0,0,0,0.1)]">
+          <div className="relative flex z-10 justify-center bg-white -mt-30 md:-mt-37">
+            <div className="flex flex-wrap w-full justify-center rounded-[20px] shadow-[0_20.553px_49.915px_1.468px_rgba(0,0,0,0.1)]">
               {stats.map((stat, index) => (
-                <div key={index} className="flex-col text-center items-center justify-center">
+                <div key={index} className="flex-col w-1/2 md:w-auto text-center py-[16px] px-[20px] md:px-[35px] md:py-[27px] items-center justify-center">
                   <div 
-                    className="font-bold mb-2"
+                    className="font-[600] font-['Inter'] text-[20px] md:text-[35px] leading-normal"
                     style={{
                       color: stat.numberColor || '#0D4F7A',
-                      fontFamily: 'Outfit, sans-serif',
-                      fontSize: 'clamp(36px, 5vw, 48px)',
-                      fontWeight: 700,
-                      lineHeight: '1.2'
                     }}
                   >
                     {stat.number}
                   </div>
                   <div 
-                    className="font-medium"
-                    style={{
-                      color: '#8B8B8B',
-                      fontFamily: 'Outfit, sans-serif',
-                      fontSize: 'clamp(16px, 2vw, 22px)',
-                      fontWeight: 500,
-                      lineHeight: '1.4'
-                    }}
-                  >
+                    className="font-[400] mt-[6px] md:mt-[11px] font-['Inter'] text-[13px] md:text-[23px] leading-normal text-[#64648A] " >
                     {stat.label}
                   </div>
                 </div>

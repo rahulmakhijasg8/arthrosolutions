@@ -56,13 +56,13 @@ const MedicalToggleComponent = ({ tabs, defaultTab = 0 }) => {
             
             {/* Text Overlay */}
             <div className="absolute bottom-4 left-4 text-white">
-              <h3 className="text-[20px] font-[600] mb-2">{currentTab.title}</h3>
+              <h3 className="text-[20px] font-['Inter'] font-[600] mb-2">{currentTab.title}</h3>
               {currentTab.badges && (
                 <div className="flex space-x-4">
                   {currentTab.badges.map((badge, index) => (
                     <span 
                       key={index}
-                      className={`px-3 py-1 text-xs rounded-[100px] ${badge.className || 'bg-blue-600'}`}
+                      className={`px-3 py-1 font-['Inter'] text-xs rounded-[100px] ${badge.className || 'bg-blue-600'}`}
                     >
                       {badge.text}
                     </span>
@@ -77,13 +77,13 @@ const MedicalToggleComponent = ({ tabs, defaultTab = 0 }) => {
             {/* Conditions Treated */}
             {currentTab.conditions && (
               <div className="mb-6">
-                <h4 className="text-[20px] font-[600] text-[#0D4F7A] mb-3">
+                <h4 className="text-[20px] font-['Inter'] font-[600] text-[#0D4F7A] mb-3">
                   {currentTab.conditionsTitle || 'Conditions Treated'}
                 </h4>
                 <ul className="mt-[12px] md:mt-[18px] space-y-[8px] md:space-y-[12px]">
                   {currentTab.conditions.map((condition, index) => (
                     <li key={index} className="flex items-center text-[16px] font-[400] text-[#64648A]">
-                      <span className={`w-2 h-2 rounded-full mr-3 ${condition.bulletColor || 'bg-[#4CAF50]'}`}></span>
+                      <span className={`w-2 h-2 font-['Inter'] rounded-full mr-3 ${condition.bulletColor || 'bg-[#4CAF50]'}`}></span>
                       {condition.text || condition}
                     </li>
                   ))}
@@ -94,13 +94,13 @@ const MedicalToggleComponent = ({ tabs, defaultTab = 0 }) => {
             {/* Key Procedures */}
             {currentTab.procedures && (
               <div className='mt-[16px] md:mt-[34px]'>
-                <h4 className="text-[20px] font-[600] text-[#0D4F7A] mb-3">
+                <h4 className="text-[20px] font-['Inter'] font-[600] text-[#0D4F7A] mb-3">
                   {currentTab.proceduresTitle || 'Key Procedures'}
                 </h4>
                 <div className="mt-[12px] md:mt-[18px] space-y-[12px] md:space-y-[6px]">
                   {currentTab.procedures.map((procedure, index) => (
                     <div key={index} className='rounded-[8px] border-[1px] border-[#2D2D2D24] p-[14px]'>
-                      <h5 className="font-[500] text-[#2D2D2D] text-[16px]">{procedure.name}</h5>
+                      <h5 className="font-[500] fint-['Inter'] text-[#2D2D2D] text-[16px]">{procedure.name}</h5>
                       
                       <div key={index} className="flex flex-col md:flex-row md:justify-between md:items-center">
                         {procedure.benefit && (

@@ -14,7 +14,7 @@ const ServiceIntro = ({
         <div className="flex flex-col md:flex-row gap-[24px] md:gap-[60px] lg:gap-[90px] items-center">
           {/* Image - appears first on mobile, second on desktop */}
           <div className="relative w-full md:w-1/2 order-1 md:order-1">
-            <div className="w-full h-[300px] rounded-[24px] md:h-[450px] relative">
+            <div className="w-full h-[300px] rounded-[24px] md:h-[420px] relative">
               <Image
                 src={image.src}
                 alt={image.alt}
@@ -43,7 +43,7 @@ const ServiceIntro = ({
                     />
                   )}
                   <span 
-                    className="font-[500] text-[12px] md:text-[14px]"
+                    className="font-[500] font-['Inter'] text-[12px] md:text-[14px]"
                     style={{ color: badge.textColor || "#0D4F7A" }}
                   >
                     {badge.text}
@@ -52,7 +52,7 @@ const ServiceIntro = ({
               </div>
             )}
             
-            <h1 className=" font-[600] text-[#2D2D2D] text-[28px] md:text-[56px] mt-[8px] font-['Outfit'] leading-normal">
+            <h1 className=" font-[600] text-[#2D2D2D] text-[28px] md:text-[56px] mt-[8px] font-['Outfit'] leading-normal md:leading-[65px]">
               {title.main}{" "}
               <span style={{ color: title.highlightColor || "#0D4F7A" }}>
                 {title.highlighted}
@@ -60,7 +60,7 @@ const ServiceIntro = ({
             </h1>
             
             <p 
-              className="text-[16px] md:text-[18px] font-[400] mt-[12px] md:mt-[18px] leading-[26px] md:leading-[28px]"
+              className="text-[16px] md:text-[18px] font-['Inter'] font-[400] mt-[12px] md:mt-[30px] leading-[26px] md:leading-[28px]"
               style={{ color: textColor }}
             >
               {description}

@@ -7,20 +7,10 @@ const Card = ({
   link = '#',
   linkbtn = false,
   accentColor = '#FF9F43',
-  isMiddleCard = false,
 }) => {
-  // Determine background color based on screen size and position
-  const getBackgroundColor = () => {
-    // On mobile, all cards have #FAFAFA background
-    // On desktop, middle card has white background, others have #FAFAFA
-    const bgColor = isMiddleCard ? 'md:bg-white bg-[#FAFAFA]' : 'bg-[#FAFAFA]';
-    const shadow = isMiddleCard ? 'md:shadow-[0_10px_18px_2px_rgba(0,0,0,0.08)]' : '';
-    return `${bgColor} ${shadow}`;
-  };
-
   return (
     <div
-      className={`${getBackgroundColor()} w-full flex flex-col p-[14px] md:p-[24px] justify-center items-center rounded-[8px] overflow-auto h-full`}
+      className={`bg-[#FAFAFA] hover:bg-white hover:shadow-[0_10px_18px_2px_rgba(0,0,0,0.08)] transition-all duration-300 w-full flex flex-col p-[14px] md:p-[24px] justify-center items-center rounded-[8px] overflow-auto h-full cursor-pointer`}
     >
       {/* Icon */}
       {icon && (
@@ -38,7 +28,7 @@ const Card = ({
       )}
 
       {/* Title */}
-      <h3 className="text-[18px] px-6 md:px-5 md:text-[20px] font-[500] text-[#2D2D2D] mt-[24px] leading-[28px] md:leading-[34px] text-center">
+      <h3 className="text-[18px] font-['Inter'] px-6 md:px-5 md:text-[20px] font-[500] text-[#2D2D2D] mt-[24px] leading-[28px] md:leading-[34px] text-center">
         {title}
       </h3>
 

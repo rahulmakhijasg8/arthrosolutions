@@ -31,11 +31,11 @@ export default function MedicalQuestionForm() {
             }}
           />
       <div className="max-w-7xl mx-auto md:px-[120px] relative z-10">
-        <h2 className="font-['Outfit'] text-center text-[#2D2D2D] font-[600] text-[36px] md:text-[56px] leading-tight px-[30px] md:px-[100px] ">
+        <h2 className="font-['Outfit'] text-center text-[#2D2D2D] font-[600] text-[36px] md:text-[56px] leading-tight px-[30px] md:px-[20px]">
           Still have a medical question?
         </h2>
         
-        <h3 className="font-['Inter'] text-center text-[#2D2D2D] md:px-47 font-[400] leading-[28px] text-[16px] md:mt-[2px] mt-[6px]">
+        <h3 className="font-['Inter'] text-center text-[#2D2D2D] md:px-25 lg:px-23  font-[400] leading-[28px] text-[16px] md:mt-[2px] mt-[6px]">
           Can't find the answer you're looking for? Ask our medical team and we'll respond within 24 hours with personalized guidance.
         </h3>
         <div 
@@ -48,7 +48,7 @@ export default function MedicalQuestionForm() {
             {/* Full Name and Email */}
             <div className="grid md:grid-cols-2 gap-[14px] md:gap-[32px]">
               <div className="space-y-2">
-                <label className="text-[16px] font-[400] text-[#2D2D2D] block">Full Name</label>
+                <label className="text-[16px] font-['Inter'] font-[400] text-[#2D2D2D] block">Full Name</label>
                 <input
                   type="text"
                   placeholder="Enter your name"
@@ -59,7 +59,7 @@ export default function MedicalQuestionForm() {
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-[16px] font-[400] text-[#2D2D2D] block">Email</label>
+                <label className="text-[16px] font-['Inter'] font-[400] text-[#2D2D2D] block">Email</label>
                 <input
                   type="email"
                   placeholder="Enter your email"
@@ -73,7 +73,7 @@ export default function MedicalQuestionForm() {
 
             {/* Your Medical Question - Full Width */}
             <div className="space-y-2">
-              <label className="text-[16px] font-[400] text-[#2D2D2D] block">Your Medical Question</label>
+              <label className="text-[16px] font-['Inter'] font-[400] text-[#2D2D2D] block">Your Medical Question</label>
               <textarea
                 placeholder="Please describe your medical question or concern"
                 value={formData.medicalQuestion}
@@ -86,7 +86,7 @@ export default function MedicalQuestionForm() {
 
             <button
               onClick={handleSubmit}
-              className="w-full bg-[#0D4F7A] hover:bg-[#0B4269] text-white py-[14px] md:py-[16px] mt-[26px] md:mt-[46px] px-[44px] rounded-[6px] text-base font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#0D4F7A] focus:ring-offset-2"
+              className="w-full bg-[#0D4F7A] font-['Inter'] hover:bg-[#0B4269] text-white py-[14px] md:py-[16px] mt-[26px] md:mt-[46px] px-[44px] rounded-[6px] text-base font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#0D4F7A] focus:ring-offset-2"
             >
               Send Medical Question
             </button>

@@ -146,7 +146,7 @@ export default function Home() {
     }
   ];
 
-  const clinicsData = [
+const clinicsData = [
   {
     id: 1,
     title: "Kumar Nursing Home",
@@ -156,40 +156,44 @@ export default function Home() {
     timing: "Tuesday/ Thursday/ Saturday: 9 AM-12 Noon",
     services: "Quick Consult & Rehabilitation",
     imageUrl: "/Kumar.png",
-    badgeText: "Main Clinic"
+    badgeText: "Main Clinic",
+    mapLink: "https://www.google.com/maps/place/Kumar+Nursing+Home/@19.0748635,72.8324545,723m/data=!3m1!1e3!4m6!3m5!1s0x3be7c90c0b7cc485:0x72c18878fe91f878!8m2!3d19.0748635!4d72.8324545!16s%2Fg%2F1tlgwf86?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     id: 2,
     title: "Surya Multispecialty Hospital",
     subtitle: "State-of-the-art surgical facility with OT and recovery suites",
-    address: "Mangal ashirwad, 101-102, SV road, Santacruz west, Mumbai 54",
+    address: "Mangal ashirwad, 101-102, SV road, Santacruz west, Mumbai 54",
     phone: "+91 - 9820273995",
     timing: "Tuesday/ Thursday: 5 PM-7 PM",
     services: "Consult & Surgeries",
     imageUrl: "/surya.png",
-    badgeText: "Main Clinic"
+    badgeText: "Main Clinic",
+    mapLink: "https://www.google.com/maps/place/Surya+Hospitals/@19.0855625,72.8353123,723m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be7c9a669e34eef:0xe4c3095ea3853d52!8m2!3d19.0855574!4d72.8378872!16s%2Fg%2F1vhkh__k?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     id: 3,
     title: "Upadhyaya Nursing Home",
-    subtitle: "Comprehensive rehabilitation center with modern equipment",
-    address: "1st floor, Moiz apartment, 12th road, Sen nagar, Santacruz East, Mumbai 55",
+    subtitle: "Dedicated orthopaedic surgical centre",
+    address: "1st floor, Moiz apartment, 12th road, Sen nagar, Santacruz East, Mumbai 55",
     phone: "+91 - 9820273995",
     timing: "Wednesday/ Saturday: 5 PM-8 PM",
     services: "Consult & Surgeries",
     imageUrl: "/raheja.png",
-    badgeText: "Main Clinic"
+    badgeText: "Main Clinic",
+    mapLink: "https://www.google.com/maps/place/Upadhyay+Nursing+Home/@19.0813223,72.8436903,723m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be7c90e1a9897c1:0x4eacb757e2c278a9!8m2!3d19.0813172!4d72.8462652!16s%2Fg%2F1tdm6sr4?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     id: 4,
     title: "S.L. Raheja hospital",
-    subtitle: "Comprehensive rehabilitation center with modern equipment",
-    address: "Raheja Rugnalaya Marg, mahim west, mumbai 16",
+    subtitle: "Comprehensive multispeciality hospital and surgical set up",
+    address: "Raheja Rugnalaya Marg, mahim west, mumbai 16",
     phone: "+91 - 9820273995",
-    timing: "Monday/ Friday: 6 PM-8 PM",
+    timing: "Monday/ Friday: 6 PM-8 PM",
     services: "Consult & Surgeries",
     imageUrl: "/raheja.png",
-    badgeText: "Main Clinic"
+    badgeText: "Main Clinic",
+    mapLink: "https://www.google.com/maps/place/Fortis+S+L+Raheja+Hospital+-+Best+Hospital+in+Mumbai/@19.046289,72.8401043,723m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be7c92f84c13ec9:0x807c1cbf1b5e8536!8m2!3d19.0462839!4d72.8426792!16s%2Fg%2F1thz03zj?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D"
   }
 ];
 
@@ -224,6 +228,46 @@ const testimonials = [
     profileImage: '/t3.png',
     bgColor: "from-green-200 to-green-300",
   },
+  {
+    id: 4,
+    name: "Monika Rathi",
+    procedure: "Shoulder Surgery",
+    testimonial: "Back to cricket in 12 weeks! The arthroscopic shoulder surgery was a game-changer. Professional approach and excellent results.",
+    rating: 5,
+    initials: "MR",
+    profileImage: "/t2.png", // Add your image path here
+    bgColor: "from-purple-200 to-purple-300",
+  },
+  {
+    id: 5,
+    name: "Ramesh Sharma",
+    procedure: "Hip Replacement",
+    testimonial: "Hip replacement at 70? Now I dance with grandkids! The care and attention from the entire team made this journey so much easier.",
+    rating: 5,
+    initials: "RS",
+    profileImage: '/t3.png',
+    bgColor: "from-green-200 to-green-300",
+  },
+  {
+    id: 6,
+    name: "Monika Rathi",
+    procedure: "Shoulder Surgery",
+    testimonial: "Back to cricket in 12 weeks! The arthroscopic shoulder surgery was a game-changer. Professional approach and excellent results.",
+    rating: 5,
+    initials: "MR",
+    profileImage: "/t2.png", // Add your image path here
+    bgColor: "from-purple-200 to-purple-300",
+  },
+  {
+    id: 7,
+    name: "Ramesh Sharma",
+    procedure: "Hip Replacement",
+    testimonial: "Hip replacement at 70? Now I dance with grandkids! The care and attention from the entire team made this journey so much easier.",
+    rating: 5,
+    initials: "RS",
+    profileImage: '/t3.png',
+    bgColor: "from-green-200 to-green-300",
+  },
 ];
 
   return (
@@ -247,8 +291,10 @@ const testimonials = [
   <DoctorHeroSection />
   <Heading title='Strategic Locations Across Mumbai' subtitle="From consultation to surgery to rehabilitation we're strategically located for your convenience" />
   <ClinicCardContainer clinics={clinicsData} />
+  <div id="testimonies">
   <Heading title='Where Science Meets Movement' subtitle='Real stories from real patients who returned to the life they love' />
   <TestimonialCarousel testimonials={testimonials} />
+  </div>
   <Heading title='Book an Appointment with Ease' subtitle="Quick, simple, and personalized orthopaedic consultation. Just fill out the form and we'll take care of the rest." />
   <AppointmentBooking />
     </>

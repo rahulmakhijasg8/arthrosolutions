@@ -42,14 +42,14 @@ const TestimonialCard = ({
       
       {/* Testimonial Text */}
       <div className="mt-[20px] md:mt-[14px]">
-        <p className="text-[#2D2D2D] text-[16px] font-[400] leading-[23px]">
+        <p className="text-[#2D2D2D] font-['Inter'] text-[16px] font-[400] leading-[23px]">
           {testimonial}
         </p>
       </div>
       
       {/* Patient Info */}
       <div>
-        <h3 className="text-[#0D4F7A] font-[600] text-[18px] md:text-[20px] mt-[14px] md:mt-[20px]">
+        <h3 className="text-[#0D4F7A] font-['Inter'] font-[600] text-[18px] md:text-[20px] mt-[14px] md:mt-[20px]">
           {name}
         </h3>
         <p className="text-[#2D2D2D] font-['Inter'] font-[300] text-[12px]">
