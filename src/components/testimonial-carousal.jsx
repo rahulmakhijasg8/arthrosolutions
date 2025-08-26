@@ -1,6 +1,6 @@
 "use client"
 import TestimonialCard from "./testimonial-card";
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 
 const LeftArrowIcon = ({ disabled = false }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="43" height="34" viewBox="0 0 43 34" fill="none">
@@ -43,6 +43,9 @@ const RightArrowIcon = ({ disabled = false }) => (
 const TestimonialCarousel = ({ testimonials = [] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const scrollContainerRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
   
   // Check screen size
   useEffect(() => {
@@ -51,6 +54,17 @@ const TestimonialCarousel = ({ testimonials = [] }) => {
   window.addEventListener('resize', checkMobile);
   return () => window.removeEventListener('resize', checkMobile);
 }, []);
+
+ const handleScroll = () => {
+    if (scrollContainerRef.current) {
+      const container = scrollContainerRef.current;
+      const scrollLeft = container.scrollLeft;
+      const maxScroll = container.scrollWidth - container.clientWidth;
+      
+      setCanScrollLeft(scrollLeft > 10); // Small threshold for precision
+      setCanScrollRight(scrollLeft < maxScroll - 10);
+    }
+  };
   
   // Navigation logic based on screen size
   const increment = isMobile ? 1 : 3;
@@ -62,14 +76,24 @@ const TestimonialCarousel = ({ testimonials = [] }) => {
     : currentIndex + 3 < testimonials.length; // Desktop: can go until last batch of 3
   
   const nextSlide = () => {
-    if (canGoNext) {
-      setCurrentIndex((prevIndex) => prevIndex + increment);
+    if (scrollContainerRef.current && canScrollRight) {
+      const container = scrollContainerRef.current;
+      const cardWidth = isMobile ? container.offsetWidth : container.offsetWidth / 3;
+      container.scrollBy({ 
+        left: cardWidth, 
+        behavior: 'smooth' 
+      });
     }
   };
   
   const prevSlide = () => {
-    if (canGoPrev) {
-      setCurrentIndex((prevIndex) => prevIndex - increment);
+    if (scrollContainerRef.current && canScrollLeft) {
+      const container = scrollContainerRef.current;
+      const cardWidth = isMobile ? container.offsetWidth : container.offsetWidth / 3;
+      container.scrollBy({ 
+        left: -cardWidth, 
+        behavior: 'smooth' 
+      });
     }
   };
   
@@ -98,50 +122,59 @@ const TestimonialCarousel = ({ testimonials = [] }) => {
 </div>
       </div>
       {/* Carousel Container */}
-      <div className="relative mt-[32px] md:mt-[60px]">
+      <div className="relative mt-[45px] md:mt-[60px]">
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
-          {visibleTestimonials.map((testimonial, index) => (
-            <div
-              key={`${testimonial.id}-${currentIndex}`}
-              className={`transition-all duration-300 ${index > 0 ? "hidden md:block" : ""}`}
-            >
-              <TestimonialCard
-                name={testimonial.name}
-                procedure={testimonial.procedure}
-                testimonial={testimonial.testimonial}
-                rating={testimonial.rating}
-                initials={testimonial.initials}
-                bgColor={testimonial.bgColor}
-                profileImage={testimonial.profileImage}
-              />
-            </div>
-          ))}
-        </div>
+        {/* Scrollable Cards Container */}
+<div className="relative">
+  <div 
+    ref={scrollContainerRef}
+    className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-[20px] pb-4"
+    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+    onScroll={handleScroll}
+  >
+    {testimonials.map((testimonial, index) => (
+      <div
+        key={testimonial.id}
+        className="flex-shrink-0 w-full md:w-[calc(33.333%-14px)] snap-start"
+      >
+        <TestimonialCard
+          name={testimonial.name}
+          procedure={testimonial.procedure}
+          testimonial={testimonial.testimonial}
+          rating={testimonial.rating}
+          initials={testimonial.initials}
+          bgColor={testimonial.bgColor}
+          profileImage={testimonial.profileImage}
+        />
+      </div>
+    ))}
+  </div>
+</div>
         {/* Navigation Buttons */}
-        <div className="flex justify-center mt-[16px] md:mt-[46px] items-center gap-[34px]">
-          <button
-            onClick={prevSlide}
-            disabled={!canGoPrev}
-            className={`transition-all duration-200 ${
-              canGoPrev ? 'hover:scale-105 cursor-pointer' : 'cursor-not-allowed opacity-75'
-            }`}
-            aria-label="Previous testimonial"
-          >
-            <LeftArrowIcon disabled={!canGoPrev} />
-          </button>
-          
-          <button
-            onClick={nextSlide}
-            disabled={!canGoNext}
-            className={`transition-all duration-200 ${
-              canGoNext ? 'hover:scale-105 cursor-pointer' : 'cursor-not-allowed opacity-75'
-            }`}
-            aria-label="Next testimonial"
-          >
-            <RightArrowIcon disabled={!canGoNext} />
-          </button>
-        </div>
+        {/* Navigation Buttons */}
+<div className="flex justify-center mt-[16px] md:mt-[46px] items-center gap-[34px]">
+  <button
+    onClick={prevSlide}
+    disabled={!canScrollLeft}
+    className={`transition-all duration-200 ${
+      canScrollLeft ? 'hover:scale-105 cursor-pointer' : 'cursor-not-allowed opacity-75'
+    }`}
+    aria-label="Previous testimonial"
+  >
+    <LeftArrowIcon disabled={!canScrollLeft} />
+  </button>
+  
+  <button
+    onClick={nextSlide}
+    disabled={!canScrollRight}
+    className={`transition-all duration-200 ${
+      canScrollRight ? 'hover:scale-105 cursor-pointer' : 'cursor-not-allowed opacity-75'
+    }`}
+    aria-label="Next testimonial"
+  >
+    <RightArrowIcon disabled={!canScrollRight} />
+  </button>
+</div>
       </div>
       </div>
     </div>

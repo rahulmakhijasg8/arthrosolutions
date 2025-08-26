@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
+
 
 export default function AppointmentBooking() {
   const [formData, setFormData] = useState({
@@ -14,12 +15,20 @@ export default function AppointmentBooking() {
     time: "",
   })
 
+  const dateInputRef = useRef(null)
+
   const handleInputChange = (field, value) => {
     setFormData((prev) => ({
       ...prev,
       [field]: value,
     }))
   }
+
+  const openDatePicker = () => {
+  if (dateInputRef.current) {
+    dateInputRef.current.showPicker?.() || dateInputRef.current.focus()
+  }
+}
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -28,6 +37,7 @@ export default function AppointmentBooking() {
   }
 
   return (
+    
     <div className="w-full px-[20px] md:px-[60px] lg:px-[100px] mt-[32px] md:mt-[60px] font-['Inter']">
   <div className="max-w-7xl mx-auto">
       <div className="grid lg:grid-cols-2 gap-[24px] md:gap-[54px]">
@@ -152,18 +162,26 @@ export default function AppointmentBooking() {
 {/* Date and Time */}
 <div className="grid md:grid-cols-2 gap-[14px] md:gap-[32px]">
   <div className="space-y-2">
-    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block">Preferred Date</label>
-    <div className="relative">
-      <input
-        type="date"
-        placeholder="Select date"
-        value={formData.date}
-        onChange={(e) => handleInputChange("date", e.target.value)}
-        className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900 font-['Inter']"
-        style={{ caretColor: '#374151' }}
-      />
-      <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-        <path d="M17.4114 1.17578H15.6467V2.94049C15.6467 3.29343 15.3526 3.52872 15.0585 3.52872C14.7644 3.52872 14.4702 3.29343 14.4702 2.94049V1.17578H5.05848V2.94049C5.05848 3.29343 4.76436 3.52872 4.47024 3.52872C4.17613 3.52872 3.88201 3.29343 3.88201 2.94049V1.17578H2.1173C1.23495 1.17578 0.587891 1.94049 0.587891 2.94049V5.05813H19.4114V2.94049C19.4114 1.94049 18.3526 1.17578 17.4114 1.17578ZM0.587891 6.29343V17.0581C0.587891 18.117 1.23495 18.8228 2.17613 18.8228H17.4702C18.4114 18.8228 19.4702 18.0581 19.4702 17.0581V6.29343H0.587891ZM5.82318 16.1758H4.41142C4.17613 16.1758 3.94083 15.9993 3.94083 15.7052V14.2346C3.94083 13.9993 4.1173 13.764 4.41142 13.764H5.88201C6.1173 13.764 6.3526 13.9405 6.3526 14.2346V15.7052C6.29377 15.9993 6.1173 16.1758 5.82318 16.1758ZM5.82318 10.8817H4.41142C4.17613 10.8817 3.94083 10.7052 3.94083 10.4111V8.94049C3.94083 8.70519 4.1173 8.4699 4.41142 8.4699H5.88201C6.1173 8.4699 6.3526 8.64637 6.3526 8.94049V10.4111C6.29377 10.7052 6.1173 10.8817 5.82318 10.8817ZM10.5291 16.1758H9.05848C8.82318 16.1758 8.58789 15.9993 8.58789 15.7052V14.2346C8.58789 13.9993 8.76436 13.764 9.05848 13.764H10.5291C10.7644 13.764 10.9997 13.9405 10.9997 14.2346V15.7052C10.9997 15.9993 10.8232 16.1758 10.5291 16.1758ZM10.5291 10.8817H9.05848C8.82318 10.8817 8.58789 10.7052 8.58789 10.4111V8.94049C8.58789 8.70519 8.76436 8.4699 9.05848 8.4699H10.5291C10.7644 8.4699 10.9997 8.64637 10.9997 8.94049V10.4111C10.9997 10.7052 10.8232 10.8817 10.5291 10.8817ZM15.2349 16.1758H13.7644C13.5291 16.1758 13.2938 15.9993 13.2938 15.7052V14.2346C13.2938 13.9993 13.4702 13.764 13.7644 13.764H15.2349C15.4702 13.764 15.7055 13.9405 15.7055 14.2346V15.7052C15.7055 15.9993 15.5291 16.1758 15.2349 16.1758ZM15.2349 10.8817H13.7644C13.5291 10.8817 13.2938 10.7052 13.2938 10.4111V8.94049C13.2938 8.70519 13.4702 8.4699 13.7644 8.4699H15.2349C15.4702 8.4699 15.7055 8.64637 15.7055 8.94049V10.4111C15.7055 10.7052 15.5291 10.8817 15.2349 10.8817Z" fill="#0D4F7A"/>
+  <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block">Preferred Date</label>
+  <div className="relative">
+    <input
+      ref={dateInputRef}  // Add this ref
+      type="date"
+      placeholder="Select date"
+      value={formData.date}
+      onChange={(e) => handleInputChange("date", e.target.value)}
+      className="w-full pl-10 pr-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900 font-['Inter']"
+      style={{ caretColor: '#374151' }}
+    />
+    <svg 
+      onClick={openDatePicker}  // Add this click handler
+      className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 cursor-pointer" // Add cursor-pointer
+      xmlns="http://www.w3.org/2000/svg" 
+      width="20" 
+      height="20" 
+      viewBox="0 0 20 20" 
+      fill="none"
+    >        <path d="M17.4114 1.17578H15.6467V2.94049C15.6467 3.29343 15.3526 3.52872 15.0585 3.52872C14.7644 3.52872 14.4702 3.29343 14.4702 2.94049V1.17578H5.05848V2.94049C5.05848 3.29343 4.76436 3.52872 4.47024 3.52872C4.17613 3.52872 3.88201 3.29343 3.88201 2.94049V1.17578H2.1173C1.23495 1.17578 0.587891 1.94049 0.587891 2.94049V5.05813H19.4114V2.94049C19.4114 1.94049 18.3526 1.17578 17.4114 1.17578ZM0.587891 6.29343V17.0581C0.587891 18.117 1.23495 18.8228 2.17613 18.8228H17.4702C18.4114 18.8228 19.4702 18.0581 19.4702 17.0581V6.29343H0.587891ZM5.82318 16.1758H4.41142C4.17613 16.1758 3.94083 15.9993 3.94083 15.7052V14.2346C3.94083 13.9993 4.1173 13.764 4.41142 13.764H5.88201C6.1173 13.764 6.3526 13.9405 6.3526 14.2346V15.7052C6.29377 15.9993 6.1173 16.1758 5.82318 16.1758ZM5.82318 10.8817H4.41142C4.17613 10.8817 3.94083 10.7052 3.94083 10.4111V8.94049C3.94083 8.70519 4.1173 8.4699 4.41142 8.4699H5.88201C6.1173 8.4699 6.3526 8.64637 6.3526 8.94049V10.4111C6.29377 10.7052 6.1173 10.8817 5.82318 10.8817ZM10.5291 16.1758H9.05848C8.82318 16.1758 8.58789 15.9993 8.58789 15.7052V14.2346C8.58789 13.9993 8.76436 13.764 9.05848 13.764H10.5291C10.7644 13.764 10.9997 13.9405 10.9997 14.2346V15.7052C10.9997 15.9993 10.8232 16.1758 10.5291 16.1758ZM10.5291 10.8817H9.05848C8.82318 10.8817 8.58789 10.7052 8.58789 10.4111V8.94049C8.58789 8.70519 8.76436 8.4699 9.05848 8.4699H10.5291C10.7644 8.4699 10.9997 8.64637 10.9997 8.94049V10.4111C10.9997 10.7052 10.8232 10.8817 10.5291 10.8817ZM15.2349 16.1758H13.7644C13.5291 16.1758 13.2938 15.9993 13.2938 15.7052V14.2346C13.2938 13.9993 13.4702 13.764 13.7644 13.764H15.2349C15.4702 13.764 15.7055 13.9405 15.7055 14.2346V15.7052C15.7055 15.9993 15.5291 16.1758 15.2349 16.1758ZM15.2349 10.8817H13.7644C13.5291 10.8817 13.2938 10.7052 13.2938 10.4111V8.94049C13.2938 8.70519 13.4702 8.4699 13.7644 8.4699H15.2349C15.4702 8.4699 15.7055 8.64637 15.7055 8.94049V10.4111C15.7055 10.7052 15.5291 10.8817 15.2349 10.8817Z" fill="#0D4F7A"/>
       </svg>
     </div>
   </div>
@@ -202,7 +220,7 @@ export default function AppointmentBooking() {
         </div>
 
         {/* Information Section */}
-        <div className="space-y-[24px] md:space-y-[46px]">
+        <div className="space-y-[24px] md:space-y-[24px]">
           {/* What to Expect */}
           <div 
             className="rounded-[18px] p-[14px] md:p-[34px] md:pr-[54px]"
@@ -245,7 +263,7 @@ export default function AppointmentBooking() {
             className="px-[14px] md:pl-[34px]"
           >
             <h3 className="text-[18px] md:text-[20px] font-['Inter'] font-[600] text-[#0D4F7A]">Contact Information</h3>
-            <div className="space-y-[12px] my-[14px] md:my-[24px] ">
+            <div className="space-y-[6px] my-[14px] md:my-[14px] ">
   <div className="flex items-center gap-3">
     <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
       <svg className="h-6 w-6 text-gray-500" fill="none" stroke="#0D4F7A" viewBox="0 0 24 24">
@@ -275,7 +293,7 @@ export default function AppointmentBooking() {
 </div>
 
             <div 
-              className="w-full h-px my-[14px] md:my-[24px]"
+              className="w-full h-px my-[14px] md:my-[12px]"
               style={{ backgroundColor: '#0000003D' }}
             ></div>
 
@@ -292,6 +310,18 @@ export default function AppointmentBooking() {
         </div>
       </div>
       </div>
+
+      <style jsx>{`
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+  }
+  input[type="date"]::-webkit-inner-spin-button,
+  input[type="date"]::-webkit-outer-spin-button {
+    display: none;
+  }
+`}</style>
     </div>
   )
 }

@@ -10,11 +10,11 @@ export function ClinicCard({
   services, 
   imageUrl, 
   badgeText = "Main Clinic",
-  mapLink // Add this new prop for Google Maps link
+  mapLink 
 }) {
   return (
     <div
-      className="w-full mx-auto overflow-hidden bg-white"
+      className="w-full mx-auto overflow-hidden bg-white flex flex-col h-full"
       style={{
         borderRadius: "18px",
         boxShadow: "0 14px 34px 1px rgba(0, 0, 0, 0.04)",
@@ -23,13 +23,10 @@ export function ClinicCard({
       {/* Image Section */}
       <div className="relative h-54 md:h-[310px]">
         <Image src={imageUrl || "/placeholder.svg"} alt={title} fill className="object-cover object-top" />
-        {/* <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-          {badgeText}
-        </div> */}
       </div>
 
       {/* Content Section */}
-      <div className="p-[18px] space-y-[12px] md:space-y-[16px]">
+      <div className="p-[18px] space-y-[12px] md:space-y-[16px] flex flex-col flex-1">
         {/* Title and Description */}
         <div className="space-y-[6px]">
           <h3 className="text-[16px] font-['Inter'] md:text-[18px] font-[500] text-[#0D4F7A] leading-tight">{title}</h3>
@@ -59,8 +56,8 @@ export function ClinicCard({
           <span className="mr-2 h-3">•</span>{services}
         </div>
 
-        {/* Action Buttons */}
-        <div className="flex gap-[14px]">
+        {/* Action Buttons - Pushed to bottom */}
+        <div className="flex gap-[14px] mt-auto">
           <a 
             href={`tel:${phone}`}
             className="flex-1 flex font-['Inter'] items-center justify-center gap-[10px] px-[14px] py-[8px] border border-[#0D4F7A] text-[#0D4F7A] bg-transparent rounded-[6px] hover:bg-blue-50 transition-colors duration-200 text-[14px] md:text-[16px] font-[400] cursor-pointer"

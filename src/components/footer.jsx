@@ -41,7 +41,7 @@ export default function Footer() {
     </a>
   </li>
   <li>
-    <a href="/services" className="text-[#808080] font-[500] font-['Inter'] text-[16px] hover:text-[#0D4F7A] transition-colors">
+    <a href="/services/shoulder-care" className="text-[#808080] font-[500] font-['Inter'] text-[16px] hover:text-[#0D4F7A] transition-colors">
       Services
     </a>
   </li>
@@ -58,7 +58,7 @@ export default function Footer() {
     </a>
   </li>
   <li>
-    <a href="#testimonies" className="text-[#808080] font-[500] font-['Inter'] text-[16px] hover:text-[#0D4F7A] transition-colors">
+    <a href="/#testimonies" className="text-[#808080] font-[500] font-['Inter'] text-[16px] hover:text-[#0D4F7A] transition-colors">
       Testimonials
     </a>
   </li>
@@ -153,7 +153,7 @@ export default function Footer() {
     </a>
   </li>
   <li>
-    <a href="/services" className="text-[#808080] font-[400] font-['Inter'] hover:text-[#0D4F7A] transition-colors text-[14px]">
+    <a href="/services/shoulder-care" className="text-[#808080] font-[400] font-['Inter'] hover:text-[#0D4F7A] transition-colors text-[14px]">
       Services
     </a>
   </li>
@@ -170,7 +170,7 @@ export default function Footer() {
     </a>
   </li>
   <li>
-    <a href="#testimonies" className="text-[#808080] font-[400] font-['Inter'] hover:text-[#0D4F7A] transition-colors text-[14px]">
+    <a href="/#testimonies" className="text-[#808080] font-[400] font-['Inter'] hover:text-[#0D4F7A] transition-colors text-[14px]">
       Testimonials
     </a>
   </li>

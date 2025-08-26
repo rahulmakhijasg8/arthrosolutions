@@ -9,7 +9,7 @@ const ServicesHeroSection = () => {
           <h1 className="text-[36px] md:text-[56px] font-[700] text-[#2D2D2D] font-['Outfit'] leading-normal">
             Your Joints, Our Expertise
           </h1>
-          <p className="text-[#2D2D2D] text-[400] font-['Inter'] text-[16px] md:text-[18px] px-10 md:px-65 leading-[26px] md:leading-[28px] mt-[12px]">
+          <p className="text-[#2D2D2D] text-[400] font-['Inter'] text-[16px] md:text-[18px] px-2 md:px-65 leading-[26px] md:leading-[28px] mt-[12px]">
             Minimally invasive solutions from injury to recovery — tailored for athletes and seniors alike.
           </p>
         </div>

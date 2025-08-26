@@ -8,7 +8,7 @@ export default function FaqItem({ question, answer, isOpen, onClick, number }) {
         <span className="font-['Inter'] text-[#0D4F7A] text-[20px] md:text-[28px] leading-[26px] md:leading-normal font-[400]">
           {number}. {question}
         </span>
-        <span className="ml-4 flex-shrink-0 transition-transform duration-200">
+        <span className="ml-4 flex-shrink-0 hover:cursor-pointer transition-transform duration-200">
           {isOpen ? (
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
               <path d="M10 20H20M20 20H30M20 20V30M20 20V10" stroke="#0151CA" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>

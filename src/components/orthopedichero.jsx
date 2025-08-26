@@ -101,7 +101,7 @@ const HeroSection = ({
                 />
               </div>
               {stats.length > 0 && (
-          <div className="relative flex z-10 justify-center bg-white -mt-30 md:-mt-37">
+          <div className="relative flex z-10 justify-center bg-white -mt-30 md:-mt-41">
             <div className="flex flex-wrap w-full justify-center rounded-[20px] shadow-[0_20.553px_49.915px_1.468px_rgba(0,0,0,0.1)]">
               {stats.map((stat, index) => (
                 <div key={index} className="flex-col w-1/2 md:w-auto text-center py-[16px] px-[20px] md:px-[35px] md:py-[27px] items-center justify-center">

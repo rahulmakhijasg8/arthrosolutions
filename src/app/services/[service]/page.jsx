@@ -148,8 +148,8 @@ const serviceConfigs = {
         id: 5,
         title: "Total Knee Replacement",
         subtitle: "Modern implants & alignment tech",
-        returnTime: "Long-term pain relief",
-        description: "Computer-assisted total knee replacement with accelerated recovery protocols.",
+        returnTime: "Rapid functional recovery program",
+        description: "Total knee replacement with accelerated recovery protocols.",
         patientType: "End-stage knee arthritis"
       }
     ]
@@ -407,7 +407,7 @@ function ServicesContent() {
             <button
               key={index}
               onClick={() => handleTabChange(index, tab.serviceKey)}
-              className={`flex items-center gap-[6px] md:gap-[10px] font-['Inter'] px-[10px] md:px-[14px] py-[8px] md:py-[10px] rounded-[6px] text-[14px] md:text-[16px] font-[400] ${
+              className={`flex items-center gap-[6px] hover:cursor-pointer md:gap-[10px] font-['Inter'] px-[10px] md:px-[14px] py-[8px] md:py-[10px] rounded-[6px] text-[14px] md:text-[16px] font-[400] ${
                 activeTabIndex === index
                   ? index === 0 
                     ? 'bg-[#0D4F7A] font-[400] text-white'

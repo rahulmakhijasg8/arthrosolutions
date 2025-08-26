@@ -3,7 +3,7 @@ import { GraduationCap } from "lucide-react"
 
 export default function ShortBio() {
   return (
-    <div className="w-full px-[20px] md:px-[60px] md:mt-[122px] lg:px-[100px] py-6">
+    <div className="w-full px-[20px] md:px-[60px] mt-[60px] md:mt-[122px] lg:px-[100px] py-6">
   <div className="max-w-7xl mx-auto">
       <div className="flex flex-col md:flex-row md:gap-[97px]">
         {/* Profile Image */}

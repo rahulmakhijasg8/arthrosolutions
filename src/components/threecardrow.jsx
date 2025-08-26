@@ -20,7 +20,7 @@ export default function ThreeCardRow({ cards, cardType = "auto" }) {
         {/* Mobile: Column layout with spacing */}
         <div className="flex flex-col md:hidden space-y-[24px]">
           {displayCards.map((card, index) => (
-            <div key={index} className="w-[100%] px-[43px] mx-auto">
+            <div key={index} className={`w-[100%] mx-auto ${isNewCard ? '' : 'px-[43px]'}`}>
               <CardComponent
                 {...card}
                 isMiddleCard={isNewCard ? undefined : false} // Only pass isMiddleCard to old card

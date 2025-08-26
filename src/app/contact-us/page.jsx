@@ -4,6 +4,7 @@ import ThreeCardRow from "@/components/threecardrow";
 import { ClinicCardContainer } from "@/components/clinic-cardcontainer";
 import AppointmentBooking from "@/components/appointment-booking";
 import Hero from "@/components/faqhero";
+import SplitHeading from "@/components/split-heading";
 
 export default function Home() {
 
@@ -107,6 +108,7 @@ const newCardsData = [
   subtitle="Quick questions, appointment requests, or teleconsultation — we're here to help."
 />
     </div>
+  <SplitHeading firstText="Need Immediate " secondText="Medical Consultation?" accentColor="#0D4F7A" subtitle="For urgent medical questions or to schedule your consultation" />
   <ThreeCardRow cards={newCardsData} />
   <Heading title='Strategic Locations Across Mumbai' subtitle="From consultation to surgery to rehabilitation we're strategically located for your convenience" />
   <ClinicCardContainer clinics={clinicsData} />
