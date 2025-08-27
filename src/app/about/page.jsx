@@ -129,8 +129,10 @@ const clinicsData = [
 
   return (
     <>
+    <div className="bg-[#F4F8FF]">
     <Navbar/>
   <AboutHeroSection />
+  </div>
   <ShortBio />
   <Heading title='Credentials & Experience' subtitle='International training + local experience.' />
   <ThreeCardRow cards={Cards} />

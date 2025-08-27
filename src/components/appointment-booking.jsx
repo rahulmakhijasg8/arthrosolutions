@@ -52,22 +52,22 @@ export default function AppointmentBooking() {
             {/* Full Name and Age */}
             <div className="grid md:grid-cols-2 gap-[14px] md:gap-[32px]">
   <div className="space-y-2">
-    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block">Full Name</label>
+    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block ml-[2px] md:ml-0">Full Name</label>
     <input
       type="text"
       placeholder="Enter your name"
       value={formData.fullName}
       onChange={(e) => handleInputChange("fullName", e.target.value)}
-      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900 font-['Inter']"
+      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900 font-['Inter'] ml-[2px] md:ml-0"
       style={{ caretColor: '#374151' }}
     />
   </div>
   <div className="space-y-2">
-    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block">Age</label>
+    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block ml-[2px] md:ml-0">Age</label>
     <select
       value={formData.age}
       onChange={(e) => handleInputChange("age", e.target.value)}
-      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm appearance-none text-gray-900 font-['Inter']"
+      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm appearance-none text-gray-900 font-['Inter'] ml-[2px] md:ml-0"
       style={{
         backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23999999' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e")`,
         backgroundPosition: 'right 0.75rem center',
@@ -90,24 +90,24 @@ export default function AppointmentBooking() {
 {/* Phone Number and Email */}
 <div className="grid md:grid-cols-2 gap-[14px] md:gap-[32px]">
   <div className="space-y-2">
-    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block">Phone Number</label>
+    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block ml-[2px] md:ml-0">Phone Number</label>
     <input
       type="tel"
       placeholder="Enter your number"
       value={formData.phoneNumber}
       onChange={(e) => handleInputChange("phoneNumber", e.target.value)}
-      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900 font-['Inter']"
+      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900 font-['Inter'] ml-[2px] md:ml-0"
       style={{ caretColor: '#374151' }}
     />
   </div>
   <div className="space-y-2">
-    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block">Email</label>
+    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block ml-[2px] md:ml-0">Email</label>
     <input
       type="email"
       placeholder="Enter your email"
       value={formData.email}
       onChange={(e) => handleInputChange("email", e.target.value)}
-      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900 font-['Inter']"
+      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900 font-['Inter'] ml-[2px] md:ml-0"
       style={{ caretColor: '#374151' }}
     />
   </div>
@@ -116,11 +116,11 @@ export default function AppointmentBooking() {
 {/* Service and Location */}
 <div className="grid md:grid-cols-2 gap-[14px] md:gap-[32px]">
   <div className="space-y-2">
-    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block">Select Service</label>
+    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block ml-[2px] md:ml-0">Select Service</label>
     <select
       value={formData.service}
       onChange={(e) => handleInputChange("service", e.target.value)}
-      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm appearance-none text-gray-900 font-['Inter']"
+      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm appearance-none text-gray-900 font-['Inter'] ml-[2px] md:ml-0"
       style={{
         backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23999999' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e")`,
         backgroundPosition: 'right 0.75rem center',
@@ -137,11 +137,11 @@ export default function AppointmentBooking() {
     </select>
   </div>
   <div className="space-y-2">
-    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block">Preferred Location</label>
+    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block ml-[2px] md:ml-0">Preferred Location</label>
     <select
       value={formData.location}
       onChange={(e) => handleInputChange("location", e.target.value)}
-      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm appearance-none text-gray-900 font-['Inter']"
+      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm appearance-none text-gray-900 font-['Inter'] ml-[2px] md:ml-0"
       style={{
         backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23999999' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e")`,
         backgroundPosition: 'right 0.75rem center',
@@ -162,8 +162,8 @@ export default function AppointmentBooking() {
 {/* Date and Time */}
 <div className="grid md:grid-cols-2 gap-[14px] md:gap-[32px]">
   <div className="space-y-2">
-  <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block">Preferred Date</label>
-  <div className="relative">
+  <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block ml-[2px] md:ml-0">Preferred Date</label>
+  <div className="relative ml-[2px] md:ml-0">
     <input
       ref={dateInputRef}  // Add this ref
       type="date"
@@ -186,11 +186,11 @@ export default function AppointmentBooking() {
     </div>
   </div>
   <div className="space-y-2">
-    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block">Preferred Time</label>
+    <label className="text-[16px] font-[400] font-['Inter'] text-[#2D2D2D] block ml-[2px] md:ml-0">Preferred Time</label>
     <select
       value={formData.time}
       onChange={(e) => handleInputChange("time", e.target.value)}
-      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm appearance-none text-gray-900 font-['Inter']"
+      className="w-full px-3 py-3 border border-[#C1C1C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm appearance-none text-gray-900 font-['Inter'] ml-[2px] md:ml-0"
       style={{
         backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23999999' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e")`,
         backgroundPosition: 'right 0.75rem center',

@@ -89,7 +89,9 @@ const HeroSection = ({
           
           {/* Right Column with Image */}
           {rightImage && (
-            <div className="w-full md:w-[50%] mt-[42px] md:mt-0 flex-col items-center justify-center">
+            <div className="w-full relative md:w-[50%] mt-[42px] md:mt-0 flex-col items-center justify-center">
+              <Image src="/orthoanimation.svg" width={1000} height={1000} className='absolute hidden lg:block h-[56px] w-[56px] right-12 top-10' />
+              <Image src="/whatsappanimation.svg" width={1000} height={1000} className='absolute hidden lg:block h-[40px] w-[40px] -right-12 -bottom-5' />
               <div className="w-full h-[100%] [@media(min-width:776px)and(max-width:817px)]:h-[35%] [@media(min-width:818px)and(max-width:903px)]:h-[45%] [@media(min-width:904px)and(max-width:995px)]:h-[50%] [@media(min-width:941px)and(max-width:995px)]:h-[55%] [@media(min-width:971px)and(max-width:995px)]:h-[60%] lg:h-[100%] relative rounded-[50px]">
                 <Image
                   src={rightImage}

@@ -12,14 +12,17 @@ export default function Navbar({ isDarkMode = false }) {
   // Handle click outside to close menu
   useEffect(() => {
     const handleClickOutside = (event) => {
+      // Don't close if clicking on a link (let the link handle closing)
       if (event.target.closest('a')) {
         return;
       }
       
-      if (event.target.closest('button') && menuRef.current && menuRef.current.contains(event.target)) {
+      // Don't close if clicking the hamburger button (let button handle toggle)
+      if (event.target.closest('[data-hamburger-button]')) {
         return;
       }
       
+      // Close if clicking outside the menu
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setIsMenuOpen(false);
       }
@@ -178,12 +181,13 @@ export default function Navbar({ isDarkMode = false }) {
           </div>
 
           {/* Hamburger Menu Button (Mobile) */}
-          <div className="relative lg:hidden" ref={menuRef}>
+          <div className="lg:hidden">
             <button 
               className="flex flex-col justify-center items-center w-8 h-8 focus:outline-none" 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
               aria-expanded={isMenuOpen}
+              data-hamburger-button
             >
               <span className={`block w-6 h-0.5 transition-all duration-300 ease-out ${
                 isMenuOpen ? 'rotate-45 translate-y-1' : ''
@@ -195,82 +199,82 @@ export default function Navbar({ isDarkMode = false }) {
                 isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''
               } ${isDarkMode ? 'bg-white' : 'bg-[#0D4F7A]'}`}></span>
             </button>
-
-            {/* Dropdown Menu (Mobile) */}
-            {isMenuOpen && (
-              <div className="absolute right-0 top-full mt-2 w-64 bg-white shadow-lg rounded-md border border-gray-200 z-50">
-                <div className="py-2">
-                  {/* Home link */}
-                  <Link 
-                    href="/" 
-                    className={`block px-4 py-3 hover:bg-gray-50 font-['Inter'] font-medium text-[16px] leading-[20px] transition-all duration-300 ${
-                      isActive('/') ? 'text-[#0D4F7A]' : 'text-[#2D2D2D]'
-                    }`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Home
-                  </Link>
-                  
-                  {/* About link */}
-                  <Link 
-                    href="/about" 
-                    className={`block px-4 py-3 hover:bg-gray-50 font-['Inter'] font-medium text-[16px] leading-[20px] transition-all duration-300 ${
-                      isActive('/about') ? 'text-[#0D4F7A]' : 'text-[#2D2D2D]'
-                    }`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    About
-                  </Link>
-                  
-                  {/* Services link */}
-                  <Link 
-                    href="/services/shoulder-care" 
-                    className={`block px-4 py-3 hover:bg-gray-50 font-['Inter'] font-medium text-[16px] leading-[20px] transition-all duration-300 ${
-                      isActive('/services') ? 'text-[#0D4F7A]' : 'text-[#2D2D2D]'
-                    }`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Services
-                  </Link>
-                  
-                  {/* FAQ link */}
-                  <Link 
-                    href="/faq" 
-                    className={`block px-4 py-3 hover:bg-gray-50 font-['Inter'] font-medium text-[16px] leading-[20px] transition-all duration-300 ${
-                      isActive('/faq') ? 'text-[#0D4F7A]' : 'text-[#2D2D2D]'
-                    }`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    FAQ
-                  </Link>
-                  
-                  {/* Contact Us link */}
-                  <Link 
-                    href="/contact-us" 
-                    className={`block px-4 py-3 hover:bg-gray-50 font-['Inter'] font-medium text-[16px] leading-[20px] transition-all duration-300 ${
-                      isActive('/contact-us') ? 'text-[#0D4F7A]' : 'text-[#2D2D2D]'
-                    }`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Contact Us
-                  </Link>
-                  
-                  {/* Book A Visit Button in mobile menu */}
-                  <div className="px-4 py-3">
-                    <Link 
-                      href="/book-visit" 
-                      className="block w-full text-center px-6 py-3 bg-[#0D4F7A] text-white rounded-md font-['Inter'] font-medium text-[16px] leading-[20px] transition-all duration-300 hover:bg-opacity-90"
-                      style={{ borderRadius: '6px' }}
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Book A Visit
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            )}
           </div>
         </nav>
+
+        {/* Full Width Dropdown Menu (Mobile) - Moved outside nav */}
+        {isMenuOpen && (
+          <div className="lg:hidden fixed left-0 right-0 top-[88px] bg-white shadow-lg border-t border-gray-200 z-50" ref={menuRef}>
+            <div className="py-2">
+              {/* Home link */}
+              <Link 
+                href="/" 
+                className={`block px-4 py-3 hover:bg-gray-50 font-['Inter'] font-medium text-[16px] leading-[20px] transition-all duration-300 ${
+                  isActive('/') ? 'text-[#0D4F7A]' : 'text-[#2D2D2D]'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Home
+              </Link>
+              
+              {/* About link */}
+              <Link 
+                href="/about" 
+                className={`block px-4 py-3 hover:bg-gray-50 font-['Inter'] font-medium text-[16px] leading-[20px] transition-all duration-300 ${
+                  isActive('/about') ? 'text-[#0D4F7A]' : 'text-[#2D2D2D]'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About
+              </Link>
+              
+              {/* Services link */}
+              <Link 
+                href="/services/shoulder-care" 
+                className={`block px-4 py-3 hover:bg-gray-50 font-['Inter'] font-medium text-[16px] leading-[20px] transition-all duration-300 ${
+                  isActive('/services') ? 'text-[#0D4F7A]' : 'text-[#2D2D2D]'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Services
+              </Link>
+              
+              {/* FAQ link */}
+              <Link 
+                href="/faq" 
+                className={`block px-4 py-3 hover:bg-gray-50 font-['Inter'] font-medium text-[16px] leading-[20px] transition-all duration-300 ${
+                  isActive('/faq') ? 'text-[#0D4F7A]' : 'text-[#2D2D2D]'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                FAQ
+              </Link>
+              
+              {/* Contact Us link */}
+              <Link 
+                href="/contact-us" 
+                className={`block px-4 py-3 hover:bg-gray-50 font-['Inter'] font-medium text-[16px] leading-[20px] transition-all duration-300 ${
+                  isActive('/contact-us') ? 'text-[#0D4F7A]' : 'text-[#2D2D2D]'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact Us
+              </Link>
+              
+              {/* Book A Visit Button in mobile menu */}
+              <div className="px-4 py-3">
+                <Link 
+                  href="/book-visit" 
+                  className="block w-full text-center px-6 py-3 bg-[#0D4F7A] text-white rounded-md font-['Inter'] font-medium text-[16px] leading-[20px] transition-all duration-300 hover:bg-opacity-90"
+                  style={{ borderRadius: '6px' }}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Book A Visit
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

@@ -8,6 +8,7 @@ import DoctorHeroSection from "@/components/doctorherosection";
 import { ClinicCardContainer } from "@/components/clinic-cardcontainer";
 import TestimonialCarousel from "@/components/testimonial-carousal";
 import AppointmentBooking from "@/components/appointment-booking";
+import Image from "next/image";
 
 export default function Home() {
 
@@ -272,7 +273,21 @@ const testimonials = [
 
   return (
     <>
+    <div className="relative">
+      <svg xmlns="http://www.w3.org/2000/svg" className="absolute hidden lg:block top-0 left-0" width="316" height="315" viewBox="0 0 316 315" fill="none">
+  <g filter="url(#filter0_f_163_7599)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M102.012 50.1023C118.753 50.4123 138.025 39.4265 150.328 50.7853C162.688 62.1977 154.655 82.2832 155.081 99.1012C155.527 116.724 165.541 137.705 152.835 149.925C140.141 162.133 119.611 149.475 102.012 150.141C82.9848 150.86 61.0639 166.963 47.1946 153.918C33.3573 140.903 46.9016 118.079 47.7475 99.1012C48.5237 81.6855 38.9337 60.6454 51.8724 48.9621C64.7709 37.3152 84.6357 49.7805 102.012 50.1023Z" fill="#D8E8FF"/>
+  </g>
+  <defs>
+    <filter id="filter0_f_163_7599" x="-115" y="-112" width="430.25" height="427" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="78" result="effect1_foregroundBlur_163_7599"/>
+    </filter>
+  </defs>
+</svg>
     <Navbar/>
+    </div>
     <OrthopedicHero title={[
           { text: "Precise Orthopaedic care for ", highlight: false },
           { text: "athletic performance", highlight: true },
@@ -283,10 +298,50 @@ const testimonials = [
   { number: "7+", label: "Years Experience", numberColor: "#0D4F7A" },
   { number: "3000+", label: "Surgeries", numberColor: "#4EBA64" },
 ]} />
+<div className="relative">
+<svg xmlns="http://www.w3.org/2000/svg" className="absolute hidden lg:block -top-60 left-0" width="436" height="626" viewBox="0 0 436 626" fill="none">
+  <g filter="url(#filter0_f_163_7557)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M30.0257 229.755C54.3681 217.536 78.9594 245.371 105.015 253.304C126.87 259.957 151.379 256.476 168.281 271.845C190.304 291.869 215.429 318.613 208.74 347.617C202.067 376.546 167.497 388.598 139.247 397.731C118.234 404.525 97.9186 392.528 75.9233 390.556C47.7908 388.033 12.7332 406.435 -5.3818 384.764C-23.4094 363.197 -2.55692 331.56 3.70258 304.156C9.79258 277.495 5.58399 242.023 30.0257 229.755Z" fill="#D8E8FF"/>
+  </g>
+  <defs>
+    <filter id="filter0_f_163_7557" x="-238.561" y="0.698547" width="674.4" height="625.095" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="113" result="effect1_foregroundBlur_163_7557"/>
+    </filter>
+  </defs>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" className="absolute z-10 hidden lg:block -top-80 right-50" width="498" height="585" viewBox="0 0 498 585" fill="none">
+  <g filter="url(#filter0_f_163_7600)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M321.685 234.265C337.859 236.923 355.264 237.04 366.705 248.778C378.038 260.406 380.664 277.588 379.707 293.797C378.811 308.974 372.313 322.927 361.685 333.798C350.921 344.807 336.797 350.194 321.685 353.143C301.483 357.086 279.777 364.046 262.287 353.195C241.795 340.482 226.682 317.904 226.025 293.797C225.356 269.257 238.115 244.042 258.958 231.071C277.436 219.571 300.208 230.735 321.685 234.265Z" fill="#D8E8FF"/>
+  </g>
+  <defs>
+    <filter id="filter0_f_163_7600" x="0" y="0" width="605.888" height="585" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="113" result="effect1_foregroundBlur_163_7600"/>
+    </filter>
+  </defs>
+</svg>
 <Heading title='Why Choose Arthro Solutions?' optionalsubtitle='Surgery to Rehabilitation in One Ecosystem' subtitle="Unlike traditional orthopaedic clinics, we merge non operative management, surgical precision with tailored rehab programs – ensuring athletes return stronger and seniors reclaim active lives." />
+  </div>
    <ThreeCardRow cards={Cards}  />
+   <div className="relative">
+    <svg xmlns="http://www.w3.org/2000/svg" className="absolute hidden lg:block -right-20 bottom-0" width="480" height="632" viewBox="0 0 480 632" fill="none">
+  <g filter="url(#filter0_f_163_7556)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M336.833 227.075C362.739 224.219 394.364 225.837 409.305 247.192C423.783 267.885 403.055 294.452 401.612 319.665C400.333 342.024 414.936 366.406 401.461 384.294C387.269 403.134 360.359 407.354 336.833 405.658C314.885 404.075 298.28 389.091 280.896 375.602C259.44 358.954 226.517 346.817 226.006 319.665C225.495 292.483 257.886 279.014 278.75 261.583C296.716 246.573 313.562 229.64 336.833 227.075Z" fill="#D8E8FF"/>
+  </g>
+  <defs>
+    <filter id="filter0_f_163_7556" x="0" y="0" width="640.417" height="632" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="113" result="effect1_foregroundBlur_163_7556"/>
+    </filter>
+  </defs>
+</svg>
   <Heading title='Surgical Precision for Every Joint, Every Age' />
   <MedicalToggleComponent tabs={medicalTabsData} defaultTab={0} />
+  </div>
   <StatsComponent />
   <DoctorHeroSection />
   <Heading title='Strategic Locations Across Mumbai' subtitle="From consultation to surgery to rehabilitation we're strategically located for your convenience" />

@@ -6,7 +6,7 @@ import { Calendar, Phone, ArrowRight } from "lucide-react"
 
 const AboutHeroSection = () => {
   return (
-    <section className="w-full bg-[#F4F8FF] pt-[41px] md:pt[72px] pb-[60px] md:pb-[100px] px-[20px] md:px-[60px] lg:px-[100px]">
+    <section className="w-full pt-[41px] md:pt[72px] pb-[60px] md:pb-[100px] px-[20px] md:px-[60px] lg:px-[100px]">
       <div className="max-w-7xl mx-auto">
         {/* Mobile Layout */}
         <div className="block md:hidden">
