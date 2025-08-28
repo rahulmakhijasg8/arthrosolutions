@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Calendar, ArrowRight } from 'lucide-react';
+import {  ArrowRight } from 'lucide-react';
+import { FadeInView, SlideInRight, HoverScale } from '@/components/animations/AnimationWrappers';
 
 const HeroSection = ({ 
   backgroundImage = '/insuranceherobg.png',
@@ -55,7 +56,7 @@ const HeroSection = ({
         <div className="flex flex-col md:flex-row gap-0 md:gap-0">
           {/* Left Column */}
           <div className="w-full md:w-[63%] flex flex-col md:mt-[100px]">
-            <h1 
+            <FadeInView delay={0.2}><h1 
               className="font-[700] text-[40px] md:text-[56px] leading-[44px] md:leading-[68px]"
               style={{
                 color: '#2D2D2D',
@@ -64,14 +65,14 @@ const HeroSection = ({
               }}
             >
               {renderTitle()}
-            </h1>
+            </h1></FadeInView>
             
-            <p className="font-['Inter'] mt-[12px] md:mt-[36px] text-[#000000D6] font-normal text-[16px] md:text-[18px] tracking-normal leading-[26px] md:leading-[28px]">
+            <FadeInView delay={0.4}><p className="font-['Inter'] mt-[12px] md:mt-[36px] text-[#000000D6] font-normal text-[16px] md:text-[18px] tracking-normal leading-[26px] md:leading-[28px]">
               {description}
-            </p>
+            </p></FadeInView>
             
             {showButton && (
-              <div className='mt-[26px] md:mt-[46px]'>
+              <HoverScale><FadeInView delay={0.6}><div className='mt-[26px] md:mt-[46px]'>
                 <Link 
                   href={buttonHref}
                   className="inline-flex items-center justify-center gap-[10px] px-[24px] py-[14px] md:px-[34px] md:py-[16px] text-white font-['Inter'] font-[500] transition-all duration-300 hover:bg-opacity-90 text-[16px] md:text-[18px] w-auto tracking-normal"
@@ -83,7 +84,7 @@ const HeroSection = ({
                   {buttonText}
                   {ButtonIcon && <ButtonIcon className="h-6 w-6" />}
                 </Link>
-              </div>
+              </div></FadeInView></HoverScale>
             )}
           </div>
           
@@ -91,7 +92,7 @@ const HeroSection = ({
           {rightImage && (
             <div className="w-full relative md:w-[50%] mt-[42px] md:mt-0 flex-col items-center justify-center">
               <Image src="/orthoanimation.svg" width={1000} height={1000} className='absolute hidden lg:block h-[56px] w-[56px] right-12 top-10' />
-              <div className="w-full h-[100%] [@media(min-width:776px)and(max-width:817px)]:h-[35%] [@media(min-width:818px)and(max-width:903px)]:h-[45%] [@media(min-width:904px)and(max-width:995px)]:h-[50%] [@media(min-width:941px)and(max-width:995px)]:h-[55%] [@media(min-width:971px)and(max-width:995px)]:h-[60%] lg:h-[100%] relative rounded-[50px]">
+              <SlideInRight delay={0.3}><div className="w-full h-[100%] [@media(min-width:776px)and(max-width:817px)]:h-[35%] [@media(min-width:818px)and(max-width:903px)]:h-[45%] [@media(min-width:904px)and(max-width:995px)]:h-[50%] [@media(min-width:941px)and(max-width:995px)]:h-[55%] [@media(min-width:971px)and(max-width:995px)]:h-[60%] lg:h-[100%] relative rounded-[50px]">
                 <Image
                   src={rightImage}
                   alt={rightImageAlt}
@@ -100,9 +101,9 @@ const HeroSection = ({
                   className="w-full h-full object-contain"
                   priority
                 />
-              </div>
+              </div></SlideInRight>
               {stats.length > 0 && (
-          <div className="relative flex z-10 justify-center bg-white -mt-30 md:-mt-41">
+          <FadeInView delay={1.0}><div className="relative flex z-10 justify-center bg-white -mt-30 md:-mt-41">
             <div className="flex flex-wrap w-full justify-center rounded-[20px] shadow-[0_20.553px_49.915px_1.468px_rgba(0,0,0,0.1)]">
               {stats.map((stat, index) => (
                 <div key={index} className="flex-col w-1/2 text-center py-[16px] px-[20px] md:px-[25px] md:py-[27px] items-center justify-center">
@@ -121,7 +122,7 @@ const HeroSection = ({
                 </div>
               ))}
             </div>
-          </div>
+          </div></FadeInView>
         )}
             </div>
           )}

@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { GraduationCap } from "lucide-react"
+import { FadeInView, SlideInLeft, SlideInRight } from "./animations/AnimationWrappers"
 
 const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
   return (
@@ -49,7 +50,7 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
         </h1>
 
         {/* Quote Section */}
-        <div className="mt-[32px]">
+        <SlideInLeft delay={0.4}><div className="mt-[32px]">
           <div
             className="p-[14px] pl-[24px] rounded-[18px] border-l-[3px] border-[#64648A]"
             style={{
@@ -110,7 +111,7 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
               </div>
             </div>
           </div>
-        </div>
+        </div></SlideInLeft>
 
         {/* Areas of Expertise */}
         <div className="mt-[14px]">
@@ -258,7 +259,7 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
         {/* Left Column - Doctor Information */}
         <div className="w-[63%] flex flex-col">
           {/* Doctor Name */}
-          <h1
+          <FadeInView delay={0.2}><h1
             className="font-[600]"
             style={{
               color: "#2D2D2D",
@@ -268,7 +269,7 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
             }}
           >
             Meet Dr. Mohit Upadhyaya
-          </h1>
+          </h1></FadeInView>
 
           {/* Quote Section */}
           <div className="mt-[32px]">
@@ -425,7 +426,7 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
 
         {/* Right Column with Image */}
         <div className="w-[37%] flex flex-col mt-[38px] items-center">
-          <div className="w-full h-[400px] lg:h-[603px] relative">
+          <SlideInRight delay={0.3}><div className="w-full h-[400px] lg:h-[603px] relative">
             <Image
               src={rightImage || "/placeholder.svg"}
               alt="Dr. Mohit Upadhyaya"
@@ -434,10 +435,10 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
               className="w-full h-full object-cover"
               priority
             />
-          </div>
+          </div></SlideInRight>
 
           {/* Stats Section */}
-          <div className="relative flex z-10 justify-end -mt-43 w-full">
+          <FadeInView delay={1.0}><div className="relative flex z-10 justify-end -mt-43 w-full">
             <div className="flex w-[85%] justify-center bg-white rounded-[20px] shadow-[0_20.553px_49.915px_1.468px_rgba(0,0,0,0.1)]">
               <div className="flex flex-col px-[24px] py-[19px] text-center items-center justify-center">
                 <div
@@ -492,7 +493,7 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </div></FadeInView>
         </div>
       </div>
       </div>
