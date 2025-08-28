@@ -91,7 +91,6 @@ const HeroSection = ({
           {rightImage && (
             <div className="w-full relative md:w-[50%] mt-[42px] md:mt-0 flex-col items-center justify-center">
               <Image src="/orthoanimation.svg" width={1000} height={1000} className='absolute hidden lg:block h-[56px] w-[56px] right-12 top-10' />
-              <Image src="/whatsappanimation.svg" width={1000} height={1000} className='absolute hidden lg:block h-[40px] w-[40px] -right-12 -bottom-5' />
               <div className="w-full h-[100%] [@media(min-width:776px)and(max-width:817px)]:h-[35%] [@media(min-width:818px)and(max-width:903px)]:h-[45%] [@media(min-width:904px)and(max-width:995px)]:h-[50%] [@media(min-width:941px)and(max-width:995px)]:h-[55%] [@media(min-width:971px)and(max-width:995px)]:h-[60%] lg:h-[100%] relative rounded-[50px]">
                 <Image
                   src={rightImage}
@@ -106,7 +105,7 @@ const HeroSection = ({
           <div className="relative flex z-10 justify-center bg-white -mt-30 md:-mt-41">
             <div className="flex flex-wrap w-full justify-center rounded-[20px] shadow-[0_20.553px_49.915px_1.468px_rgba(0,0,0,0.1)]">
               {stats.map((stat, index) => (
-                <div key={index} className="flex-col w-1/2 md:w-auto text-center py-[16px] px-[20px] md:px-[35px] md:py-[27px] items-center justify-center">
+                <div key={index} className="flex-col w-1/2 text-center py-[16px] px-[20px] md:px-[25px] md:py-[27px] items-center justify-center">
                   <div 
                     className="font-[600] font-['Inter'] text-[20px] md:text-[35px] leading-normal"
                     style={{

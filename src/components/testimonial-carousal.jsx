@@ -61,10 +61,28 @@ const TestimonialCarousel = ({ testimonials = [] }) => {
       const scrollLeft = container.scrollLeft;
       const maxScroll = container.scrollWidth - container.clientWidth;
       
-      setCanScrollLeft(scrollLeft > 10); // Small threshold for precision
-      setCanScrollRight(scrollLeft < maxScroll - 10);
+       setCanScrollLeft(scrollLeft > 5);
+       setCanScrollRight(scrollLeft < maxScroll - 5);
     }
   };
+
+  useEffect(() => {
+  const checkScrollability = () => {
+    if (scrollContainerRef.current) {
+      const container = scrollContainerRef.current;
+      const maxScroll = container.scrollWidth - container.clientWidth;
+      
+      setCanScrollLeft(container.scrollLeft > 5);
+      setCanScrollRight(maxScroll > 5); // Check if there's actual content to scroll
+    }
+  };
+  
+  checkScrollability();
+  
+  // Recheck on window resize
+  window.addEventListener('resize', checkScrollability);
+  return () => window.removeEventListener('resize', checkScrollability);
+}, [testimonials]);
   
   // Navigation logic based on screen size
   const increment = isMobile ? 1 : 3;
@@ -76,26 +94,31 @@ const TestimonialCarousel = ({ testimonials = [] }) => {
     : currentIndex + 3 < testimonials.length; // Desktop: can go until last batch of 3
   
   const nextSlide = () => {
-    if (scrollContainerRef.current && canScrollRight) {
-      const container = scrollContainerRef.current;
-      const cardWidth = isMobile ? container.offsetWidth : container.offsetWidth / 3;
+  if (scrollContainerRef.current) {
+    const container = scrollContainerRef.current;
+    const cardWidth = isMobile ? container.offsetWidth : container.offsetWidth / 3;
+    const newScrollLeft = container.scrollLeft + cardWidth;
+    const maxScroll = container.scrollWidth - container.clientWidth;
+    
+    if (newScrollLeft <= maxScroll + 5) { // Add small buffer
       container.scrollBy({ 
         left: cardWidth, 
         behavior: 'smooth' 
       });
     }
-  };
-  
-  const prevSlide = () => {
-    if (scrollContainerRef.current && canScrollLeft) {
-      const container = scrollContainerRef.current;
-      const cardWidth = isMobile ? container.offsetWidth : container.offsetWidth / 3;
-      container.scrollBy({ 
-        left: -cardWidth, 
-        behavior: 'smooth' 
-      });
-    }
-  };
+  }
+};
+
+const prevSlide = () => {
+  if (scrollContainerRef.current && canScrollLeft) {
+    const container = scrollContainerRef.current;
+    const cardWidth = isMobile ? container.offsetWidth : container.offsetWidth / 3;
+    container.scrollBy({ 
+      left: -cardWidth, 
+      behavior: 'smooth' 
+    });
+  }
+};
   
   // Get visible testimonials
   const getVisibleTestimonials = () => {

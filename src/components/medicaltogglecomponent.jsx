@@ -8,7 +8,7 @@ const MedicalToggleComponent = ({ tabs, defaultTab = 0 }) => {
   const currentTab = tabs[activeTabIndex];
 
   return (
-    <div className="flex flex-col px-[20px] md:px-[60px] lg:px-[100px] bg-white">
+    <div className="flex flex-col max-w-7xl mx-auto px-[20px] md:px-[60px] lg:px-[100px] bg-white">
       {/* Toggle Buttons */}
       <div className="flex justify-center mt-[18px] md:mt-[36px] border-[1px] rounded-[6px] border-[#2D2D2D24] w-fit mx-auto">
         {tabs.map((tab, index) => (

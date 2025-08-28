@@ -72,37 +72,37 @@ export default function Home() {
     {
       buttonLabel: "KNEE REVOLUTION",
       title: "For Athletes & Active Individuals",
-      image: "/path/to/knee-image.jpg", // Replace with actual image path
-      imageAlt: "Knee treatment procedures",
+      image: "/knee-solutions.png", // Replace with actual image path
+      imageAlt: "Doctor examining patient's knee",
       imagePlaceholder: "Knee Revolution Image",
       badges: [
-        { text: "SPORTS MEDICINE", className: "bg-red-600" },
-        { text: "PERFORMANCE", className: "bg-purple-600" }
+        { text: "SPORTS MEDICINE", className: "bg-[#7D7D7D]" },
+        { text: "PERFORMANCE", className: "bg-[#7D7D7D]" }
       ],
       conditions: [
-        "ACL Tears",
-        "Meniscus Injuries",
-        "Knee Arthritis", 
-        "Patella Dislocation",
-        "Cartilage Damage"
+        "ACL/PCL Tears",
+      "Meniscus Injuries",
+      "Knee Arthritis",
+      "Patella Dislocation",
+      "Sports Injuries"
       ],
       procedures: [
         {
-          name: "ACL Reconstruction",
-          benefit: "Restore knee stability",
-          recovery: "6-9 months to sport",
+          name: "Arthroscopic ACL Reconstruction",
+          benefit: "Hamstring/Patellar graft",
+          recovery: "Return to sport 6-9 months",
           borderColor: "border-red-600"
         },
         {
           name: "Meniscus Repair",
-          benefit: "Preserve joint function", 
-          recovery: "3-4 months for full activity",
+          benefit: "Preserves cartilage", 
+          recovery: "Full recovery in 2-3 months",
           borderColor: "border-red-600"
         },
         {
-          name: "Knee Replacement",
+          name: "Partial Knee Replacement",
           benefit: "Pain relief and mobility",
-          recovery: "3-6 months to return to activities",
+          recovery: "Walk pain-free in 24hrs post-op",
           borderColor: "border-red-600"
         }
       ]
@@ -110,19 +110,18 @@ export default function Home() {
     {
       buttonLabel: "HIP RENEWAL",
       title: "For Runners & Movement Enthusiasts", 
-      image: "/path/to/hip-image.jpg", // Replace with actual image path
-      imageAlt: "Hip renewal treatment",
+      image: "/hip-solutions.png", // Replace with actual image path
+      imageAlt: "Doctor examining patient's hip",
       imagePlaceholder: "Hip Renewal Image",
       badges: [
-        { text: "MOBILITY EXPERT", className: "bg-orange-600" },
-        { text: "MOVEMENT FOCUSED", className: "bg-teal-600" }
+        { text: "MOBILITY EXPERT", className: "[#7D7D7D]" },
+        { text: "MOVEMENT FOCUSED", className: "[#7D7D7D]" }
       ],
       conditions: [
-        "Hip Impingement",
-        "Labral Tears",
-        "Hip Arthritis",
-        "Bursitis", 
-        "Hip Dysplasia"
+       "Hip Arthritis",
+      "Hip Fractures",
+      "Femoroacetabular Impingement",
+      "Avascular Necrosis",
       ],
       procedures: [
         {
@@ -132,9 +131,9 @@ export default function Home() {
           borderColor: "border-orange-600"
         },
         {
-          name: "Hip Replacement", 
+          name: "Total Hip Replacement", 
           benefit: "Long-term pain relief",
-          recovery: "3-6 months for full activity",
+          recovery: "Walk same day",
           borderColor: "border-orange-600"
         },
         {
@@ -288,6 +287,22 @@ const testimonials = [
 </svg>
     <Navbar/>
     </div>
+    {/* Sticky WhatsApp Button */}
+<div className="fixed bottom-6 hidden lg:block right-6 z-50">
+  <a 
+    href="https://wa.me/918591353530" 
+    target="_blank" 
+    className="block hover:scale-110 transition-transform duration-300"
+  >
+    <Image 
+      src="/whatsappanimation.svg" 
+      width={56} 
+      height={56} 
+      alt="WhatsApp Contact"
+      className="drop-shadow-lg"
+    />
+  </a>
+</div>
     <OrthopedicHero title={[
           { text: "Precise Orthopaedic care for ", highlight: false },
           { text: "athletic performance", highlight: true },
@@ -327,7 +342,7 @@ const testimonials = [
   </div>
    <ThreeCardRow cards={Cards}  />
    <div className="relative">
-    <svg xmlns="http://www.w3.org/2000/svg" className="absolute hidden lg:block -right-20 bottom-0" width="480" height="632" viewBox="0 0 480 632" fill="none">
+    <svg xmlns="http://www.w3.org/2000/svg" className="absolute hidden lg:block right-0 bottom-0" width="480" height="632" viewBox="0 0 480 632" fill="none">
   <g filter="url(#filter0_f_163_7556)">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M336.833 227.075C362.739 224.219 394.364 225.837 409.305 247.192C423.783 267.885 403.055 294.452 401.612 319.665C400.333 342.024 414.936 366.406 401.461 384.294C387.269 403.134 360.359 407.354 336.833 405.658C314.885 404.075 298.28 389.091 280.896 375.602C259.44 358.954 226.517 346.817 226.006 319.665C225.495 292.483 257.886 279.014 278.75 261.583C296.716 246.573 313.562 229.64 336.833 227.075Z" fill="#D8E8FF"/>
   </g>
