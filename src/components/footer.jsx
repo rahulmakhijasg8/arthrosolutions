@@ -122,7 +122,7 @@ export default function Footer() {
           <div className="">
             <div className="flex items-center pt-[32px]">
               {/* Logo */}
-              <div className="w-[84px] h-[34px]">
+              <div className="w-[104px] h-[44px]">
                 <img 
                   src="/logo.svg" 
                   alt="Arthro Solutions Orthopaedics" 

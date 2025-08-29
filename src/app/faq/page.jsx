@@ -1,3 +1,6 @@
+"use client"
+
+import { useState, useMemo } from "react";
 import Navbar from "@/components/navbar";
 import ThreeCardRow from "@/components/threecardrow";
 import FaqSection from "@/components/faqsection";
@@ -7,8 +10,9 @@ import Hero from "@/components/faqhero";
 import ProceduresList from "@/components/procedurelist";
 
 export default function Home() {
+  const [searchQuery, setSearchQuery] = useState("");
 
-const Faqs = [
+  const Faqs = [
   {
     question: "What is a total hip replacement?",
     answer: "A total hip replacement, or total hip arthroplasty, is a surgical procedure in which a damaged hip joint is removed and replaced with an artificial joint (prosthesis). It is most commonly performed to relieve pain and improve mobility in patients with hip arthritis or injury."
@@ -59,8 +63,17 @@ const Faqs = [
   }
 ];
 
-      // Example data for NEW CARD component - Complete with all fields
-const newCardsData = [
+  // Filter FAQs based on search query
+  const filteredFaqs = useMemo(() => {
+    if (!searchQuery.trim()) return Faqs;
+    
+    return Faqs.filter(faq => 
+      faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }, [searchQuery, Faqs]);
+
+  const newCardsData = [
   {
     icon: "/Phone.svg",
     title: "Call Directly",
@@ -98,22 +111,23 @@ const newCardsData = [
 
   return (
     <>
-    <div style={{ backgroundColor: '#0D4F7A' }}>
-      <Navbar isDarkMode={true}/>
-      <Hero 
-        type="faq"
-        firstText="Frequently Asked"
-        secondText="Questions"
-        subtitle="Common questions about appointments, surgery, recovery and insurance — if you don't see your question, drop us a message."
-        searchPlaceholder="Search FAQs..."
-      />
-    </div>
-<ProceduresList />
-    
-  <FaqSection faqs={Faqs} />
-  <MedicalQuestionForm />
-  <SplitHeading firstText="Need Immediate " secondText="Medical Consultation?" accentColor="#0D4F7A" subtitle="For urgent medical questions or to schedule your consultation" />
-  <ThreeCardRow cards={newCardsData} />
+      <div style={{ backgroundColor: '#0D4F7A' }}>
+        <Navbar isDarkMode={true}/>
+        <Hero 
+          type="faq"
+          firstText="Frequently Asked"
+          secondText="Questions"
+          subtitle="Common questions about appointments, surgery, recovery and insurance — if you don't see your question, drop us a message."
+          searchPlaceholder="Search FAQs..."
+          searchQuery={searchQuery}
+          onSearchChange={setSearchQuery}
+        />
+      </div>
+      <ProceduresList />
+      <FaqSection faqs={filteredFaqs} />
+      <MedicalQuestionForm />
+      <SplitHeading firstText="Need Immediate " secondText="Medical Consultation?" accentColor="#0D4F7A" subtitle="For urgent medical questions or to schedule your consultation" />
+      <ThreeCardRow cards={newCardsData} />
     </>
   );
 }

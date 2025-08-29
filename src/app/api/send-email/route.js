@@ -1,13 +1,9 @@
-// pages/api/send-email.js (if using Pages Router)
-// OR
-// app/api/send-email/route.js (if using App Router)
-
 import nodemailer from 'nodemailer';
-import { formatFormDataForEmail } from '../../utils/emailService';
+import { formatFormDataForEmail } from '@/utils/emailService';
 
 // Create transporter
 const createTransporter = () => {
-  return nodemailer.createTransporter({
+  return nodemailer.createTransport({
     service: 'gmail',
     auth: {
       user: process.env.GMAIL_USER,
@@ -16,18 +12,13 @@ const createTransporter = () => {
   });
 };
 
-// For Pages Router (pages/api/send-email.js)
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method not allowed' });
-  }
-
+export async function POST(request) {
   try {
-    const { formType, subject, recipient, sender, formData } = req.body;
+    const { formType, subject, recipient, sender, formData } = await request.json();
 
     // Validate required fields
     if (!formData || !recipient) {
-      return res.status(400).json({ message: 'Missing required fields' });
+      return Response.json({ message: 'Missing required fields' }, { status: 400 });
     }
 
     // Create transporter
@@ -38,7 +29,7 @@ export default async function handler(req, res) {
       await transporter.verify();
     } catch (error) {
       console.error('Email transporter verification failed:', error);
-      return res.status(500).json({ message: 'Email service configuration error' });
+      return Response.json({ message: 'Email service configuration error' }, { status: 500 });
     }
 
     // Format email content
@@ -57,7 +48,7 @@ export default async function handler(req, res) {
     
     console.log('Email sent successfully:', info.messageId);
     
-    res.status(200).json({ 
+    return Response.json({ 
       success: true, 
       messageId: info.messageId,
       message: 'Email sent successfully' 
@@ -65,10 +56,10 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('Email sending error:', error);
-    res.status(500).json({ 
+    return Response.json({ 
       success: false, 
       message: 'Failed to send email',
       error: error.message 
-    });
+    }, { status: 500 });
   }
 }
