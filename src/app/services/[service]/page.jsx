@@ -47,46 +47,71 @@ const serviceConfigs = {
       secondText: "Procedures"
     },
     procedures: [
-      {
-        id: 1,
-        title: "Arthroscopic Instability Surgery",
-        subtitle: "Anchor-based stabilization",
-        returnTime: "Return to sport 4-6 months",
-        description: "Minimally invasive procedure to stabilize recurring shoulder dislocations using bioabsorbable anchors.",
-        patientType: "Athletes with recurrent dislocations"
-      },
-      {
-        id: 2,
-        title: "Rotator Cuff Repair",
-        subtitle: "Suture-bridge technique",
-        returnTime: "90% strength recovery in 3-5 months",
-        description: "Advanced double-row repair technique for optimal healing and strength restoration.",
-        patientType: "Active adults with rotator cuff tears"
-      },
-      {
-        id: 3,
-        title: "Frozen Shoulder Release",
-        subtitle: "Arthroscopic capsular release",
-        returnTime: "70% mobility improvement in 6 hours",
-        description: "Precise arthroscopic release of tight capsular structures for immediate mobility gains.",
-        patientType: "Patients with adhesive capsulitis",
-         successRate: 88,
+  {
+    id: 1,
+    title: "Arthroscopic Instability Surgery",
+    subtitle: "Anchor-based stabilization",
+    returnTime: "Return to sport 4-6 months",
+    description: "Minimally invasive procedure to stabilize recurring shoulder dislocations using bioabsorbable anchors.",
+    patientType: "Athletes with recurrent dislocations",
+    successRate: 95,
+    buttonColor: '#0D4F7A',
     procedureHighlights: [
-      "Immediate post-operative pain relief",
+      "3-4 small incisions (5mm each)",
+      "Same-day discharge possible",
+      "Full overhead activities at 4-6 months",
+      "Return to contact sports at 6 months"
+    ]
+  },
+  {
+    id: 2,
+    title: "Rotator Cuff Repair",
+    subtitle: "Suture-bridge technique",
+    returnTime: "90% strength recovery in 3-5 months",
+    description: "Advanced double-row repair technique for optimal healing and strength restoration.",
+    patientType: "Active adults with rotator cuff tears",
+    successRate: 92,
+    buttonColor: '#0D4F7A',
+    procedureHighlights: [
+      "Superior biomechanical strength",
+      "Lower re-tear rates vs single-row",
+      "Progressive strengthening protocol",
+      "Return to full activities 4-5 months"
+    ]
+  },
+  {
+    id: 3,
+    title: "Frozen Shoulder Release",
+    subtitle: "Arthroscopic capsular release",
+    returnTime: "70% mobility improvement in 6 hours",
+    description: "Precise arthroscopic release of tight capsular structures for immediate mobility gains.",
+    patientType: "Patients with adhesive capsulitis",
+    successRate: 88,
+    buttonColor: '#0D4F7A',
+    procedureHighlights: [
+      "Immediate post-op motion gains",
       "Aggressive early physiotherapy", 
       "Pain relief within 24-48 hours",
       "Full range of motion 2-3 months"
     ]
-      },
-      {
-        id: 4,
-        title: "Shoulder Replacement",
-        subtitle: "Anatomic / Reverse prosthesis",
-        returnTime: "Long-term pain relief",
-        description: "Total or reverse shoulder replacement for end-stage arthritis and massive rotator cuff tears.",
-        patientType: "Severe arthritis or massive cuff tears"
-      }
+  },
+  {
+    id: 4,
+    title: "Shoulder Replacement",
+    subtitle: "Anatomic / Reverse prosthesis",
+    returnTime: "Long-term pain relief",
+    description: "Total or reverse shoulder replacement for end-stage arthritis and massive rotator cuff tears.",
+    patientType: "Severe arthritis or massive cuff tears",
+    successRate: 92,
+    buttonColor: '#0D4F7A',
+    procedureHighlights: [
+      "Computer-assisted planning",
+      "Modern ceramic/metal implants",
+      "2-3 day hospital stay",
+      "90% pain relief at 1 year"
     ]
+  }
+]
   },
   "knee-revolution": {
     index: 1,
@@ -119,47 +144,87 @@ const serviceConfigs = {
       secondText: "Procedures"
     },
     procedures: [
-      {
-        id: 1,
-        title: "Arthroscopic ACL Reconstruction",
-        subtitle: "Hamstring/Patellar graft",
-        returnTime: "Return to sport 6-9 months",
-        description: "Gold standard ACL reconstruction using athlete's own tissue for optimal integration.",
-        patientType: "Athletes and active individuals"
-      },
-      {
-        id: 2,
-        title: "Meniscus Repair",
-        subtitle: "Preserves cartilage",
-        returnTime: "Full recovery in 2-3 months",
-        description: "Tissue-preserving repair techniques to maintain natural shock absorption.",
-        patientType: "Young adults with meniscus tears"
-      },
-      {
-        id: 3,
-        title: "Patellar Stabilisation (MPFL reconstruction)",
-        subtitle: "Corrects kneecap dislocation",
-        returnTime: "Return to sport in 4-6 months",
-        description: "Precise anatomical reconstruction prevents future patellofemoral instability.",
-        patientType: "Recurrent kneecap dislocators"
-      },
-      {
-        id: 4,
-        title: "Partial Knee Replacement",
-        subtitle: "Revision 24, 15mm in 2 days",
-        returnTime: "Walk pain-free in 24hrs post-op",
-        description: "Minimally invasive, compartmental knee replacement preserving healthy tissue.",
-        patientType: "Single compartment arthritis"
-      },
-      {
-        id: 5,
-        title: "Total Knee Replacement",
-        subtitle: "Modern implants & alignment tech",
-        returnTime: "Rapid functional recovery program",
-        description: "Total knee replacement with accelerated recovery protocols.",
-        patientType: "End-stage knee arthritis"
-      }
+  {
+    id: 1,
+    title: "Arthroscopic ACL Reconstruction",
+    subtitle: "Hamstring/Patellar graft",
+    returnTime: "Return to sport 6-9 months",
+    description: "Gold standard ACL reconstruction using athlete's own tissue for optimal integration.",
+    patientType: "Athletes and active individuals",
+    successRate: 96,
+    buttonColor: '#1AB585',
+    procedureHighlights: [
+      "Choice of hamstring or patellar tendon graft",
+      "Anatomic tunnel placement",
+      "Accelerated rehab protocol available",
+      "Return to pivoting sports 8-9 months"
     ]
+  },
+  {
+    id: 2,
+    title: "Meniscus Repair",
+    subtitle: "Preserves cartilage",
+    returnTime: "Full recovery in 2-3 months",
+    description: "Tissue-preserving repair techniques to maintain natural shock absorption.",
+    patientType: "Young adults with meniscus tears",
+    successRate: 85,
+    buttonColor: '#1AB585',
+    procedureHighlights: [
+      "All-inside suture techniques",
+      "Biological augmentation when needed",
+      "Protected weight bearing 6 weeks",
+      "Return to sports 3-4 months"
+    ]
+  },
+  {
+    id: 3,
+    title: "Patellar Stabilisation (MPFL reconstruction)",
+    subtitle: "Corrects kneecap dislocation",
+    returnTime: "Return to sport in 4-6 months",
+    description: "Precise anatomical reconstruction prevents future patellofemoral instability.",
+    patientType: "Recurrent kneecap dislocators",
+    successRate: 90,
+    buttonColor: '#1AB585',
+    procedureHighlights: [
+      "Anatomic MPFL reconstruction",
+      "Concurrent cartilage procedures if needed",
+      "Return to running 3-4 months",
+      "Full sports activities 5-6 months"
+    ]
+  },
+  {
+    id: 4,
+    title: "Partial Knee Replacement",
+    subtitle: "Revision 24, 15mm in 2 days",
+    returnTime: "Walk pain-free in 24hrs post-op",
+    description: "Minimally invasive, compartmental knee replacement preserving healthy tissue.",
+    patientType: "Single compartment arthritis",
+    successRate: 94,
+    buttonColor: '#1AB585',
+    procedureHighlights: [
+      "3-4 inch incision",
+      "Preserve ACL and most of knee",
+      "Rapid recovery protocol",
+      "Back to golf/tennis 6-8 weeks"
+    ]
+  },
+  {
+    id: 5,
+    title: "Total Knee Replacement",
+    subtitle: "Modern implants & alignment tech",
+    returnTime: "Rapid functional recovery program",
+    description: "Total knee replacement with accelerated recovery protocols.",
+    patientType: "End-stage knee arthritis",
+    successRate: 97,
+    buttonColor: '#1AB585',
+    procedureHighlights: [
+      "Computer navigation for precision",
+      "Same-day mobilization",
+      "Multimodal pain management",
+      "Home discharge 1-2 days"
+    ]
+  }
+]
   },
   "hip-renewal": {
     index: 2,
@@ -191,23 +256,34 @@ const serviceConfigs = {
       secondText: "Procedures"
     },
     procedures: [
-      {
-        id: 1,
-        title: "X-ray Guided Injection",
-        subtitle: "Precise drug delivery for maximum result",
-        returnTime: "Limp in, walkout normally",
-        description: "Drive Immediately",
-        patientType: "Hip arthritis, avascular necrosis"
-      },
-      {
-        id: 2,
-        title: "Total Hip Replacement",
-        subtitle: "Posterior Approach",
-        returnTime: "Walk same day",
-        description: "Drive in 2 weeks",
-        patientType: "Hip arthritis, avascular necrosis"
-      }
+  {
+    id: 1,
+    title: "X-ray Guided Injection",
+    subtitle: "Precise drug delivery for maximum result",
+    returnTime: "Limp in, walkout normally",
+    description: "Drive Immediately",
+    patientType: "Hip arthritis, avascular necrosis",
+    successRate: null,
+    buttonColor: '#FE7C49',
+    procedureHighlights: []
+  },
+  {
+    id: 2,
+    title: "Total Hip Replacement",
+    subtitle: "Posterior Approach",
+    returnTime: "Walk same day",
+    description: "Drive in 2 weeks",
+    patientType: "Hip arthritis, avascular necrosis",
+    successRate: 98,
+    buttonColor: '#FE7C49',
+    procedureHighlights: [
+      "No muscle cutting tissue sparing",
+      "Lower dislocation risk",
+      "Walk with walker same day",
+      "Drive automatic car 2 weeks"
     ]
+  }
+]
   }
 };
 

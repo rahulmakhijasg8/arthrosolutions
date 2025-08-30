@@ -439,14 +439,13 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
 
           {/* Stats Section */}
           <FadeInView delay={1.0}><div className="relative flex z-10 justify-end -mt-43 w-full">
-            <div className="flex w-[85%] justify-center bg-white rounded-[20px] shadow-[0_20.553px_49.915px_1.468px_rgba(0,0,0,0.1)]">
-              <div className="flex flex-col px-[24px] py-[19px] text-center items-center justify-center">
+            <div className="flex flex-wrap w-[100%] md:w-[300px] lg:w-[366px] justify-center bg-white rounded-[20px] shadow-[0_20.553px_49.915px_1.468px_rgba(0,0,0,0.1)]">
+              <div className="flex flex-col w-1/2 px-[24px] py-[19px] text-center items-center justify-center">
                 <div
-                  className=""
+                  className="text-[20px] md:text-[24px]"
                   style={{
                     color: "#0D4F7A",
                     fontFamily: "Inter",
-                    fontSize: "24px",
                     fontWeight: 600,
                     lineHeight: "1.2",
                   }}
@@ -454,11 +453,10 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
                   7+
                 </div>
                 <div
-                  className="mt-[8px]"
+                  className="mt-[8px] text-[14px] md:text-[16px]"
                   style={{
                     color: "#64648A",
                     fontFamily: "Inter",
-                    fontSize: "16px",
                     fontWeight: 400,
                     lineHeight: "1.4",
                   }}
@@ -466,13 +464,12 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
                   Years Experience
                 </div>
               </div>
-              <div className="flex flex-col px-[24px] py-[19px] text-center items-center justify-center">
+              <div className="flex flex-col w-1/2 px-[24px] py-[19px] text-center items-center justify-center">
                 <div
-                  className=""
+                  className="text-[20px] md:text-[24px]"
                   style={{
                     color: "#4CAF50",
                     fontFamily: "Inter",
-                    fontSize: "24px",
                     fontWeight: 600,
                     lineHeight: "1.2",
                   }}
@@ -480,11 +477,10 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
                   3000+
                 </div>
                 <div
-                  className="mt-[8px]"
+                  className="mt-[8px] text-[14px] md:text-[16px]"
                   style={{
                     color: "#64648A",
                     fontFamily: "Inter",
-                    fontSize: "16px",
                     fontWeight: 400,
                     lineHeight: "1.4",
                   }}

@@ -10,7 +10,9 @@ export default function MedicalProcedureCard({
   patientType, 
   successRate,
   procedureHighlights = [],
-  onMoreDetails 
+  onMoreDetails,
+  // Single color prop for all buttons
+  buttonColor = "#0D4F7A"
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -56,7 +58,8 @@ export default function MedicalProcedureCard({
           <span className="text-[10px] font-['Inter'] text-[#2D2D2D] font-[400]">{patientType}</span>
         </div>
         <button 
-          className="bg-[#0D4F7A] px-[8px] py-[6px] md:px-[10px] md:py-[8px] hover:cursor-pointer rounded-[6px] md:rounded-[6px] text-white" 
+          className="px-[8px] py-[6px] md:px-[10px] md:py-[8px] hover:cursor-pointer rounded-[6px] md:rounded-[6px] text-white transition-colors duration-200"
+          style={{ backgroundColor: buttonColor }}
           onClick={handleMoreDetailsClick}
         >
           <div className="flex items-center gap-1 md:gap-2">
@@ -106,10 +109,43 @@ export default function MedicalProcedureCard({
 
           {/* Additional buttons in expanded state */}
           <div className="flex gap-[16px] md:gap-[34px] mt-4 md:mt-6">
-            <button className="bg-[#0D4F7A] w-1/2 text-white hover:text-[#0D4F7A] border border-[#0D4F7A] text-[14px] px-[10px] md:px-[14px] py-2 rounded-[6px] hover:bg-white transition-colors duration-200">
+            {/* Book Assessment Button - Normal: colored bg with white text, Hover: white bg with colored text */}
+            <button 
+              className="w-1/2 text-white text-[14px] px-[10px] md:px-[14px] py-2 rounded-[6px] transition-colors duration-200"
+              style={{ 
+                backgroundColor: buttonColor,
+                borderColor: buttonColor,
+                border: `1px solid ${buttonColor}`
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundColor = 'white';
+                e.target.style.color = buttonColor;
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundColor = buttonColor;
+                e.target.style.color = 'white';
+              }}
+            >
               Book Assessment
             </button>
-            <button className="border w-1/2 border-[#0D4F7A] text-[#0D4F7A] text-[14px] px-[10px] md:px-[14px] py-2 rounded-[6px] hover:bg-[#0D4F7A] hover:text-white transition-colors duration-200">
+            
+            {/* Learn More Button - Normal: white bg with colored text, Hover: colored bg with white text */}
+            <button 
+              className="border w-1/2 text-[14px] px-[10px] md:px-[14px] py-2 rounded-[6px] transition-colors duration-200"
+              style={{ 
+                borderColor: buttonColor,
+                color: buttonColor,
+                backgroundColor: 'white'
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundColor = buttonColor;
+                e.target.style.color = 'white';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundColor = 'white';
+                e.target.style.color = buttonColor;
+              }}
+            >
               Learn More
             </button>
           </div>

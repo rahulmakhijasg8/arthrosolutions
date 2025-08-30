@@ -36,8 +36,8 @@ export default function Home() {
       imagePlaceholder: "Shoulder Care Image",
       gradientOverlay: "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.64) 84.26%)",
       badges: [
-        { text: "JOINT SPECIALIST", className: "bg-[#7D7D7D]" },
-        { text: "ATHLETIC FOCUSED", className: "bg-[#7D7D7D]" }
+        { text: "Ideal For Athletes", className: "bg-[#7D7D7D]" },
+        { text: "Minimally Invasive", className: "bg-[#7D7D7D]" }
       ],
       conditionsTitle: "Conditions Treated",
       conditions: [
@@ -76,36 +76,37 @@ export default function Home() {
       imageAlt: "Doctor examining patient's knee",
       imagePlaceholder: "Knee Revolution Image",
       badges: [
-        { text: "SPORTS MEDICINE", className: "bg-[#7D7D7D]" },
-        { text: "PERFORMANCE", className: "bg-[#7D7D7D]" }
+        { text: "Advanced Technology", className: "bg-[#7D7D7D]" },
+        { text: "Quick Recovery", className: "bg-[#7D7D7D]" }
       ],
       conditions: [
-        "ACL/PCL Tears",
-      "Meniscus Injuries",
-      "Knee Arthritis",
-      "Patella Dislocation",
-      "Sports Injuries"
-      ],
-      procedures: [
-        {
-          name: "Arthroscopic ACL Reconstruction",
-          benefit: "Hamstring/Patellar graft",
-          recovery: "Return to sport 6-9 months",
-          borderColor: "border-red-600"
-        },
-        {
-          name: "Meniscus Repair",
-          benefit: "Preserves cartilage", 
-          recovery: "Full recovery in 2-3 months",
-          borderColor: "border-red-600"
-        },
-        {
-          name: "Partial Knee Replacement",
-          benefit: "Pain relief and mobility",
-          recovery: "Walk pain-free in 24hrs post-op",
-          borderColor: "border-red-600"
-        }
-      ]
+  "ACL/PCL Tears",
+  "Meniscus Injuries",
+  "Knee Arthritis",
+  "Patella Dislocation",
+  "Sports Injuries"
+],
+
+procedures: [
+  {
+    name: "Arthroscopic ACL Reconstruction",
+    benefit: "Return to pre-injury performance",
+    recovery: "6-9 months to competitive sport",
+    borderColor: "border-red-600"
+  },
+  {
+    name: "Meniscus Repair",
+    benefit: "Preserves natural cartilage", 
+    recovery: "6-8 weeks return to activity",
+    borderColor: "border-red-600"
+  },
+  {
+    name: "Partial Knee Replacement",
+    benefit: "Complete pain relief",
+    recovery: "6-12 weeks for full recovery",
+    borderColor: "border-red-600"
+  }
+]
     },
     {
       buttonLabel: "HIP RENEWAL",
@@ -118,31 +119,20 @@ export default function Home() {
         { text: "MOVEMENT FOCUSED", className: "[#7D7D7D]" }
       ],
       conditions: [
-       "Hip Arthritis",
-      "Hip Fractures",
-      "Femoroacetabular Impingement",
-      "Avascular Necrosis",
-      ],
-      procedures: [
-        {
-          name: "Hip Arthroscopy",
-          benefit: "Minimal invasion, quick recovery",
-          recovery: "3-4 months to sport",
-          borderColor: "border-orange-600"
-        },
-        {
-          name: "Total Hip Replacement", 
-          benefit: "Long-term pain relief",
-          recovery: "Walk same day",
-          borderColor: "border-orange-600"
-        },
-        {
-          name: "Labral Repair",
-          benefit: "Restore hip stability", 
-          recovery: "4-6 months to return to sport",
-          borderColor: "border-orange-600"
-        }
-      ]
+  "Hip Arthritis",
+  "Hip Fractures",
+  "Femoroacetabular Impingement",
+  "Avascular Necrosis"
+],
+
+procedures: [
+  {
+    name: "Hip Replacement",
+    benefit: "Minimally invasive repair",
+    recovery: "4-6 weeks rehabilitation",
+    borderColor: "border-red-600"
+  }
+]
     }
   ];
 

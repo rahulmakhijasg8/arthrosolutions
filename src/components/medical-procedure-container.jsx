@@ -49,6 +49,7 @@ export default function MedicalProcedureContainer({ procedures = [] }) {
                 onMoreDetails={() => handleMoreDetails(procedure.id)}
                 procedureHighlights={procedure.procedureHighlights}
                 successRate={procedure.successRate}
+                buttonColor={procedure.buttonColor}
               />
             </div>
           );

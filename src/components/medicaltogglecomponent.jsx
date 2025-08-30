@@ -31,7 +31,7 @@ const MedicalToggleComponent = ({ tabs, defaultTab = 0 }) => {
       </div></FadeInView>
 
       {/* Main Card */}
-      <ScaleInView delay={0.3}><div className="bg-white w-full mt-[32px] md:mt-[60px] md:h-[570px] rounded-[12px] md:rounded-[20px] overflow-hidden" 
+      <ScaleInView delay={0.3}><div className="bg-white w-full mt-[32px] md:mt-[60px] md:h-[580px] rounded-[12px] md:rounded-[20px] overflow-hidden" 
      style={{boxShadow: '0 14px 34px 1px rgba(0, 0, 0, 0.09)'}}>
         <div className="flex flex-col md:flex-row h-full">
           {/* Left Side - Image */}
