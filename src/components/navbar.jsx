@@ -172,7 +172,7 @@ export default function Navbar({ isDarkMode = false }) {
               className={`ml-6 px-6 py-3 ${
                 isDarkMode 
                   ? 'bg-white text-[#0D4F7A] hover:bg-gray-100' 
-                  : 'bg-[#0D4F7A] text-white hover:bg-opacity-90'
+                  : 'bg-[#0D4F7A] text-white border border-[#0D4F7A] hover:text-[#0D4F7A] hover:bg-white'
               } rounded-md font-['Inter'] font-medium text-[18px] leading-[22px] transition-all duration-300`}
               style={{ borderRadius: '6px' }}
             >

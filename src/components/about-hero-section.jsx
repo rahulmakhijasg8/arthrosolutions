@@ -255,36 +255,36 @@ const AboutHeroSection = () => {
             {/* Action Buttons */}
             <div className="flex flex-col xl:flex-row gap-4">
               <Link
-                href="/schedule"
-                className="bg-[#0D4F7A] w-fit text-white p-[14px] rounded-lg font-medium flex items-center justify-between hover:bg-[#1D4ED8] transition-colors"
-              >
-                <div className="flex items-center gap-[10px]">
-                  <span className="whitespace-nowrap text-[14px]">Schedule Your Joint Assessment</span>
-                </div>
-                <ArrowRight className="w-4 h-4 flex-shrink-0 ml-4" />
-              </Link>
-              <Link
-                href="/consultation"
-                className="border border-[#0D4F7A] w-fit text-[#0D4F7A] p-[14px] rounded-lg font-medium flex items-center justify-between hover:bg-[#0D4F7A] hover:text-white transition-colors"
-              >
-                <div className="flex items-center gap-[10px]">
-                  <span className="whitespace-nowrap text-[14px]">Free 15-Min Tele-Consultation</span>
-                </div>
-                <ArrowRight className="w-4 h-4 flex-shrink-0 ml-4" />
-              </Link>
+  href="/schedule"
+  className="bg-[#0D4F7A] w-fit text-white p-[14px] rounded-lg font-medium flex items-center justify-center hover:bg-[#FFFFFF] hover:text-[#0D4F7A] border border-[#0D4F7A] transition-colors hover:shadow-[0_4px_12px_0_rgba(1,81,202,0.24)]"
+>
+  <div className="flex items-center gap-[10px]">
+    <span className="whitespace-nowrap text-[14px]">Schedule Your Joint Assessment</span>
+  </div>
+  <ArrowRight className="w-4 h-4 flex-shrink-0 ml-4" />
+</Link>
+<Link
+  href="/consultation"
+  className="border border-[#0D4F7A] bg-white w-fit text-[#0D4F7A] p-[14px] rounded-lg font-medium flex items-center justify-center hover:bg-[#0D4F7A] hover:text-white transition-colors"
+>
+  <div className="flex items-center gap-[10px]">
+    <span className="whitespace-nowrap text-[14px]">Free 15-Min Tele-Consultation</span>
+  </div>
+  <ArrowRight className="w-4 h-4 flex-shrink-0 ml-4" />
+</Link>
             </div>
 
             {/* Statistics */}
             <div className="stats-container grid grid-cols-3 gap-6 w-[530px] mt-[64px]">
-  <div className="bg-white rounded-lg px-[24px] justify-center py-[10px] flex flex-col items-center">
+  <div className="bg-white rounded-lg p-[8px] md:px-[10px] justify-center md:py-[24px] flex flex-col items-center">
     <div className="text-[28px] font-[700] font-['Inter'] text-[#0D4F7A]">3000+</div>
     <div className="text-[#64648A] font-[400] text-[14px] font-['Inter'] whitespace-nowrap">Successful Surgeries</div>
   </div>
-  <div className="bg-white rounded-lg px-[24px] justify-center py-[10px] flex flex-col items-center">
+  <div className="bg-white rounded-lg p-[8px] md:px-[10px] justify-center md:py-[24px] flex flex-col items-center">
     <div className="text-[28px] font-[700] font-['Inter'] text-[#4CAF50]">97%</div>
     <div className="text-[#64648A] font-[400] text-[14px] font-['Inter'] whitespace-nowrap">Patient Satisfaction</div>
   </div>
-  <div className="bg-white rounded-lg px-[24px] justify-center py-[10px] flex flex-col items-center">
+  <div className="bg-white rounded-lg p-[8px] md:px-[10px] justify-center md:py-[24px] flex flex-col items-center">
     <div className="text-[28px] font-[700] font-['Inter'] text-[#FE7C49]">7+</div>
     <div className="text-[#64648A] font-[400] text-[14px] font-['Inter'] whitespace-nowrap">Years Experience</div>
   </div>

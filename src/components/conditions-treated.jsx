@@ -17,7 +17,7 @@ export default function ConditionsTreated({
       </h2>
       
       {/* Desktop layout - single row */}
-      <div className="hidden md:flex md:flex-wrap md:justify-center md:pb-[64px] md:px-[60px] lg:px-[100px] md:gap-x-8 md:gap-y-3">
+      <div className="hidden max-w-[7xl] md:flex md:flex-wrap md:justify-center md:pb-[64px] md:px-[60px] lg:px-[100px] md:gap-x-8 md:gap-y-3">
         {conditions.map((condition, index) => (
           <div key={index} className="flex font-['Inter'] bg-white text-[18px] mt-[48px] rounded-[8px] py-[18px] px-[14px] items-start">
             <span className="mr-3 text-2xl leading-none" style={{ color: accentColor }}>•</span>

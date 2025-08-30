@@ -8,6 +8,7 @@ import MedicalQuestionForm from "@/components/faqform";
 import SplitHeading from "@/components/split-heading";
 import Hero from "@/components/faqhero";
 import ProceduresList from "@/components/procedurelist";
+import MedicalProcedureCard from "@/components/medical-procedure-card";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");

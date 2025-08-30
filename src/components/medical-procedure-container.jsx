@@ -47,6 +47,8 @@ export default function MedicalProcedureContainer({ procedures = [] }) {
                 description={procedure.description}
                 patientType={procedure.patientType}
                 onMoreDetails={() => handleMoreDetails(procedure.id)}
+                procedureHighlights={procedure.procedureHighlights}
+                successRate={procedure.successRate}
               />
             </div>
           );

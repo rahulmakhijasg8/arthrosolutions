@@ -72,19 +72,19 @@ const HeroSection = ({
             </p></FadeInView>
             
             {showButton && (
-              <HoverScale><FadeInView delay={0.6}><div className='mt-[26px] md:mt-[46px]'>
-                <Link 
-                  href={buttonHref}
-                  className="inline-flex items-center justify-center gap-[10px] px-[24px] py-[14px] md:px-[34px] md:py-[16px] text-white font-['Inter'] font-[500] transition-all duration-300 hover:bg-opacity-90 text-[16px] md:text-[18px] w-auto tracking-normal"
-                  style={{
-                    backgroundColor: '#0D4F7A',
-                    borderRadius: '6px'
-                  }}
-                >
-                  {buttonText}
-                  {ButtonIcon && <ButtonIcon className="h-6 w-6" />}
-                </Link>
-              </div></FadeInView></HoverScale>
+              <HoverScale>
+  <FadeInView delay={0.6}>
+    <div className='mt-[26px] md:mt-[46px]'>
+      <Link 
+        href={buttonHref}
+        className="inline-flex items-center justify-center gap-[10px] px-[24px] py-[14px] md:px-[34px] md:py-[16px] bg-[#0D4F7A] text-white border border-[#0D4F7A] hover:text-[#0D4F7A] hover:bg-white font-['Inter'] font-[500] transition-all duration-300 text-[16px] md:text-[18px] w-auto tracking-normal rounded-[6px]"
+      >
+        {buttonText}
+        {ButtonIcon && <ButtonIcon className="h-6 w-6" />}
+      </Link>
+    </div>
+  </FadeInView>
+</HoverScale>
             )}
           </div>
           
@@ -103,23 +103,23 @@ const HeroSection = ({
                 />
               </div></SlideInRight>
               {stats.length > 0 && (
-          <FadeInView delay={1.0}><div className="relative flex z-10 justify-center bg-white -mt-30 md:-mt-41">
+          <FadeInView delay={1.0}><div className="relative flex z-10 justify-center bg-white -mt-30 md:-mt-27 lg:-mt-39">
             <div className="flex flex-wrap w-full justify-center rounded-[20px] shadow-[0_20.553px_49.915px_1.468px_rgba(0,0,0,0.1)]">
               {stats.map((stat, index) => (
-                <div key={index} className="flex-col w-1/2 text-center py-[16px] px-[20px] md:px-[25px] md:py-[27px] items-center justify-center">
-                  <div 
-                    className="font-[600] font-['Inter'] text-[20px] md:text-[35px] leading-normal"
-                    style={{
-                      color: stat.numberColor || '#0D4F7A',
-                    }}
-                  >
-                    {stat.number}
-                  </div>
-                  <div 
-                    className="font-[400] mt-[6px] md:mt-[11px] font-['Inter'] text-[13px] md:text-[23px] leading-normal text-[#64648A] " >
-                    {stat.label}
-                  </div>
-                </div>
+                <div key={index} className="flex-col w-1/2 md:w-auto md:flex-1 lg:w-1/2 text-center py-[16px] px-[20px] md:px-[25px] md:py-[27px] items-center justify-center">
+  <div 
+    className="font-[600] font-['Inter'] text-[20px] md:text-[35px] leading-normal"
+    style={{
+      color: stat.numberColor || '#0D4F7A',
+    }}
+  >
+    {stat.number}
+  </div>
+  <div 
+    className="font-[400] mt-[6px] md:mt-[11px] font-['Inter'] text-[13px] md:text-[23px] leading-normal text-[#64648A] whitespace-nowrap" >
+    {stat.label}
+  </div>
+</div>
               ))}
             </div>
           </div></FadeInView>

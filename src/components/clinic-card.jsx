@@ -60,7 +60,7 @@ export function ClinicCard({
         <div className="flex gap-[14px] mt-auto">
           <a 
             href={`tel:${phone}`}
-            className="flex-1 flex font-['Inter'] items-center justify-center gap-[10px] px-[14px] py-[8px] border border-[#0D4F7A] text-[#0D4F7A] bg-transparent rounded-[6px] hover:bg-blue-50 transition-colors duration-200 text-[14px] md:text-[16px] font-[400] cursor-pointer"
+            className="flex-1 flex font-['Inter'] items-center justify-center gap-[10px] px-[14px] py-[8px] border border-[#0D4F7A] text-[#0D4F7A] bg-transparent rounded-[6px] hover:bg-[#0D4F7A] hover:text-[#FFFFFF] transition-colors duration-200 text-[14px] md:text-[16px] font-[400] cursor-pointer"
           >
             <Phone className="w-4 h-4" />
             Call Now
@@ -69,7 +69,7 @@ export function ClinicCard({
             href={mapLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 flex items-center font-['Inter'] justify-center gap-[10px] px-[14px] py-[8px] border border-[#4CAF50] text-[#4CAF50] bg-transparent rounded-[6px] hover:bg-green-50 transition-colors duration-200 text-[14px] md:text-[16px] font-[400] cursor-pointer"
+            className="flex-1 flex items-center font-['Inter'] justify-center gap-[10px] px-[14px] py-[8px] border border-[#4CAF50] text-[#4CAF50] bg-transparent rounded-[6px] hover:bg-[#4CAF50] hover:text-[#FFFFFF] transition-colors duration-200 text-[14px] md:text-[16px] font-[400] cursor-pointer"
           >
             <MapPin className="w-4 h-4" />
             Direction

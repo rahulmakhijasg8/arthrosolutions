@@ -49,7 +49,7 @@ export default function Philosophy({
                   "Joints shouldn't limit life's playbooks"
                 </p>
                 <p
-                  className="mt-[24px] italic text-[15px] font-['Inter'] font-500 text-white"
+                  className="mt-[24px] italic text-[15px] font-['Inter'] text-[#D1D5DB]"
                 >
                   — Dr. Mohit Upadhyaya
                 </p>

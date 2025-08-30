@@ -69,7 +69,14 @@ const serviceConfigs = {
         subtitle: "Arthroscopic capsular release",
         returnTime: "70% mobility improvement in 6 hours",
         description: "Precise arthroscopic release of tight capsular structures for immediate mobility gains.",
-        patientType: "Patients with adhesive capsulitis"
+        patientType: "Patients with adhesive capsulitis",
+         successRate: 88,
+    procedureHighlights: [
+      "Immediate post-operative pain relief",
+      "Aggressive early physiotherapy", 
+      "Pain relief within 24-48 hours",
+      "Full range of motion 2-3 months"
+    ]
       },
       {
         id: 4,

@@ -33,7 +33,7 @@ export default function StatsComponent() {
           </div>
         </div></ScaleInView>
         {index < stats.length - 1 && (
-          <div className="mx-auto w-[203px] h-px md:w-px md:h-[127px] bg-[#64648A] opacity-[0.14]"></div>
+          <div className="mx-auto w-[203px] h-px md:w-px md:h-[127px] bg-[#FFFFFF] opacity-[0.06]"></div>
         )}
       </>
     ))}

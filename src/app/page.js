@@ -314,7 +314,7 @@ const testimonials = [
   { number: "3000+", label: "Surgeries", numberColor: "#4EBA64" },
 ]} />
 <div className="relative">
-<svg xmlns="http://www.w3.org/2000/svg" className="absolute hidden lg:block -top-60 left-0" width="436" height="626" viewBox="0 0 436 626" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" className="absolute -z-10 hidden lg:block -top-60 left-0" width="436" height="626" viewBox="0 0 436 626" fill="none">
   <g filter="url(#filter0_f_163_7557)">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M30.0257 229.755C54.3681 217.536 78.9594 245.371 105.015 253.304C126.87 259.957 151.379 256.476 168.281 271.845C190.304 291.869 215.429 318.613 208.74 347.617C202.067 376.546 167.497 388.598 139.247 397.731C118.234 404.525 97.9186 392.528 75.9233 390.556C47.7908 388.033 12.7332 406.435 -5.3818 384.764C-23.4094 363.197 -2.55692 331.56 3.70258 304.156C9.79258 277.495 5.58399 242.023 30.0257 229.755Z" fill="#D8E8FF"/>
   </g>
@@ -342,7 +342,7 @@ const testimonials = [
   </div>
    <ThreeCardRow cards={Cards}  />
    <div className="relative">
-    <svg xmlns="http://www.w3.org/2000/svg" className="absolute hidden lg:block right-0 bottom-0" width="480" height="632" viewBox="0 0 480 632" fill="none">
+    <svg xmlns="http://www.w3.org/2000/svg" className="absolute -z-10 hidden lg:block right-0 bottom-0" width="480" height="632" viewBox="0 0 480 632" fill="none">
   <g filter="url(#filter0_f_163_7556)">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M336.833 227.075C362.739 224.219 394.364 225.837 409.305 247.192C423.783 267.885 403.055 294.452 401.612 319.665C400.333 342.024 414.936 366.406 401.461 384.294C387.269 403.134 360.359 407.354 336.833 405.658C314.885 404.075 298.28 389.091 280.896 375.602C259.44 358.954 226.517 346.817 226.006 319.665C225.495 292.483 257.886 279.014 278.75 261.583C296.716 246.573 313.562 229.64 336.833 227.075Z" fill="#D8E8FF"/>
   </g>

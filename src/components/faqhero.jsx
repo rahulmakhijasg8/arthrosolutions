@@ -30,8 +30,10 @@ export default function Hero({
   
   return (
     <div className="w-full pb-[60px] md:pb-[87px] text-white pt-[41px] md:pt-[52px]">
-      <div className="max-w-7xl mx-auto px-[20px] md:px-[60px] lg:px-[100px]">
-        
+      <div className="max-w-7xl relative mx-auto px-[20px] md:px-[60px] lg:px-[100px]">
+        {/* <svg className="absolute top-0 left-0 -z-0" xmlns="http://www.w3.org/2000/svg" width="235" height="180" viewBox="0 0 235 180" fill="none">
+  <path d="M148.79 -47.298V24.5309V31.2329H155.492H227.317V93.8229H155.495H148.793V100.525V172.351H86.2026V100.525V93.8229H79.5007H7.67168V31.2329H79.4976H86.1996V24.5309V-47.295L148.79 -47.298ZM155.495 -54H79.4976V24.5309H0.969727V100.528H79.4976V179.056H155.495V100.525H234.022V24.5309H155.495V-54Z" fill="white"/>
+</svg> */}
         {/* Header Section */}
         <div className="text-center">
           <h1 className="font-['Outfit'] text-[32px] md:text-[48px] lg:text-[56px] lg:px-[140px] font-[600] md:leading-[62px] text-white">

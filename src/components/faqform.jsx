@@ -199,7 +199,7 @@ export default function MedicalQuestionForm() {
                   className={`w-full font-['Inter'] py-[14px] md:py-[16px] mt-[26px] md:mt-[46px] px-[44px] rounded-[6px] text-base font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#0D4F7A] focus:ring-offset-2 ${
                     isSubmitting 
                       ? 'bg-gray-400 cursor-not-allowed text-white' 
-                      : 'bg-[#0D4F7A] hover:bg-[#0B4269] text-white'
+                      : 'bg-[#0D4F7A] hover:bg-white hover:text-[#0D4F7A] hover:cursor-pointer border border-[#0D4F7A] text-white'
                   }`}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Medical Question'}
