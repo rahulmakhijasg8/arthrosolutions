@@ -280,8 +280,8 @@ const testimonials = [
     {/* Sticky WhatsApp Button */}
 <div className="fixed bottom-6 hidden lg:block right-6 z-50">
   <a 
-    href="https://wa.me/918591353530" 
-    target="_blank" 
+    href="#" 
+    // target="_blank" 
     className="block hover:scale-110 transition-transform duration-300"
   >
     <Image 
