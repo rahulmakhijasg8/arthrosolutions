@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { FadeInView, HoverScale } from "./animations/AnimationWrappers"
 
 const ServicesHeroSection = () => {
   return (
@@ -6,12 +7,12 @@ const ServicesHeroSection = () => {
       <div className="max-w-7xl mx-auto text-center">
         {/* Title and Subtitle */}
         <div className="">
-          <h1 className="text-[36px] md:text-[56px] font-[700] text-[#2D2D2D] font-['Outfit'] leading-normal">
+          <FadeInView delay={0.2}><h1 className="text-[36px] md:text-[56px] font-[700] text-[#2D2D2D] font-['Outfit'] leading-normal">
             Your Joints, Our Expertise
-          </h1>
-          <p className="text-[#2D2D2D] text-[400] font-['Inter'] text-[16px] md:text-[18px] px-2 md:px-65 leading-[26px] md:leading-[28px] mt-[12px]">
+          </h1></FadeInView>
+          <FadeInView delay={0.4}><p className="text-[#2D2D2D] text-[400] font-['Inter'] text-[16px] md:text-[18px] px-2 md:px-65 leading-[26px] md:leading-[28px] mt-[12px]">
             Minimally invasive solutions from injury to recovery — tailored for athletes and seniors alike.
-          </p>
+          </p></FadeInView>
         </div>
 
         {/* Action Buttons */}

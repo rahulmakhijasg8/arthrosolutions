@@ -111,7 +111,7 @@ export default function MedicalProcedureCard({
           <div className="flex gap-[16px] md:gap-[34px] mt-4 md:mt-6">
             {/* Book Assessment Button - Normal: colored bg with white text, Hover: white bg with colored text */}
             <button 
-              className="w-1/2 text-white text-[14px] px-[10px] md:px-[14px] py-2 rounded-[6px] transition-colors duration-200"
+              className="w-1/2 text-white hover:cursor-pointer text-[14px] px-[10px] md:px-[14px] py-2 rounded-[6px] transition-colors duration-200"
               style={{ 
                 backgroundColor: buttonColor,
                 borderColor: buttonColor,
@@ -131,7 +131,7 @@ export default function MedicalProcedureCard({
             
             {/* Learn More Button - Normal: white bg with colored text, Hover: colored bg with white text */}
             <button 
-              className="border w-1/2 text-[14px] px-[10px] md:px-[14px] py-2 rounded-[6px] transition-colors duration-200"
+              className="border w-1/2 text-[14px] hover:cursor-pointer px-[10px] md:px-[14px] py-2 rounded-[6px] transition-colors duration-200"
               style={{ 
                 borderColor: buttonColor,
                 color: buttonColor,

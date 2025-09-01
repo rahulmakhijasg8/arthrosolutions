@@ -120,52 +120,57 @@ const TestimonialCarousel = ({ testimonials = [] }) => {
     scrollContainerRef.current.scrollLeft = scrollLeft - walk;
   };
   
-  // Navigation logic based on screen size
-  const increment = isMobile ? 1 : 3;
-  const maxVisiblePerSlide = isMobile ? 1 : 3;
-  
-  const canGoPrev = currentIndex > 0;
-  const canGoNext = isMobile 
-    ? currentIndex < testimonials.length - 1
-    : currentIndex + 3 < testimonials.length;
+  // Calculate scroll amount more precisely
+  const getScrollAmount = () => {
+    if (!scrollContainerRef.current) return 0;
+    
+    const container = scrollContainerRef.current;
+    const containerWidth = container.clientWidth;
+    const gap = 20; // Gap between cards
+    
+    if (isMobile) {
+      // On mobile, scroll by full container width to show next card completely
+      return containerWidth;
+    } else {
+      // On desktop, scroll by one card width + gap
+      const cardWidth = (containerWidth - (2 * gap)) / 3; // 3 cards visible with gaps
+      return cardWidth + gap;
+    }
+  };
   
   const nextSlide = () => {
-    if (scrollContainerRef.current) {
+    if (scrollContainerRef.current && canScrollRight) {
       const container = scrollContainerRef.current;
-      const scrollAmount = isMobile 
-        ? container.offsetWidth
-        : container.offsetWidth;
+      const scrollAmount = getScrollAmount();
       
       container.scrollBy({ 
         left: scrollAmount, 
         behavior: 'smooth' 
       });
+      
+      // Update current index for mobile
+      if (isMobile) {
+        setCurrentIndex(prev => Math.min(prev + 1, testimonials.length - 1));
+      }
     }
   };
 
   const prevSlide = () => {
     if (scrollContainerRef.current && canScrollLeft) {
       const container = scrollContainerRef.current;
-      const scrollAmount = isMobile 
-        ? container.offsetWidth
-        : container.offsetWidth;
+      const scrollAmount = getScrollAmount();
       
       container.scrollBy({ 
         left: -scrollAmount, 
         behavior: 'smooth' 
       });
+      
+      // Update current index for mobile
+      if (isMobile) {
+        setCurrentIndex(prev => Math.max(prev - 1, 0));
+      }
     }
   };
-  
-  // Get visible testimonials
-  const getVisibleTestimonials = () => {
-    const remaining = testimonials.length - currentIndex;
-    const countToShow = Math.min(maxVisiblePerSlide, remaining);
-    
-    return testimonials.slice(currentIndex, currentIndex + countToShow);
-  };
-  
-  const visibleTestimonials = getVisibleTestimonials();
   
   return (
     <div className="w-full px-[20px] md:px-[60px] lg:px-[100px] mt-[14px] md:mt-[24px]">
@@ -215,7 +220,7 @@ const TestimonialCarousel = ({ testimonials = [] }) => {
                 <div
                   key={testimonial.id}
                   className="flex-shrink-0 w-full md:w-[calc(33.333%-14px)] snap-start"
-                  style={{ userSelect: 'none' }} // Prevent text selection during drag
+                  style={{ userSelect: 'none' }}
                 >
                   <TestimonialCard
                     name={testimonial.name}

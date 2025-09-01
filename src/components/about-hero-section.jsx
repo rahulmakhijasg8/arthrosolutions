@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Calendar, Phone, ArrowRight } from "lucide-react"
+import { FadeInView, SlideInLeft, SlideInRight, HoverScale, ScaleInView, StaggerContainer, StaggerItem } from "./animations/AnimationWrappers"
 
 const AboutHeroSection = () => {
   return (
@@ -15,7 +16,7 @@ const AboutHeroSection = () => {
         <div className="block md:hidden">
           {/* Header */}
           <div className="">
-            <div className="flex items-center gap-2">
+           <FadeInView delay={0.2}><div className="flex items-center gap-2">
               <div className="bg-white py-[8px] px-[14px]  rounded-[6px] flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 16 17" fill="none">
                   <g clipPath="url(#clip0_163_8232)">
@@ -31,20 +32,20 @@ const AboutHeroSection = () => {
                 </svg>
                 <span className="text-[#0D4F7A] font-[500] font-['Inter'] text-[10px]">FRCS Ed Certified Surgeon</span>
               </div>
-            </div>
-            <h1 className="text-[32px] font-['Outfit'] font-[700] text-[#2D2D2D] mt-[6px] leading-[44px]">
+            </div></FadeInView>
+            <FadeInView delay={0.4}><h1 className="text-[32px] font-['Outfit'] font-[700] text-[#2D2D2D] mt-[6px] leading-[44px]">
               Meet <span className="font-[700] font-['Outfit'] text-[#0D4F7A]"> Dr. Mohit </span>
                Upadhyaya
-            </h1>
-            <p className="font-['Inter'] text-[#2D2D2D] text-[400] text-[16px] leading-[26px] mt-[12px]">
+            </h1></FadeInView>
+            <FadeInView delay={0.6}><p className="font-['Inter'] text-[#2D2D2D] text-[400] text-[16px] leading-[26px] mt-[12px]">
               Young, UK-Fellowship-trained orthopaedic surgeon specializing in minimally invasive 
               joint preservation, sports injuries and joint replacements.
-            </p>
+            </p></FadeInView>
           </div>
           
           {/* Action Buttons */}
           <div className="flex flex-col gap-3 mt-[26px]">
-            <Link
+            <HoverScale><Link
               href="/schedule"
               className="w-fit bg-[#0D4F7A] text-white p-[14px] rounded-[6px] font-[500] text-center flex items-center justify-between hover:bg-[#1D4ED8] transition-colors"
             >
@@ -52,8 +53,8 @@ const AboutHeroSection = () => {
                 <span>Schedule Your Joint Assessment</span>
                 <ArrowRight className="w-5 h-5" />
               </div>
-            </Link>
-            <Link
+            </Link></HoverScale>
+            <HoverScale><Link
               href="/consultation"
               className="w-fit border border-[#0D4F7A] text-[16px] text-[#0D4F7A] p-[14px] rounded-[6px] font-[500] text-center flex items-center justify-between hover:bg-[#0D4F7A] hover:text-white transition-colors"
             >
@@ -61,27 +62,27 @@ const AboutHeroSection = () => {
                 <span className="font-['Inter']">Free 15-Min Tele-Consultation</span>
                 <ArrowRight className="w-5 h-5" />
               </div>
-            </Link>
+            </Link></HoverScale>
           </div>
 
           {/* Statistics */}
-          <div className="grid grid-cols-3 gap-3 mt-[24px]">
-  <div className="bg-white rounded-lg p-2 text-center">
+          <StaggerContainer><div className="grid grid-cols-3 gap-3 mt-[24px]">
+  <StaggerItem><div className="bg-white rounded-lg p-2 text-center">
     <div className="text-[18px] font-[700] font-['Inter'] text-[#0D4F7A]">500+</div>
     <div className="text-[#64648A] text-[10px] font-['Inter'] font-[400] whitespace-nowrap">Successful Surgeries</div>
-  </div>
-  <div className="bg-white rounded-lg p-2 text-center">
+  </div></StaggerItem>
+  <StaggerItem><div className="bg-white rounded-lg p-2 text-center">
     <div className="text-[18px] font-[700] font-['Inter'] text-[#4CAF50]">97%</div>
     <div className="text-[#64648A] text-[10px] font-['Inter'] font-[400] whitespace-nowrap">Patient Satisfaction</div>
-  </div>
-  <div className="bg-white rounded-lg p-2 text-center">
+  </div></StaggerItem>
+  <StaggerItem><div className="bg-white rounded-lg p-2 text-center">
     <div className="text-[18px] font-[700] font-['Inter'] text-[#FE7C49]">7+</div>
     <div className="text-[#64648A] text-[10px] font-['Inter'] font-[400] whitespace-nowrap">Years Experience</div>
-  </div>
-</div>
+  </div></StaggerItem>
+</div></StaggerContainer>
 
           {/* Doctor Image */}
-          <div className="relative">
+          <ScaleInView><div className="relative">
             <div className="w-full h-[400px] relative rounded-[18px] mt-[24px] overflow-hidden">
               <Image
                 src="/aboutphoto.png"
@@ -110,7 +111,7 @@ const AboutHeroSection = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div></ScaleInView>
         </div>
 
         {/* Tablet Layout */}
@@ -118,7 +119,7 @@ const AboutHeroSection = () => {
           <div className="space-y-8">
             {/* Header */}
             <div className="text-center">
-              <div className="flex items-center justify-center gap-2 mb-6">
+              <FadeInView delay={0.2}><div className="flex items-center justify-center gap-2 mb-6">
                 <div className="bg-white p-2 rounded-lg flex items-center gap-2">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
                     <g clipPath="url(#clip0_163_8232_desktop)">
@@ -134,20 +135,20 @@ const AboutHeroSection = () => {
                   </svg>
                   <span className="text-[#0D4F7A] font-medium text-sm">FRCS Ed Certified Surgeon</span>
                 </div>
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-[#2D2D2D] mb-4 font-['Inter'] leading-tight">
+              </div></FadeInView>
+              <FadeInView delay={0.4}><h1 className="text-4xl md:text-5xl font-bold text-[#2D2D2D] mb-4 font-['Inter'] leading-tight">
                 Meet  
                 <span className="text-[#0D4F7A]"> Dr. Mohit</span> Upadhyaya
-              </h1>
-              <p className="text-[#6B7280] text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
+              </h1></FadeInView>
+              <FadeInView delay={0.6}><p className="text-[#6B7280] text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
                 Young, UK-Fellowship-trained orthopaedic surgeon specializing in minimally invasive 
                 joint preservation, sports injuries and joint replacements.
-              </p>
+              </p></FadeInView>
             </div>
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link
+              <HoverScale><Link
                 href="/schedule"
                 className="bg-[#0D4F7A] text-white py-4 px-6 rounded-lg font-medium flex items-center justify-between hover:bg-[#1D4ED8] transition-colors"
               >
@@ -156,8 +157,8 @@ const AboutHeroSection = () => {
                   <span className="whitespace-nowrap text-[14px]">Schedule Your Joint Assessment</span>
                 </div>
                 <ArrowRight className="w-4 h-4 flex-shrink-0 ml-4" />
-              </Link>
-              <Link
+              </Link></HoverScale>
+              <HoverScale><Link
                 href="/consultation"
                 className="border border-[#0D4F7A] text-[#0D4F7A] py-4 px-6 rounded-lg font-medium flex items-center justify-between hover:bg-[#0D4F7A] hover:text-white transition-colors"
               >
@@ -166,27 +167,27 @@ const AboutHeroSection = () => {
                   <span className="whitespace-nowrap text-[14px]">Free 15-Min Tele-Consultation</span>
                 </div>
                 <ArrowRight className="w-4 h-4 flex-shrink-0 ml-4" />
-              </Link>
+              </Link></HoverScale>
             </div>
 
             {/* Statistics */}
-            <div className="grid grid-cols-3 gap-4 max-w-md mx-auto mb-8">
-              <div className="bg-white rounded-lg p-4 flex flex-col items-center">
+            <StaggerContainer><div className="grid grid-cols-3 gap-4 max-w-md mx-auto mb-8">
+              <StaggerItem><div className="bg-white rounded-lg p-4 flex flex-col items-center">
                 <div className="text-2xl font-bold text-[#0D4F7A] mb-1">3000+</div>
                 <div className="text-[#64648A] font-medium text-sm whitespace-nowrap text-center">Successful Surgeries</div>
-              </div>
-              <div className="bg-white rounded-lg p-4 flex flex-col items-center">
+              </div></StaggerItem>
+              <StaggerItem><div className="bg-white rounded-lg p-4 flex flex-col items-center">
                 <div className="text-2xl font-bold text-[#4CAF50] mb-1">97%</div>
                 <div className="text-[#64648A] font-medium text-sm whitespace-nowrap text-center">Patient Satisfaction</div>
-              </div>
-              <div className="bg-white rounded-lg p-4 flex flex-col items-center">
+              </div></StaggerItem>
+              <StaggerItem><div className="bg-white rounded-lg p-4 flex flex-col items-center">
                 <div className="text-2xl font-bold text-[#FE7C49] mb-1">7+</div>
                 <div className="text-[#64648A] font-medium text-sm whitespace-nowrap text-center">Years Experience</div>
-              </div>
-            </div>
+              </div></StaggerItem>
+            </div></StaggerContainer>
 
             {/* Doctor Image */}
-            <div className="relative max-w-2xl mx-auto">
+            <ScaleInView><div className="relative max-w-2xl mx-auto">
               <div className="w-full aspect-[4/3] relative rounded-2xl overflow-hidden">
                 <Image
                   src="/aboutphoto.png"
@@ -215,7 +216,7 @@ const AboutHeroSection = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div></ScaleInView>
           </div>
         </div>
 
@@ -225,7 +226,7 @@ const AboutHeroSection = () => {
           <div className="lg:col-span-6">
             {/* Header */}
             <div className="mb-8">
-              <div className="flex items-center gap-2 mb-6">
+              <FadeInView delay={0.2}><div className="flex items-center gap-2 mb-6">
                 <div className="bg-white p-2 rounded-lg flex items-center gap-2">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
                     <g clipPath="url(#clip0_163_8232_desktop)">
@@ -241,15 +242,15 @@ const AboutHeroSection = () => {
                   </svg>
                   <span className="text-[#0D4F7A] font-medium text-sm">FRCS Ed Certified Surgeon</span>
                 </div>
-              </div>
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2D2D2D] mb-2 font-['Inter'] leading-tight">
+              </div></FadeInView>
+              <FadeInView delay={0.4}><h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2D2D2D] mb-2 font-['Inter'] leading-tight">
                 Meet  
                 <span className="text-[#0D4F7A]"> Dr. Mohit</span> Upadhyaya
-              </h1>
-              <p className="text-[#6B7280] text-lg leading-relaxed mb-8 max-w-2xl">
+              </h1></FadeInView>
+              <FadeInView delay={0.6}><p className="text-[#6B7280] text-lg leading-relaxed mb-8 max-w-2xl">
                 Young, UK-Fellowship-trained orthopaedic surgeon specializing in minimally invasive 
                 joint preservation, sports injuries and joint replacements.
-              </p>
+              </p></FadeInView>
             </div>
 
             {/* Action Buttons */}
@@ -275,20 +276,20 @@ const AboutHeroSection = () => {
             </div>
 
             {/* Statistics */}
-            <div className="stats-container grid grid-cols-3 gap-6 w-[530px] mt-[64px]">
-  <div className="bg-white rounded-lg p-[8px] md:px-[10px] justify-center md:py-[24px] flex flex-col items-center">
+            <StaggerContainer><div className="stats-container grid grid-cols-3 gap-6 w-[530px] mt-[64px]">
+  <StaggerItem><div className="bg-white rounded-lg p-[8px] md:px-[10px] justify-center md:py-[24px] flex flex-col items-center">
     <div className="text-[28px] font-[700] font-['Inter'] text-[#0D4F7A]">3000+</div>
     <div className="text-[#64648A] font-[400] text-[14px] font-['Inter'] whitespace-nowrap">Successful Surgeries</div>
-  </div>
-  <div className="bg-white rounded-lg p-[8px] md:px-[10px] justify-center md:py-[24px] flex flex-col items-center">
+  </div></StaggerItem>
+  <StaggerItem><div className="bg-white rounded-lg p-[8px] md:px-[10px] justify-center md:py-[24px] flex flex-col items-center">
     <div className="text-[28px] font-[700] font-['Inter'] text-[#4CAF50]">97%</div>
     <div className="text-[#64648A] font-[400] text-[14px] font-['Inter'] whitespace-nowrap">Patient Satisfaction</div>
-  </div>
-  <div className="bg-white rounded-lg p-[8px] md:px-[10px] justify-center md:py-[24px] flex flex-col items-center">
+  </div></StaggerItem>
+  <StaggerItem><div className="bg-white rounded-lg p-[8px] md:px-[10px] justify-center md:py-[24px] flex flex-col items-center">
     <div className="text-[28px] font-[700] font-['Inter'] text-[#FE7C49]">7+</div>
     <div className="text-[#64648A] font-[400] text-[14px] font-['Inter'] whitespace-nowrap">Years Experience</div>
-  </div>
-</div>
+  </div></StaggerItem>
+</div></StaggerContainer>
             
             <style jsx>{`
               @media (min-width: 1074px) and (max-width: 1279px) {
@@ -314,7 +315,7 @@ const AboutHeroSection = () => {
           {/* Right Column - Doctor Image */}
           <div className="lg:col-span-6 relative">
             <div className="w-full max-w-[550px] ml-auto">
-              <div className="aspect-[3/2.9] relative rounded-2xl overflow-hidden">
+              <SlideInRight delay={0.8}><div className="aspect-[3/2.9] relative rounded-2xl overflow-hidden">
                 <Image
                   src="/aboutphoto.png"
                   alt="Dr. Mohit Upadhyaya in professional attire standing in front of medical library"
@@ -341,7 +342,7 @@ const AboutHeroSection = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div></SlideInRight>
             </div>
           </div>
         </div>

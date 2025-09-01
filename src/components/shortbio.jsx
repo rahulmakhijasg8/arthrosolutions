@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { GraduationCap, X } from "lucide-react"
 import { useState, useEffect } from "react"
+import { FadeInView, SlideInRight, SlideInLeft } from "./animations/AnimationWrappers"
 
 export default function ShortBio() {
   const [selectedDegree, setSelectedDegree] = useState(null)
@@ -59,21 +60,21 @@ export default function ShortBio() {
             {/* Profile Image */}
             <div className="w-full md:w-1/2 flex-shrink-0">
               <div className="w-full h-96 md:h-[520px] rounded-2xl overflow-hidden bg-gray-900">
-                <Image
+                <SlideInLeft delay={0.3}><Image
                   src="/biophoto.png"
                   alt="Dr. Mohit Upadhyaya"
                   width={1000}
                   height={1000}
                   className="w-full h-full object-cover object-top"
-                />
+                /></SlideInLeft>
               </div>
             </div>
             
             {/* Bio Content */}
             <div className="w-full md:w-1/2 flex-1">
-              <h2 className="text-[28px] font-['Outfit'] md:text-[52px] font-[600] text-[#2D2D2D] mt-[24px] md:mt-0 ">Short Bio</h2>
+              <FadeInView delay={0.5}><h2 className="text-[28px] font-['Outfit'] md:text-[52px] font-[600] text-[#2D2D2D] mt-[24px] md:mt-0 ">Short Bio</h2></FadeInView>
               
-              <div className="text-[#2D2D2D] text-[16px] font-['Inter'] font-[400] leading-[26px] md:leading-[28px] space-y-[6px]">
+              <FadeInView delay={0.7}><div className="text-[#2D2D2D] text-[16px] font-['Inter'] font-[400] leading-[26px] md:leading-[28px] space-y-[6px]">
                 <p>
                   Dr. Mohit Upadhyaya, Completed post graduate orthopaedic training from the 
                   prestigious Sassoon Hospital and B.J. Govt Medical College Pune. He then worked as 
@@ -90,7 +91,7 @@ export default function ShortBio() {
                   Dr. Upadhyaya is a specialist in both minimally invasive joint preservation & ligament 
                   surgery as well as joint replacement surgery.
                 </p>
-              </div>
+              </div></FadeInView>
               
               {/* Qualification Buttons */}
               <div className="flex flex-wrap mt-[14px] md:mt-[26px] gap-[24px] md:gap-[10px]">
