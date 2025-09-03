@@ -164,23 +164,39 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
           ></div>
 
         {/* Credentials */}
-        <div className="">
-          <div className="flex px-[10px] py-[8px] bg-[#FAFAFA] rounded-[6px] items-center gap-[8px]">
-            <GraduationCap className="w-[24px] h-[24px] text-[#FE7C49]" />
-            <span
-              style={{
-                color: "#64648A",
-                fontFamily: "Inter",
-                fontSize: "14px",
-                fontWeight: 400,
-                lineHeight: "20px"
-              }}
-            >
-              Master of Surgery, India & Fellow of royal college of surgeons, UK
-            </span>
-          </div>
-        </div>
-
+        {/* Credentials */}
+<div className="">
+  <div className="flex flex-col gap-2">
+    <div className="flex px-[10px] py-[8px] bg-[#FAFAFA] rounded-[6px] items-center gap-[8px]">
+      <GraduationCap className="w-[24px] h-[24px] text-[#FE7C49]" />
+      <span
+        style={{
+          color: "#64648A",
+          fontFamily: "Inter",
+          fontSize: "14px",
+          fontWeight: 400,
+          lineHeight: "20px"
+        }}
+      >
+        Master of Surgery, India
+      </span>
+    </div>
+    <div className="flex px-[10px] py-[8px] bg-[#FAFAFA] rounded-[6px] items-center gap-[8px]">
+      <GraduationCap className="w-[24px] h-[24px] text-[#FE7C49]" />
+      <span
+        style={{
+          color: "#64648A",
+          fontFamily: "Inter",
+          fontSize: "14px",
+          fontWeight: 400,
+          lineHeight: "20px"
+        }}
+      >
+        Fellow of Royal College of Surgeons, UK
+      </span>
+    </div>
+  </div>
+</div>
         {/* Doctor Image */}
         <div className="w-full flex flex-col items-center mt-6">
           <div className="w-[100%] h-[500px] relative overflow-hidden">

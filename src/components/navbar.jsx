@@ -81,9 +81,22 @@ export default function Navbar({ isDarkMode = false }) {
           transition: all 0.3s ease;
         }
         
-        .nav-link-light:hover,
+        .nav-link-light:hover{
+          text-decoration: none;
+          color: #0D4F7A; /* Add this line */
+        }
+        
         .nav-link-dark:hover {
           text-decoration: none;
+          color: white;
+        }
+
+        .nav-link-light.active {
+          color: #0D4F7A;
+        }
+
+        .nav-link-dark.active {
+          color: white;
         }
         
         .nav-link-light.active::after {
@@ -120,7 +133,7 @@ export default function Navbar({ isDarkMode = false }) {
               alt="Arthro Solutions Orthopaedics"
               height={208}
               width={208}
-              className="h-11 lg:h-16 w-auto"
+              className="h-11 lg:h-18 w-auto"
             />
           </Link>
 

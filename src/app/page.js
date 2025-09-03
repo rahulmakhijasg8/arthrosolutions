@@ -89,21 +89,21 @@ export default function Home() {
 
 procedures: [
   {
-    name: "Arthroscopic ACL Reconstruction",
+    name: "ACL Reconstruction",
     benefit: "Return to pre-injury performance",
     recovery: "6-9 months to competitive sport",
     borderColor: "border-red-600"
   },
   {
-    name: "Meniscus Repair",
-    benefit: "Preserves natural cartilage", 
+    name: "Total / Partial Knee Replacement",
+    benefit: "Complete pain relief", 
     recovery: "6-8 weeks return to activity",
     borderColor: "border-red-600"
   },
   {
-    name: "Partial Knee Replacement",
-    benefit: "Complete pain relief",
-    recovery: "6-12 weeks for full recovery",
+    name: "Meniscus Repair ",
+    benefit: "Preserves natural cartilage",
+    recovery: "6-12 weeks return to activity",
     borderColor: "border-red-600"
   }
 ]
@@ -294,10 +294,10 @@ const testimonials = [
   </a>
 </div>
     <OrthopedicHero title={[
-          { text: "Precise Orthopaedic care for ", highlight: false },
-          { text: "athletic performance", highlight: true },
+          { text: "Precise Orthopaedic care ", highlight: false },
+          { text: "for athletic performance", highlight: true },
           { text: " and ageless joints", highlight: false }
-        ]} description='From Sports Injuries to Joint Replacement Comprehensive Solutions Under one roof by globally trained Orthopaedic surgeon, Dr. Mohit Upadhyaya.'
+        ]} description='From Sports Injuries to Joint Replacement, Comprehensive Solutions Under one roof by globally trained Orthopaedic surgeon, Dr. Mohit Upadhyaya.'
         buttonText="Schedule A Consultation" buttonHref="#" rightImageAlt="test" rightImage='/homehero.png'
         stats={[
   { number: "7+", label: "Years Experience", numberColor: "#0D4F7A" },
@@ -328,7 +328,7 @@ const testimonials = [
     </filter>
   </defs>
 </svg>
-<Heading title='Why Choose Arthro Solutions?' optionalsubtitle='Surgery to Rehabilitation in One Ecosystem' subtitle="Unlike traditional orthopaedic clinics, we merge non operative management, surgical precision with tailored rehab programs – ensuring athletes return stronger and seniors reclaim active lives." />
+<Heading title='Why Choose Arthro Solutions?' optionalsubtitle='Surgery to Rehabilitation in One Ecosystem' subtitle="Unlike traditional orthopaedic clinics, we merge non operative management & surgical precision with tailored rehab programs – ensuring athletes return stronger and seniors reclaim active lives." />
   </div>
    <ThreeCardRow cards={Cards}  />
    <div className="relative">
