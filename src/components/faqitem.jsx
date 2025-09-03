@@ -10,12 +10,12 @@ export default function FaqItem({ question, answer, isOpen, onClick, number }) {
         </span>
         <span className="ml-4 flex-shrink-0 hover:cursor-pointer transition-transform duration-200">
           {isOpen ? (<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M10 20H30" stroke="#0151CA" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M10 20H30" stroke="#0D4F7A" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             
           ) : (
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M10 20H20M20 20H30M20 20V30M20 20V10" stroke="#0151CA" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M10 20H20M20 20H30M20 20V30M20 20V10" stroke="#0D4F7A" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           )}
         </span>

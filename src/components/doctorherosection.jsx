@@ -167,7 +167,7 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
         {/* Credentials */}
 <div className="">
   <div className="flex flex-col gap-2">
-    <div className="flex px-[10px] py-[8px] bg-[#FAFAFA] rounded-[6px] items-center gap-[8px]">
+    <div className="flex px-[10px] py-[8px] bg-[#F1F1F1] rounded-[6px] items-center gap-[8px]">
       <GraduationCap className="w-[24px] h-[24px] text-[#FE7C49]" />
       <span
         style={{
@@ -181,7 +181,7 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
         Master of Surgery, India
       </span>
     </div>
-    <div className="flex px-[10px] py-[8px] bg-[#FAFAFA] rounded-[6px] items-center gap-[8px]">
+    <div className="flex px-[10px] py-[8px] bg-[#F1F1F1] rounded-[6px] items-center gap-[8px]">
       <GraduationCap className="w-[24px] h-[24px] text-[#FE7C49]" />
       <span
         style={{
@@ -410,7 +410,7 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
           {/* Credentials */}
           <div className="mb-8">
             <div className="flex flex-row gap-6">
-              <div className="flex bg-[#FAFAFA] rounded-[6px] py-3 px-4 items-center gap-3">
+              <div className="flex bg-[#F1F1F1] rounded-[6px] py-3 px-4 items-center gap-3">
                 <GraduationCap className="w-5 h-5 text-[#FE7C49] flex-shrink-0" />
                 <span
                   style={{
@@ -423,7 +423,7 @@ const DoctorHeroSection = ({ rightImage = "/meet.png" }) => {
                   Master of Surgery, India
                 </span>
               </div>
-              <div className="flex bg-[#FAFAFA] rounded-[6px] py-3 px-4 items-center gap-3">
+              <div className="flex bg-[#F1F1F1] rounded-[6px] py-3 px-4 items-center gap-3">
                 <GraduationCap className="w-5 h-5 text-[#FE7C49] flex-shrink-0" />
                 <span
                   style={{

@@ -175,7 +175,7 @@ export default function AppointmentBooking() {
                         placeholder="Enter your name"
                         value={formData.fullName}
                         onChange={(e) => handleInputChange("fullName", e.target.value)}
-                        className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900 font-['Inter'] ml-[2px] md:ml-0 ${
+                        className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0D4F7A] focus:border-transparent text-sm placeholder-[#999999] text-gray-900 font-['Inter'] ml-[2px] md:ml-0 ${
                           errors.fullName ? 'border-red-500' : 'border-[#C1C1C1]'
                         }`}
                         style={{ caretColor: '#374151' }}
@@ -191,7 +191,7 @@ export default function AppointmentBooking() {
                         value={formData.age}
                         onChange={(e) => handleInputChange("age", e.target.value)}
                         disabled={isSubmitting}
-                        className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm appearance-none text-gray-900 font-['Inter'] ml-[2px] md:ml-0 ${
+                        className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0D4F7A] focus:border-transparent bg-white text-sm appearance-none text-gray-900 font-['Inter'] ml-[2px] md:ml-0 ${
                           errors.age ? 'border-red-500' : 'border-[#C1C1C1]'
                         } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                         style={{
@@ -226,7 +226,7 @@ export default function AppointmentBooking() {
                         value={formData.phoneNumber}
                         onChange={(e) => handleInputChange("phoneNumber", e.target.value)}
                         disabled={isSubmitting}
-                        className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900 font-['Inter'] ml-[2px] md:ml-0 ${
+                        className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0D4F7A] focus:border-transparent text-sm placeholder-[#999999] text-gray-900 font-['Inter'] ml-[2px] md:ml-0 ${
                           errors.phoneNumber ? 'border-red-500' : 'border-[#C1C1C1]'
                         } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                         style={{ caretColor: '#374151' }}
@@ -243,7 +243,7 @@ export default function AppointmentBooking() {
                         value={formData.email}
                         onChange={(e) => handleInputChange("email", e.target.value)}
                         disabled={isSubmitting}
-                        className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900 font-['Inter'] ml-[2px] md:ml-0 ${
+                        className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0D4F7A] focus:border-transparent text-sm placeholder-[#999999] text-gray-900 font-['Inter'] ml-[2px] md:ml-0 ${
                           errors.email ? 'border-red-500' : 'border-[#C1C1C1]'
                         } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                         style={{ caretColor: '#374151' }}
@@ -262,7 +262,7 @@ export default function AppointmentBooking() {
                         value={formData.service}
                         onChange={(e) => handleInputChange("service", e.target.value)}
                         disabled={isSubmitting}
-                        className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm appearance-none text-gray-900 font-['Inter'] ml-[2px] md:ml-0 ${
+                        className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0D4F7A] focus:border-transparent bg-white text-sm appearance-none text-gray-900 font-['Inter'] ml-[2px] md:ml-0 ${
                           errors.service ? 'border-red-500' : 'border-[#C1C1C1]'
                         } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                         style={{
@@ -289,7 +289,7 @@ export default function AppointmentBooking() {
                         value={formData.location}
                         onChange={(e) => handleInputChange("location", e.target.value)}
                         disabled={isSubmitting}
-                        className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm appearance-none text-gray-900 font-['Inter'] ml-[2px] md:ml-0 ${
+                        className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0D4F7A] focus:border-transparent bg-white text-sm appearance-none text-gray-900 font-['Inter'] ml-[2px] md:ml-0 ${
                           errors.location ? 'border-red-500' : 'border-[#C1C1C1]'
                         } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                         style={{
@@ -325,7 +325,7 @@ export default function AppointmentBooking() {
                           onChange={(e) => handleInputChange("date", e.target.value)}
                           disabled={isSubmitting}
                           min={new Date().toISOString().split('T')[0]}
-                          className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900 font-['Inter'] ${
+                          className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0D4F7A] focus:border-transparent text-sm placeholder-[#999999] text-gray-900 font-['Inter'] ${
                             errors.date ? 'border-red-500' : 'border-[#C1C1C1]'
                           } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                           style={{ caretColor: '#374151' }}
@@ -351,7 +351,7 @@ export default function AppointmentBooking() {
                         value={formData.time}
                         onChange={(e) => handleInputChange("time", e.target.value)}
                         disabled={isSubmitting}
-                        className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm appearance-none text-gray-900 font-['Inter'] ml-[2px] md:ml-0 ${
+                        className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0D4F7A] focus:border-transparent bg-white text-sm appearance-none text-gray-900 font-['Inter'] ml-[2px] md:ml-0 ${
                           errors.time ? 'border-red-500' : 'border-[#C1C1C1]'
                         } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                         style={{
@@ -393,7 +393,7 @@ export default function AppointmentBooking() {
                 {/* What to Expect */}
                 <div 
                   className="rounded-[18px] p-[14px] md:p-[34px] md:pr-[54px]"
-                  style={{ background: '#FAFAFA' }}
+                  style={{ background: '#F1F1F1' }}
                 >
                   <h3 className="text-[18px] md:text-[20px] font-[600] font-['Inter'] text-[#0D4F7A]">What to Expect</h3>
                   <div className="mt-[12px] md:mt-[24px] space-y-[20px]">

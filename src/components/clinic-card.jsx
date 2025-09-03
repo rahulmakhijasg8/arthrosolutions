@@ -52,7 +52,7 @@ export function ClinicCard({
         </div>
 
         {/* Services */}
-        <div className="bg-[#FAFAFA] text-[#64648A] text-[12px] md:text-[14px] font-['Inter'] font-[400] rounded-[6px] w-fit px-[10px] py-[6px]">
+        <div className="bg-[#F1F1F1] text-[#64648A] text-[12px] md:text-[14px] font-['Inter'] font-[400] rounded-[6px] w-fit px-[10px] py-[6px]">
           <span className="mr-2 h-3">•</span>{services}
         </div>
 

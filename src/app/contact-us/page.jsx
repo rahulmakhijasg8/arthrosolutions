@@ -101,7 +101,19 @@ const newCardsData = [
 
   return (
     <>
-    <div style={{ backgroundColor: '#0D4F7A' }}>
+    <div className="relative" style={{ backgroundColor: '#0D4F7A' }}>
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <img 
+      src="/faqherobg.png" 
+      alt="" 
+      className="absolute top-0 left-0 w-[300px] h-[223px] md:w-[450px] md:h-[75%] opacity-100"
+    />
+    <img 
+      src="/contactherobg.png" 
+      alt="" 
+      className="absolute top-95 md:top-60 -right-5 md:-right-15 h-[176px] w-[150px] md:w-auto md:h-auto opacity-100"
+    />
+  </div>
       <Navbar isDarkMode={true}/>
       <Hero 
   type="contact"

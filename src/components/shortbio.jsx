@@ -76,20 +76,13 @@ export default function ShortBio() {
               
               <FadeInView delay={0.7}><div className="text-[#2D2D2D] text-[16px] font-['Inter'] font-[400] leading-[26px] md:leading-[28px] space-y-[6px]">
                 <p>
-                  Dr. Mohit Upadhyaya, Completed post graduate orthopaedic training from the 
-                  prestigious Sassoon Hospital and B.J. Govt Medical College Pune. He then worked as 
-                  a senior registrar at Cooper hospital, Mumbai and was subsequently promoted to 
-                  assistant professor in orthopaedic surgery. He completed his Diplomate of National 
-                  Board examination in orthopaedic while at cooper hospital.
+                  Dr. Mohit. Upadhyaya, Completed post graduate orthopaedic training from the prestigious Sassoon hospital and B.J. Govt Medical College Pune. He then worked as a senior registrar at DR. R.N. Cooper hospital & HBT Medical College, Mumbai and was subsequently promoted to assistant professor in orthopaedic surgery. He completed the Diplomate of National Board examination in orthopaedic while at cooper hospital.
                 </p>
                 <p>
-                  Keen then chose to pursue further sub specialty training in the UK. He was awarded 
-                  the coveted Fellowship of the Royal College of Surgeons of Edinburgh during his 
-                  training in the UK.
+                 Mohit then chose to pursue further sub specialty training in the UK. He was awarded the coveted Fellowship of the Royal College of Surgeons of Edinburgh during his tenure there.
                 </p>
                 <p>
-                  Dr. Upadhyaya is a specialist in both minimally invasive joint preservation & ligament 
-                  surgery as well as joint replacement surgery.
+                  Dr. Upadhyaya is a specialist in both minimally invasive joint preservation & ligament surgery as well as joint replacement surgery.
                 </p>
               </div></FadeInView>
               

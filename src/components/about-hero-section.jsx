@@ -257,7 +257,7 @@ const AboutHeroSection = () => {
             <div className="flex flex-col xl:flex-row gap-4">
               <Link
   href="/schedule"
-  className="bg-[#0D4F7A] w-fit text-white p-[14px] rounded-lg font-medium flex items-center justify-center hover:bg-[#FFFFFF] hover:text-[#0D4F7A] border border-[#0D4F7A] transition-colors hover:shadow-[0_4px_12px_0_rgba(1,81,202,0.24)]"
+  className="bg-[#0D4F7A] w-fit text-white p-[14px] rounded-lg font-medium flex items-center justify-center hover:bg-[#FFFFFF] hover:text-[#0D4F7A] border border-[#0D4F7A] transition-colors"
 >
   <div className="flex items-center gap-[10px]">
     <span className="whitespace-nowrap text-[14px]">Schedule Your Joint Assessment</span>

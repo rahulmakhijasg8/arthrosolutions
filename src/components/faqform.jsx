@@ -145,7 +145,7 @@ export default function MedicalQuestionForm() {
                       value={formData.fullName}
                       onChange={(e) => handleInputChange("fullName", e.target.value)}
                       disabled={isSubmitting}
-                      className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900 ${
+                      className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0D4F7A] focus:border-transparent text-sm placeholder-[#999999] text-gray-900 ${
                         errors.fullName ? 'border-red-500' : 'border-[#C1C1C1]'
                       } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                       style={{ caretColor: '#374151' }}
@@ -162,7 +162,7 @@ export default function MedicalQuestionForm() {
                       value={formData.email}
                       onChange={(e) => handleInputChange("email", e.target.value)}
                       disabled={isSubmitting}
-                      className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900 ${
+                      className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0D4F7A] focus:border-transparent text-sm placeholder-[#999999] text-gray-900 ${
                         errors.email ? 'border-red-500' : 'border-[#C1C1C1]'
                       } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                       style={{ caretColor: '#374151' }}
@@ -182,7 +182,7 @@ export default function MedicalQuestionForm() {
                     onChange={(e) => handleInputChange("medicalQuestion", e.target.value)}
                     disabled={isSubmitting}
                     rows={4}
-                    className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm placeholder-[#999999] text-gray-900 resize-none ${
+                    className={`w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0D4F7A] focus:border-transparent text-sm placeholder-[#999999] text-gray-900 resize-none ${
                       errors.medicalQuestion ? 'border-red-500' : 'border-[#C1C1C1]'
                     } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                     style={{ caretColor: '#374151' }}
