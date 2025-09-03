@@ -36,7 +36,7 @@ const MedicalToggleComponent = ({ tabs, defaultTab = 0 }) => {
         <div className="flex flex-col md:flex-row h-full">
           {/* Left Side - Image */}
           <div 
-            className="w-full md:w-1/2 object-top relative h-[400px] md:h-full"
+            className="w-full md:w-[46%] object-top relative h-[400px] md:h-full"
             style={{
               backgroundImage: currentTab.image ? `url(${currentTab.image})` : 'none',
               backgroundSize: 'cover',
@@ -77,7 +77,7 @@ const MedicalToggleComponent = ({ tabs, defaultTab = 0 }) => {
           </div>
 
           {/* Right Side - Content */}
-          <div className="w-full md:w-1/2 p-[12px] md:px-[34px] md:py-[24px] h-auto md:h-full">
+          <div className="w-full md:w-[54%] p-[12px] md:px-[34px] md:py-[24px] h-auto md:h-full">
             {/* Conditions Treated */}
             {currentTab.conditions && (
               <div className="mb-6">
@@ -96,33 +96,33 @@ const MedicalToggleComponent = ({ tabs, defaultTab = 0 }) => {
             )}
 
             {/* Key Procedures */}
-            {currentTab.procedures && (
-              <div className='mt-[16px] md:mt-[34px]'>
-                <h4 className="text-[20px] font-['Inter'] font-[600] text-[#0D4F7A] mb-3">
-                  {currentTab.proceduresTitle || 'Key Procedures'}
-                </h4>
-                <div className="mt-[12px] md:mt-[18px] space-y-[12px] md:space-y-[6px]">
-                  {currentTab.procedures.map((procedure, index) => (
-                    <div key={index} className='rounded-[8px] border-[1px] border-[#2D2D2D24] p-[14px]'>
-                      <h5 className="font-[500] fint-['Inter'] text-[#2D2D2D] text-[16px]">{procedure.name}</h5>
-                      
-                      <div key={index} className="flex flex-col md:flex-row md:justify-between md:items-center">
-                        {procedure.benefit && (
-                          <p className="text-[12px] text-[#4CAF50] font-[400] font-['Inter'] mb-1 md:mb-0">
-                            <span className="text-[#2D2D2D] font-[300]">Benefit:</span> {procedure.benefit}
-                          </p>
-                        )}
-                        {procedure.recovery && (
-                          <p className="text-[12px] text-[#FE7C49] font-[400] font-['Inter'] mb-1 md:mb-0">
-                            <span className="text-[#2D2D2D] font-[300]">Recovery:</span> {procedure.recovery}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+{currentTab.procedures && (
+  <div className='mt-[16px] md:mt-[34px]'>
+    <h4 className="text-[20px] font-['Inter'] font-[600] text-[#0D4F7A] mb-3">
+      {currentTab.proceduresTitle || 'Key Procedures'}
+    </h4>
+    <div className="mt-[12px] md:mt-[18px] space-y-[12px] md:space-y-[6px]">
+      {currentTab.procedures.map((procedure, index) => (
+        <div key={index} className='rounded-[8px] border-[1px] border-[#2D2D2D24] p-[14px]'>
+          <h5 className="font-[500] fint-['Inter'] text-[#2D2D2D] text-[16px]">{procedure.name}</h5>
+          
+          <div key={index} className="flex flex-col md:flex-row md:items-center md:gap-4">
+            {procedure.benefit && (
+              <p className="text-[12px] text-[#4CAF50] font-[400] font-['Inter'] mb-1 md:mb-0 md:w-1/2">
+                <span className="text-[#2D2D2D] font-[300]">Benefit:</span> {procedure.benefit}
+              </p>
             )}
+            {procedure.recovery && (
+              <p className="text-[12px] text-[#FE7C49] font-[400] font-[400] font-['Inter'] mb-1 md:mb-0 md:w-1/2">
+                <span className="text-[#2D2D2D] font-[300]">Recovery:</span> {procedure.recovery}
+              </p>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+)}
           </div>
         </div>
       </div></ScaleInView>

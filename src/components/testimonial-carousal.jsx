@@ -175,7 +175,7 @@ const TestimonialCarousel = ({ testimonials = [] }) => {
   return (
     <div className="w-full px-[20px] md:px-[60px] lg:px-[100px] mt-[14px] md:mt-[24px]">
       <div className="max-w-7xl relative mx-auto">
-        <svg xmlns="http://www.w3.org/2000/svg" className="absolute hidden lg:block -left-25 -top-75" width="425" height="442" viewBox="0 0 425 442" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" className="absolute -z-10 hidden lg:block -left-25 -top-75" width="425" height="442" viewBox="0 0 425 442" fill="none">
           <g filter="url(#filter0_f_226_10783)">
             <path fillRule="evenodd" clipRule="evenodd" d="M201.944 156.285C220.761 159.188 223.126 185.324 235.61 199.695C246.367 212.077 267.434 217.016 268.895 233.351C270.386 250.019 255.707 263.7 242.221 273.614C230.702 282.082 216.189 281.34 201.944 282.568C185.408 283.993 167.993 290.24 154.067 281.213C137.932 270.755 125.615 252.57 126.009 233.351C126.399 214.347 142.647 200.952 155.99 187.41C169.488 173.711 182.934 153.352 201.944 156.285Z" fill="#D8E8FF"/>
           </g>

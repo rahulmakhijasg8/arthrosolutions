@@ -21,7 +21,7 @@ export default function StatsComponent() {
 
   return (
     <div className="w-full mt-[60px] md:mt-[120px] md:h-[240px] bg-[#0D4F7A] py-[34px] md:py-[56px] px-[20px] md:px-[60px] lg:px-[100px] ">
-  <div className="flex flex-col md:px-[40px] md:flex-row md:justify-center md:items-center gap-6 md:gap-0">
+  <div className="flex flex-col md:px-[100px] md:flex-row md:justify-center md:items-center gap-6 md:gap-0">
     {stats.map((stat, index) => (
       <>
         <ScaleInView delay={index * 0.2}><div className="text-center">
