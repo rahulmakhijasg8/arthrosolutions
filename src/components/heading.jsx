@@ -15,7 +15,7 @@ export default function Heading({
         </h2>
 
         {optionalsubtitle && (
-          <h2 className="font-['Inter'] text-[#64648A] font-[400] italic text-[14px] md:text-[18px] leading-tight mt-[12px] md:mt-[18px]">
+          <h2 className="font-['Inter'] text-[#64648A] font-[400] lg:px-20 italic text-[14px] md:text-[18px] leading-tight mt-[12px] md:mt-[18px]">
             {optionalsubtitle}
           </h2>
         )}
