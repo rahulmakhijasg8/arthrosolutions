@@ -294,8 +294,8 @@ const testimonials = [
   </a>
 </div>
     <OrthopedicHero title={[
-          { text: "Precise Orthopaedic care ", highlight: false },
-          { text: "for athletic performance", highlight: true },
+          { text: "Precise Orthopaedic care ", highlight: true },
+          { text: "for athletic performance", highlight: false },
           { text: " and ageless joints", highlight: false }
         ]} description='From Sports Injuries to Joint Replacement, Comprehensive Solutions Under one roof by globally trained Orthopaedic surgeon, Dr. Mohit Upadhyaya.'
         buttonText="Schedule A Consultation" buttonHref="#" rightImageAlt="test" rightImage='/homehero.png'

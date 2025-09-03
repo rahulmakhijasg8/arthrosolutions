@@ -234,7 +234,7 @@ export default function Footer() {
       {/* Copyright bar */}
       <div className="bg-[#0D4F7A] w-full px-[20px] mt-[32px] md:mt-[52px] md:px-[60px] lg:px-[100px] py-[16px] md:py-[24px]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-center font-['Inter'] font-[400] text-[12px] md:text-[16px]">Copyright © 2025 <a href="https://www.techdevs.in/" className="hover:underline">TechDevs</a>, All rights reserved.</p>     </div>
+          <p className="text-center text-[#FFFFFF] font-['Inter'] font-[400] text-[12px] md:text-[16px]">Copyright © 2025 <a href="https://www.techdevs.in/" className="hover:underline">TechDevs</a>, All rights reserved.</p>     </div>
       </div>
     </footer>
   )
