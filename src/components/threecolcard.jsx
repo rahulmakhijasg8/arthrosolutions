@@ -10,7 +10,7 @@ const Card = ({
 }) => {
   return (
     <div
-      className={`bg-[#FAFAFA] hover:bg-white hover:shadow-[0_10px_18px_2px_rgba(0,0,0,0.08)] transition-all duration-300 w-full flex flex-col p-[14px] md:p-[24px] justify-center items-center rounded-[8px] overflow-auto h-full md:h-[295px] cursor-pointer`}
+      className={`bg-[#F1F1F1] hover:bg-white hover:shadow-[0_10px_18px_2px_rgba(0,0,0,0.08)] transition-all duration-300 w-full flex flex-col p-[14px] md:p-[24px] justify-center items-center rounded-[8px] overflow-auto h-full md:h-[295px] cursor-pointer`}
     >
       {/* Icon */}
       {icon && (

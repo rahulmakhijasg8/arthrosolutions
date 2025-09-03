@@ -103,7 +103,7 @@ const HeroSection = ({
                 />
               </div></SlideInRight>
               {stats.length > 0 && (
-          <FadeInView delay={1.0}><div className="relative flex z-10 justify-center bg-white -mt-30 md:-mt-27 lg:-mt-39">
+          <FadeInView delay={1.0}><div className="relative flex z-10 justify-center bg-white -mt-30 md:-mt-27 lg:-mt-42">
             <div className="flex flex-wrap w-full justify-center rounded-[20px] shadow-[0_20.553px_49.915px_1.468px_rgba(0,0,0,0.1)]">
               {stats.map((stat, index) => (
                 <div key={index} className="flex-col w-1/2 md:w-auto md:flex-1 lg:w-1/2 text-center py-[16px] px-[20px] md:px-[25px] md:py-[27px] items-center justify-center">
