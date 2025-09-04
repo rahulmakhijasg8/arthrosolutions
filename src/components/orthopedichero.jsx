@@ -27,7 +27,7 @@ const HeroSection = ({
     return title.map((part, index) => (
       <span 
         key={index}
-        className='leading-[44px] text-[38px] md:text-[53px] md:leading-[38px]'
+        className='leading-[44px] text-[36px] md:text-[53px] md:leading-[38px]'
         style={{
           color: part.highlight ? '#0D4F7A' : '#2D2D2D',
           fontFeatureSettings: "'liga' off, 'clig' off",

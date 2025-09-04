@@ -204,7 +204,7 @@ const TestimonialCarousel = ({ testimonials = [] }) => {
           <div className="relative">
             <div 
               ref={scrollContainerRef}
-              className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-[20px] pb-4 select-none"
+              className="flex overflow-x-auto scrollbar-hide gap-[20px] pb-6 pl-3 pr-3 select-none"
               style={{ 
                 scrollbarWidth: 'none', 
                 msOverflowStyle: 'none',

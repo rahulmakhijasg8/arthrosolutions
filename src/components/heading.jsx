@@ -10,7 +10,7 @@ export default function Heading({
   return (
     <div className={`w-full text-center mt-[60px] md:mt-[93px]  px-[20px] md:px-[60px] lg:px-[100px] ${className}`}>
       <div className="max-w-7xl mx-auto">
-        <h2 className="font-['Outfit'] text-[#2D2D2D] font-[600] text-[36px] md:text-[56px] leading-tight px-[30px] md:px-[50px] lg:px-[100px] ">
+        <h2 className="font-['Outfit'] text-[#2D2D2D] font-[600] text-[28px] md:text-[56px] leading-tight px-[30px] md:px-[50px] lg:px-[100px] ">
           {title}
         </h2>
 
