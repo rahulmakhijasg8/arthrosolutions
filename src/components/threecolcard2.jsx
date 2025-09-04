@@ -108,7 +108,7 @@ const NewCard = ({
           href={buttonLink}
           target={buttonTarget}
           className={`
-            w-[45%] md:w-full mt-[18px] font-['Inter'] md:mt-[24px] px-[10px] md:px-[14px] py-[8px] md:py-[10px] 
+            w-[50%] md:w-full mt-[18px] font-['Inter'] md:mt-[24px] px-[10px] md:px-[14px] py-[8px] md:py-[10px] 
             rounded-[6px] flex items-center justify-center gap-[8px] transition-all duration-200 
             no-underline text-[12px] md:text-[14px] font-[500] border
             ${buttonType === 'contained' 

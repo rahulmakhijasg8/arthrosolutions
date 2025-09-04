@@ -13,7 +13,7 @@ export default function MedicalProcedureCard({
   buttonColor = "#0D4F7A"
 }) {
   return (
-    <div className="p-[16px] md:[20px] lg:p-[24px] bg-white border border-[rgba(45, 45, 45, 0.24)] rounded-[16px] shadow-sm">
+    <div className="p-[16px] md:[20px] lg:p-[24px] bg-white border border-[#F1F1F1] rounded-[16px] shadow-sm">
       {/* Main title */}
       <div className="flex justify-between">
         <h2 className="text-[16px] md:text-[18px] font-[600] font-['Inter'] text-[#2D2D2D] leading-tight">
