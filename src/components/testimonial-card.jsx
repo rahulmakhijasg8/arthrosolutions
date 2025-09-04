@@ -12,7 +12,7 @@ const TestimonialCard = ({
   bgColor = "from-pink-200 to-pink-300" 
 }) => {
   return (
-    <div className="mx-auto bg-[#F1F1F1] hover:bg-white rounded-[20px] p-[18px] md:p-6 pt-[58px] md:pt-[60px] relative mt-10">
+    <div className="mx-auto bg-[#F1F1F1] hover:shadow-[0_10px_18px_2px_rgba(0,0,0,0.08)] hover:bg-white rounded-[20px] p-[18px] md:p-6 pt-[58px] md:pt-[60px] relative mt-10">
       {/* Profile Image - positioned at top-left, half outside the card */}
       <div className="absolute -top-10 left-6 md:left-5">
         <div className="w-[84px] md:w-[100px] h-[84px] md:h-[100px] rounded-full overflow-hidden bg-pink-200 flex items-center justify-center shadow-md">
